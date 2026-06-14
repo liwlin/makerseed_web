@@ -94,6 +94,28 @@ function saveBooking(data) {
   localStorage.setItem(storageKey, JSON.stringify(bookings));
 }
 
+async function submitBooking(data) {
+  const payload = { ...data, createdAt: new Date().toISOString(), source: "makerseed-website" };
+  saveBooking(payload);
+
+  const config = window.MAKERSEED_CONFIG || {};
+  if (!config.bookingEndpoint) {
+    return { mode: "local" };
+  }
+
+  const response = await fetch(config.bookingEndpoint, {
+    method: "POST",
+    headers: config.bookingHeaders || { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+
+  if (!response.ok) {
+    throw new Error(`booking endpoint returned ${response.status}`);
+  }
+
+  return { mode: "remote" };
+}
+
 function toCsv(rows) {
   const headers = ["学生姓名", "年龄", "联系电话", "感兴趣方向", "备注", "提交时间"];
   const body = rows.map((row) =>
@@ -124,12 +146,18 @@ nav?.addEventListener("click", (event) => {
   }
 });
 
-form?.addEventListener("submit", (event) => {
+form?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const data = Object.fromEntries(new FormData(form).entries());
-  saveBooking(data);
-  form.reset();
-  message.textContent = "预约信息已保存。正式上线时可接入消息通知或 CRM。";
+  message.textContent = "正在提交预约信息...";
+
+  try {
+    const result = await submitBooking(data);
+    form.reset();
+    message.textContent = result.mode === "remote" ? "预约信息已提交，我们会尽快联系你。" : "预约信息已保存。正式上线时可接入消息通知或 CRM。";
+  } catch {
+    message.textContent = "远程提交失败，信息已保存在当前浏览器，可导出 CSV 备份。";
+  }
 });
 
 exportButton?.addEventListener("click", () => {

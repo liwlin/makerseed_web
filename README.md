@@ -17,7 +17,8 @@
 - 春秋季课程、暑假课程公众号原文入口
 - 课程分类筛选
 - 预约体验表单
-- 浏览器本地保存预约记录
+- 可选远程表单接口提交预约
+- 未配置远程接口时浏览器本地保存预约记录
 - CSV 导出预约记录
 - 移动端导航适配
 
@@ -76,3 +77,18 @@ python3 scripts/validate.py
 4. 等待 `Deploy static website to Pages` 工作流完成。
 
 小程序需要在微信公众平台完成 AppID、类目、服务器域名和版本提审配置；当前版本无需后端接口即可在开发者工具中验证主要流程。
+
+## 预约接口配置
+
+官网默认使用浏览器本地存储，适合前期验证。正式使用时可编辑 `config.js`：
+
+```js
+window.MAKERSEED_CONFIG = {
+  bookingEndpoint: "https://your-form-or-api.example.com/bookings",
+  bookingHeaders: {
+    "Content-Type": "application/json"
+  }
+};
+```
+
+如果远程接口提交失败，表单会保留本地记录，可通过页面上的“导出预约 CSV”备份。
