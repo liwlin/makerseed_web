@@ -11,6 +11,18 @@ Page({
   goBooking() {
     wx.navigateTo({ url: "/pages/booking/index" });
   },
+  handleAction(event) {
+    const title = event.currentTarget.dataset.title;
+    if (title === "我的孩子") {
+      wx.navigateTo({ url: "/pages/booking/index" });
+      return;
+    }
+    if (title === "会员商城") {
+      wx.switchTab({ url: "/pages/makerclub/index" });
+      return;
+    }
+    wx.showToast({ title: `${title}待接入`, icon: "none" });
+  },
   copyWechat() {
     wx.setClipboardData({
       data: "种子创客工坊",

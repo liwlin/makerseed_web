@@ -40,6 +40,8 @@
       class="action-card {{item.color}}"
       wx:for="{{profileActions}}"
       wx:key="title"
+      data-title="{{item.title}}"
+      bindtap="handleAction"
     >
       <view>{{item.title}}</view>
       <text>{{index + 1}}</text>

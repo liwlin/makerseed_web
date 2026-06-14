@@ -83,6 +83,20 @@ def check_miniprogram_navigation():
     return ok("miniprogram navigation targets") if passed else False
 
 
+def check_miniprogram_data_flows():
+    passed = True
+    manage_js = (ROOT / "miniprogram/pages/course-manage/index.js").read_text(encoding="utf-8")
+    manage_wxml = (ROOT / "miniprogram/pages/course-manage/index.wxml").read_text(encoding="utf-8")
+    profile_js = (ROOT / "miniprogram/pages/profile/index.js").read_text(encoding="utf-8")
+    if 'wx.getStorageSync("bookings")' not in manage_js:
+        passed = fail("course management does not read booking data") and passed
+    if "visibleCourses.length" not in manage_wxml or "managed-card" not in manage_wxml:
+        passed = fail("course management is missing non-empty course rendering") and passed
+    if "handleAction" not in profile_js:
+        passed = fail("profile action grid is missing tap handlers") and passed
+    return ok("miniprogram data flows") if passed else False
+
+
 def check_miniprogram_course_detail():
     required_files = [
         "miniprogram/utils/courses.js",
@@ -123,6 +137,7 @@ def main():
         check_miniprogram_pages(),
         check_miniprogram_tabbar(),
         check_miniprogram_navigation(),
+        check_miniprogram_data_flows(),
         check_miniprogram_course_detail(),
     ]
     if all(checks):

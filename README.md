@@ -63,6 +63,18 @@ http://localhost:8080
 4. AppID 可先使用测试号，正式发布前替换为工坊的小程序 AppID。
 5. 在开发者工具中点击“编译”，测试首页、课程、预约、我的四个 Tab。
 
+命令行预览可用：
+
+```bash
+/Applications/wechatwebdevtools.app/Contents/MacOS/cli preview \
+  --project /Users/lwl/Desktop/makerseed_web/miniprogram \
+  --qr-format image \
+  --qr-output miniprogram-preview-qr.png \
+  --port 9420
+```
+
+当前 `project.config.json` 使用占位 `touristappid`，微信开发者工具 CLI 会返回 `AppID 不合法`。替换为正式小程序 AppID 后，再运行预览或上传。
+
 ## 校验
 
 ```bash
