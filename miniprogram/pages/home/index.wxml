@@ -1,0 +1,31 @@
+<view class="page home-page">
+  <view class="hero card">
+    <image class="hero-logo" src="/images/logo.png" mode="aspectFit"></image>
+    <view class="eyebrow">Makerseed STEAM Workshop</view>
+    <view class="hero-title">在造物中学习科学、工程、数学与设计</view>
+    <view class="hero-text">江门本地专注创客教育的创客空间，用项目制学习激发孩子的创造力和计算机思维。</view>
+    <view class="hero-actions">
+      <button class="primary-button" bindtap="goBooking">预约体验</button>
+      <button class="ghost-button" bindtap="goCourses">查看课程</button>
+    </view>
+  </view>
+
+  <view class="quick-grid">
+    <view class="quick-item card" wx:for="{{features}}" wx:key="title">
+      <view class="quick-mark">{{item.mark}}</view>
+      <view class="quick-title">{{item.title}}</view>
+      <view class="quick-text">{{item.text}}</view>
+    </view>
+  </view>
+
+  <view class="section-title">学习闭环</view>
+  <view class="loop card">
+    <view class="loop-item" wx:for="{{loop}}" wx:key="title">
+      <view class="loop-index">{{index + 1}}</view>
+      <view>
+        <view class="loop-title">{{item.title}}</view>
+        <view class="loop-text">{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+</view>

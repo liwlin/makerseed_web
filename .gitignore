@@ -1,0 +1,10 @@
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+node_modules/
+dist/
+build/
+.env
+.env.*
+miniprogram/project.private.config.json
