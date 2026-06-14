@@ -527,6 +527,62 @@ h2 {
   color: rgba(255, 255, 255, 0.86);
 }
 
+.contact {
+  background: var(--white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.contact-card {
+  min-height: 190px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.contact-card.wide {
+  grid-column: 1 / -1;
+}
+
+.contact-card span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.contact-card strong {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--ink);
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  line-height: 1.25;
+}
+
+.contact-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.text-button {
+  padding: 0;
+  border: 0;
+  color: var(--blue-deep);
+  background: transparent;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.text-button:hover {
+  color: var(--blue);
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;
@@ -566,6 +622,10 @@ h2 {
 
   .course-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 
   .steps {

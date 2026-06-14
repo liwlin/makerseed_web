@@ -1,31 +1,56 @@
-<view class="page">
-  <view class="profile-head card">
-    <image src="/images/logo.png" mode="aspectFit"></image>
-    <view>
-      <view class="profile-title">种子创客工坊</view>
-      <view class="profile-subtitle">造物立志，认识世界，改变世界</view>
+<view class="page profile-page">
+  <view class="profile-top">
+    <image class="avatar" src="/images/logo.png" mode="aspectFit"></image>
+    <view class="nickname">makerseed</view>
+    <view class="top-icons">
+      <view>✉</view>
+      <view>⚙</view>
     </view>
   </view>
 
-  <view class="actions">
-    <button class="primary-button" bindtap="goBooking">新增预约</button>
-    <button class="ghost-button" bindtap="copyWechat">复制公众号名称</button>
-  </view>
-
-  <view class="section-title">预约记录</view>
-  <view wx:if="{{bookings.length}}" class="booking-list">
-    <view class="booking-card card" wx:for="{{bookings}}" wx:key="createdAt">
-      <view class="booking-title">{{item.student}} · {{item.interest}}</view>
-      <view class="booking-line">年龄：{{item.age}}</view>
-      <view class="booking-line">电话：{{item.phone}}</view>
-      <view class="booking-line">时间：{{item.createdAt}}</view>
-      <view class="booking-note" wx:if="{{item.note}}">{{item.note}}</view>
+  <view class="level-card">
+    <view class="level-row">
+      <view class="level-title">新星级</view>
+      <button bindtap="goBooking">查看预约记录</button>
     </view>
-    <button class="ghost-button clear" bindtap="clearBookings">清空记录</button>
+    <view class="progress">
+      <view class="progress-dot"></view>
+      <view class="progress-line"></view>
+    </view>
+    <view class="level-meta">
+      <text>0</text>
+      <text>当前创客值:0</text>
+      <text>12000</text>
+    </view>
   </view>
 
-  <view wx:else class="empty card">
-    <view>还没有预约记录</view>
-    <view class="empty-sub">可以先去课程页选择方向，或直接新增预约。</view>
+  <view class="stats">
+    <view><text>0</text><view>创客值</view></view>
+    <view><text>0</text><view>优惠券</view></view>
+    <view><text>{{bookings.length}}</text><view>预约</view></view>
   </view>
+
+  <view class="profile-banner card">
+    <view>MAKING IS A FUN WAY TO BE CREATIVE</view>
+    <text>趣造童年 · 乐创未来</text>
+  </view>
+
+  <view class="action-grid">
+    <view
+      class="action-card {{item.color}}"
+      wx:for="{{profileActions}}"
+      wx:key="title"
+    >
+      <view>{{item.title}}</view>
+      <text>{{index + 1}}</text>
+    </view>
+  </view>
+
+  <view class="booking-preview card" wx:if="{{bookings.length}}">
+    <view class="preview-title">最近预约</view>
+    <view class="preview-line">{{bookings[0].student}} · {{bookings[0].interest}}</view>
+    <view class="preview-line">{{bookings[0].createdAt}}</view>
+  </view>
+
+  <view class="version">Makerseed © 1.0.0</view>
 </view>

@@ -57,9 +57,12 @@ const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const exportButton = document.querySelector("[data-export]");
 const copyButton = document.querySelector("[data-copy]");
+const copyWechatButton = document.querySelector("[data-copy-wechat]");
+const copyPhoneButton = document.querySelector("[data-copy-phone]");
 const year = document.querySelector("[data-year]");
 
 const storageKey = "makerseed-bookings";
+const config = window.MAKERSEED_CONFIG || {};
 
 function renderCourses(category = "all") {
   const selected = category === "all" ? courses : courses.filter((course) => course.category === category);
@@ -98,7 +101,6 @@ async function submitBooking(data) {
   const payload = { ...data, createdAt: new Date().toISOString(), source: "makerseed-website" };
   saveBooking(payload);
 
-  const config = window.MAKERSEED_CONFIG || {};
   if (!config.bookingEndpoint) {
     return { mode: "local" };
   }
@@ -114,6 +116,26 @@ async function submitBooking(data) {
   }
 
   return { mode: "remote" };
+}
+
+function setText(selector, value, fallback = "") {
+  const node = document.querySelector(selector);
+  if (node) {
+    node.textContent = value || fallback;
+  }
+}
+
+async function copyText(text, fallbackMessage) {
+  if (!text) {
+    message.textContent = fallbackMessage;
+    return;
+  }
+  try {
+    await navigator.clipboard.writeText(text);
+    message.textContent = "已复制。";
+  } catch {
+    message.textContent = text;
+  }
 }
 
 function toCsv(rows) {
@@ -185,5 +207,17 @@ copyButton?.addEventListener("click", async () => {
   }
 });
 
+copyWechatButton?.addEventListener("click", () => {
+  copyText(config.contact?.wechatOfficialAccount || "种子创客工坊", "公众号名称暂未配置。");
+});
+
+copyPhoneButton?.addEventListener("click", () => {
+  copyText(config.contact?.phone, "联系电话暂未配置，请先提交预约。");
+});
+
+setText("[data-contact-wechat]", config.contact?.wechatOfficialAccount, "种子创客工坊");
+setText("[data-contact-city]", config.contact?.city, "广东江门");
+setText("[data-contact-phone]", config.contact?.phone, "预约后联系");
+setText("[data-contact-address]", config.contact?.address, "广东江门，详细地址请预约后确认");
 year.textContent = new Date().getFullYear();
 renderCourses();

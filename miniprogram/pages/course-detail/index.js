@@ -1,10 +1,24 @@
 const { findCourse } = require("../../utils/courses");
+const { signupGroups } = require("../../utils/app-data");
 
 Page({
   data: {
-    course: null
+    course: null,
+    group: null
   },
   onLoad(options) {
+    if (options.group) {
+      const group = signupGroups.find((item) => item.id === options.group);
+      if (!group) {
+        wx.showToast({ title: "课程组不存在", icon: "none" });
+        setTimeout(() => wx.navigateBack(), 800);
+        return;
+      }
+      this.setData({ group });
+      wx.setNavigationBarTitle({ title: group.label });
+      return;
+    }
+
     const course = findCourse(options.id);
     if (!course) {
       wx.showToast({ title: "课程不存在", icon: "none" });
@@ -14,9 +28,10 @@ Page({
     this.setData({ course });
     wx.setNavigationBarTitle({ title: course.title });
   },
-  bookCourse() {
-    wx.setStorageSync("pendingCourse", this.data.course.title);
-    wx.switchTab({ url: "/pages/booking/index" });
+  bookCourse(event) {
+    const title = event?.currentTarget?.dataset?.title || this.data.course?.title || this.data.group?.label || "综合项目制课程";
+    wx.setStorageSync("pendingCourse", title);
+    wx.navigateTo({ url: "/pages/booking/index" });
   },
   copyLink() {
     const { link } = this.data.course;

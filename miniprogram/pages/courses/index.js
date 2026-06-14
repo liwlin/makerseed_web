@@ -22,7 +22,7 @@ Page({
   bookCourse(event) {
     const title = event.currentTarget.dataset.title;
     wx.setStorageSync("pendingCourse", title);
-    wx.switchTab({ url: "/pages/booking/index" });
+    wx.navigateTo({ url: "/pages/booking/index" });
   },
   viewCourse(event) {
     const id = event.currentTarget.dataset.id;

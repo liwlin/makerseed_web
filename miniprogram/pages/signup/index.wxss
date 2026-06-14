@@ -1,0 +1,123 @@
+.signup-page {
+  padding-bottom: 150rpx;
+}
+
+.video-card {
+  display: grid;
+  place-items: center;
+  min-height: 420rpx;
+  padding: 48rpx 36rpx;
+  background: #f7f7f7;
+}
+
+.video-card image {
+  width: 180rpx;
+  height: 180rpx;
+  margin-bottom: 18rpx;
+}
+
+.video-title {
+  font-size: 44rpx;
+  font-weight: 950;
+}
+
+.video-subtitle {
+  margin-top: 12rpx;
+  color: #888888;
+  font-size: 27rpx;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.path-list {
+  display: grid;
+  gap: 28rpx;
+  margin-top: 46rpx;
+}
+
+.path-card {
+  display: grid;
+  grid-template-columns: 1fr 190rpx;
+  align-items: center;
+  min-height: 152rpx;
+  overflow: hidden;
+  border-radius: 28rpx;
+  box-shadow: 0 18rpx 42rpx rgba(0, 0, 0, 0.13);
+}
+
+.path-card > view:first-child {
+  padding-left: 40rpx;
+}
+
+.path-card.purple {
+  color: #ffffff;
+  background: #4b1f68;
+}
+
+.path-card.orange {
+  color: #ffffff;
+  background: #ff5a36;
+}
+
+.path-card.violet {
+  color: #ffffff;
+  background: #8f3dd6;
+}
+
+.path-title {
+  font-size: 36rpx;
+  font-weight: 950;
+}
+
+.path-desc {
+  margin-top: 12rpx;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 25rpx;
+}
+
+.path-button {
+  display: grid;
+  place-items: center;
+  height: 152rpx;
+  border-top-left-radius: 70rpx;
+  border-bottom-left-radius: 70rpx;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 38rpx;
+  font-weight: 950;
+}
+
+.orange .path-button {
+  background: #ff9632;
+}
+
+.violet .path-button {
+  background: #4b1f68;
+}
+
+.intro-card {
+  margin-top: 46rpx;
+  padding: 36rpx;
+  text-align: center;
+}
+
+.intro-title {
+  color: #888888;
+  font-size: 42rpx;
+  font-weight: 900;
+}
+
+.intro-text {
+  margin-top: 22rpx;
+  color: #777777;
+  font-size: 28rpx;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.fixed-main {
+  position: fixed;
+  right: 50rpx;
+  bottom: 38rpx;
+  left: 50rpx;
+  z-index: 10;
+}

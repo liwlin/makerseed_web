@@ -1,0 +1,16 @@
+<view class="page manage-page">
+  <view class="segmented">
+    <view
+      class="segment {{active === item.value ? 'active' : ''}}"
+      wx:for="{{tabs}}"
+      wx:key="value"
+      data-value="{{item.value}}"
+      bindtap="switchTab"
+    >{{item.label}}</view>
+  </view>
+
+  <view class="empty-box">
+    <view class="empty-text">暂无课程数据哦~</view>
+    <button class="primary-button signup-button" bindtap="goSignup">去报名课程</button>
+  </view>
+</view>

@@ -1,12 +1,15 @@
+const { profileActions } = require("../../utils/app-data");
+
 Page({
   data: {
-    bookings: []
+    bookings: [],
+    profileActions
   },
   onShow() {
     this.setData({ bookings: wx.getStorageSync("bookings") || [] });
   },
   goBooking() {
-    wx.switchTab({ url: "/pages/booking/index" });
+    wx.navigateTo({ url: "/pages/booking/index" });
   },
   copyWechat() {
     wx.setClipboardData({

@@ -1,3 +1,29 @@
+<view class="page detail-page" wx:if="{{group}}">
+  <view class="detail-hero group-hero">
+    <view class="detail-tag">课程分类</view>
+    <view class="detail-title">{{group.label}}</view>
+    <view class="detail-meta">适合阶段 · 项目制学习</view>
+    <view class="detail-summary">选择适合孩子阶段的课程方向，再预约面谈或报名课程。</view>
+  </view>
+
+  <view class="group-list">
+    <view class="group-course card" wx:for="{{group.courses}}" wx:key="id">
+      <view class="course-dot" style="background: {{item.accent}}"></view>
+      <view class="group-course-main">
+        <view class="group-course-title">{{item.title}}</view>
+        <view class="group-course-subtitle">{{item.subtitle}}</view>
+        <view class="group-course-fit">{{item.fit}}</view>
+      </view>
+      <button class="check-button" data-title="{{item.title}}" bindtap="bookCourse">查看</button>
+    </view>
+  </view>
+
+  <view class="fixed-actions">
+    <button class="ghost-button action" bindtap="bookCourse">预约试听</button>
+    <button class="primary-button action" bindtap="bookCourse">报名课程</button>
+  </view>
+</view>
+
 <view class="page detail-page" wx:if="{{course}}">
   <view class="detail-hero card">
     <view class="detail-tag">{{course.tag}}</view>

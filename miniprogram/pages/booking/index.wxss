@@ -1,7 +1,8 @@
 .tip {
-  padding: 24rpx;
+  padding: 30rpx;
   color: rgba(255, 255, 255, 0.88);
-  background: linear-gradient(135deg, #075f9b 0%, #0079c8 100%);
+  border-radius: 28rpx;
+  background: linear-gradient(135deg, #4b1f68 0%, #8f3dd6 100%);
   font-size: 27rpx;
   line-height: 1.65;
 }
@@ -17,6 +18,7 @@
   gap: 22rpx;
   margin-top: 24rpx;
   padding: 28rpx;
+  border-radius: 28rpx;
 }
 
 .field {
@@ -36,10 +38,10 @@ textarea,
   width: 100%;
   min-height: 88rpx;
   padding: 20rpx 22rpx;
-  border: 1rpx solid #d9e4ee;
-  border-radius: 14rpx;
+  border: 0;
+  border-radius: 18rpx;
   color: #111827;
-  background: #fbfdff;
+  background: #f5f5f5;
   font-size: 28rpx;
 }
 

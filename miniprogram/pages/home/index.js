@@ -13,9 +13,9 @@ Page({
     ]
   },
   goBooking() {
-    wx.switchTab({ url: "/pages/booking/index" });
+    wx.navigateTo({ url: "/pages/booking/index" });
   },
   goCourses() {
-    wx.switchTab({ url: "/pages/courses/index" });
+    wx.navigateTo({ url: "/pages/courses/index" });
   }
 });

@@ -1,0 +1,48 @@
+.manage-page {
+  padding-top: 56rpx;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 500rpx;
+  min-height: 86rpx;
+  margin: 0 auto;
+  padding: 10rpx;
+  border-radius: 24rpx;
+  background: #dddddd;
+}
+
+.segment {
+  display: grid;
+  place-items: center;
+  border-radius: 18rpx;
+  color: #333333;
+  font-size: 28rpx;
+  font-weight: 850;
+}
+
+.segment.active {
+  color: #ff5a36;
+  background: #ffffff;
+}
+
+.empty-box {
+  width: 610rpx;
+  margin: 150rpx auto 0;
+  padding: 54rpx 30rpx;
+  border-radius: 20rpx;
+  background: #fffaf7;
+  box-shadow: 0 12rpx 30rpx rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.empty-text {
+  color: #777777;
+  font-size: 34rpx;
+  font-weight: 850;
+}
+
+.signup-button {
+  margin-top: 40rpx;
+}

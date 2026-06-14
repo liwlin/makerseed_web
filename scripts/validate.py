@@ -49,6 +49,40 @@ def check_miniprogram_pages():
     return ok("miniprogram page files") if passed else False
 
 
+def check_miniprogram_tabbar():
+    app_config = json.loads((ROOT / "miniprogram/app.json").read_text(encoding="utf-8"))
+    expected = [
+        "pages/campus/index",
+        "pages/signup/index",
+        "pages/makerclub/index",
+        "pages/course-manage/index",
+        "pages/profile/index",
+    ]
+    actual = [item["pagePath"] for item in app_config["tabBar"]["list"]]
+    passed = True
+    if actual != expected:
+        passed = fail(f"tabBar pages differ from expected 5-tab layout: {actual}") and passed
+    for item in app_config["tabBar"]["list"]:
+        for key in ["iconPath", "selectedIconPath"]:
+            path = ROOT / "miniprogram" / item[key]
+            if not path.exists():
+                passed = fail(f"missing tab icon {item[key]}") and passed
+    return ok("miniprogram 5-tab layout") if passed else False
+
+
+def check_miniprogram_navigation():
+    app_config = json.loads((ROOT / "miniprogram/app.json").read_text(encoding="utf-8"))
+    tab_pages = {"/" + item["pagePath"] for item in app_config["tabBar"]["list"]}
+    passed = True
+    for path in (ROOT / "miniprogram/pages").glob("**/*.js"):
+        text = path.read_text(encoding="utf-8")
+        for target in re.findall(r'wx\.switchTab\(\{\s*url:\s*"([^"]+)"', text):
+            clean = target.split("?")[0]
+            if clean not in tab_pages:
+                passed = fail(f"{path.relative_to(ROOT)} switchTab targets non-tab page {target}") and passed
+    return ok("miniprogram navigation targets") if passed else False
+
+
 def check_miniprogram_course_detail():
     required_files = [
         "miniprogram/utils/courses.js",
@@ -87,6 +121,8 @@ def main():
         check_file(".github/workflows/pages.yml"),
         check_html_assets(),
         check_miniprogram_pages(),
+        check_miniprogram_tabbar(),
+        check_miniprogram_navigation(),
         check_miniprogram_course_detail(),
     ]
     if all(checks):

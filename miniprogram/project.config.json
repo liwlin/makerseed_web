@@ -1,7 +1,8 @@
 {
   "description": "种子创客工坊微信小程序",
   "packOptions": {
-    "ignore": []
+    "ignore": [],
+    "include": []
   },
   "setting": {
     "urlCheck": false,
@@ -44,5 +45,9 @@
   "libVersion": "latest",
   "appid": "touristappid",
   "projectname": "makerseed-miniprogram",
-  "condition": {}
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
 }
