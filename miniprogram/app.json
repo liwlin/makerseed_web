@@ -2,6 +2,7 @@
   "pages": [
     "pages/home/index",
     "pages/courses/index",
+    "pages/course-detail/index",
     "pages/booking/index",
     "pages/profile/index"
   ],

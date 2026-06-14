@@ -1,0 +1,83 @@
+const courses = [
+  {
+    id: "spring-autumn-steam",
+    title: "春秋季 STEAM 项目课",
+    tag: "春秋季",
+    age: "7-15 岁",
+    category: "season",
+    summary: "持续型项目制课程，围绕结构、电子、编程和展示逐步完成作品。",
+    points: ["每周稳定推进", "适合长期能力培养", "公众号课程介绍可复制查看"],
+    outcomes: ["完成可展示的创客作品", "掌握设计、制作、调试的基本流程", "形成持续记录和复盘习惯"],
+    projects: ["结构与机械小车", "传感器互动装置", "自动控制挑战任务"],
+    link: "https://mp.weixin.qq.com/s/pHvM6vADUsP_PVRNrlVeNw"
+  },
+  {
+    id: "summer-maker-camp",
+    title: "暑假创客营",
+    tag: "暑假",
+    age: "7-15 岁",
+    category: "season",
+    summary: "假期集中完成主题作品，适合体验进阶和项目成果展示。",
+    points: ["短周期高反馈", "作品目标明确", "公众号暑假课程可复制查看"],
+    outcomes: ["在假期完成一个完整项目", "提升动手、协作和抗压能力", "建立工程迭代意识"],
+    projects: ["机器人主题挑战", "FPV / RC 操控体验", "数字制造作品营"],
+    link: "https://mp.weixin.qq.com/s/2Us_7YtPTEWQckH1mBOA9g"
+  },
+  {
+    id: "coding-thinking",
+    title: "少儿编程与计算思维",
+    tag: "编程",
+    age: "6-14 岁",
+    category: "code",
+    summary: "通过图形化编程、Python 和 Arduino 项目训练问题拆解与调试能力。",
+    points: ["算法启蒙", "程序调试", "互动作品"],
+    outcomes: ["理解顺序、循环、条件和变量", "能用程序控制真实硬件", "学会定位和修复程序问题"],
+    projects: ["互动小游戏", "Arduino 灯光控制", "传感器数据可视化"],
+    link: ""
+  },
+  {
+    id: "robot-control",
+    title: "机器人与自动控制",
+    tag: "机器人",
+    age: "8-16 岁",
+    category: "robot",
+    summary: "学习传感器、执行器、机械结构和控制策略，完成挑战任务。",
+    points: ["结构搭建", "传感器应用", "挑战赛任务"],
+    outcomes: ["理解机器人的感知、决策和执行", "能搭建稳定结构并完成任务", "能根据测试结果调参优化"],
+    projects: ["循迹机器人", "机械臂任务", "自动避障挑战"],
+    link: ""
+  },
+  {
+    id: "digital-fabrication",
+    title: "数字制造与产品原型",
+    tag: "制造",
+    age: "8-16 岁",
+    category: "make",
+    summary: "用 3D 打印、激光切割、CNC 和设计软件把创意变成实体原型。",
+    points: ["三维建模", "材料加工", "工程迭代"],
+    outcomes: ["掌握从草图到模型的表达方式", "理解材料、结构和加工限制", "能制作并改进可用原型"],
+    projects: ["激光切割结构件", "3D 打印产品外壳", "CNC 小型零件"],
+    link: ""
+  },
+  {
+    id: "fpv-rc-combat",
+    title: "FPV / RC / 格斗机器人",
+    tag: "竞速",
+    age: "10-18 岁",
+    category: "robot",
+    summary: "结合机械、电控、动力系统、操控和安全规范，在高反馈项目中成长。",
+    points: ["动力系统", "安全规范", "复盘抗压"],
+    outcomes: ["理解动力和操控系统的关系", "建立安全测试与维护习惯", "通过对抗和竞速训练复盘能力"],
+    projects: ["RC 竞速调校", "FPV 飞行基础", "格斗机器人结构强化"],
+    link: ""
+  }
+];
+
+function findCourse(id) {
+  return courses.find((course) => course.id === id);
+}
+
+module.exports = {
+  courses,
+  findCourse
+};

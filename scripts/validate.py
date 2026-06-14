@@ -49,6 +49,31 @@ def check_miniprogram_pages():
     return ok("miniprogram page files") if passed else False
 
 
+def check_miniprogram_course_detail():
+    required_files = [
+        "miniprogram/utils/courses.js",
+        "miniprogram/pages/course-detail/index.js",
+        "miniprogram/pages/course-detail/index.wxml",
+        "miniprogram/pages/course-detail/index.wxss",
+    ]
+    passed = True
+    for path in required_files:
+        if not (ROOT / path).exists():
+            passed = fail(f"missing {path}") and passed
+
+    courses_js = (ROOT / "miniprogram/utils/courses.js").read_text(encoding="utf-8")
+    detail_js = (ROOT / "miniprogram/pages/course-detail/index.js").read_text(encoding="utf-8")
+    detail_wxml = (ROOT / "miniprogram/pages/course-detail/index.wxml").read_text(encoding="utf-8")
+    if "spring-autumn-steam" not in courses_js or "summer-maker-camp" not in courses_js:
+        passed = fail("course data is missing seasonal course ids") and passed
+    if "pendingCourse" not in detail_js or "copyLink" not in detail_js:
+        passed = fail("course detail page is missing booking/link actions") and passed
+    if "course.outcomes" not in detail_wxml or "course.projects" not in detail_wxml:
+        passed = fail("course detail page is missing outcomes/projects rendering") and passed
+
+    return ok("miniprogram course detail flow") if passed else False
+
+
 def main():
     checks = [
         check_file("index.html"),
@@ -62,6 +87,7 @@ def main():
         check_file(".github/workflows/pages.yml"),
         check_html_assets(),
         check_miniprogram_pages(),
+        check_miniprogram_course_detail(),
     ]
     if all(checks):
         print("All checks passed.")

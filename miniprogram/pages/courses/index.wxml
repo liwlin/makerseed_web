@@ -22,7 +22,8 @@
         <view class="course-point" wx:for="{{item.points}}" wx:key="*this">{{item}}</view>
       </view>
       <view class="course-actions">
-        <button class="primary-button mini" data-title="{{item.title}}" bindtap="bookCourse">预约</button>
+        <button class="primary-button mini" data-id="{{item.id}}" bindtap="viewCourse">详情</button>
+        <button class="ghost-button mini" data-title="{{item.title}}" bindtap="bookCourse">预约</button>
         <button class="ghost-button mini" data-url="{{item.link}}" bindtap="copyLink">复制原文链接</button>
       </view>
     </view>

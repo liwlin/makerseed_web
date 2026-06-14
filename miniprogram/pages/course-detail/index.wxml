@@ -1,0 +1,32 @@
+<view class="page detail-page" wx:if="{{course}}">
+  <view class="detail-hero card">
+    <view class="detail-tag">{{course.tag}}</view>
+    <view class="detail-title">{{course.title}}</view>
+    <view class="detail-meta">{{course.age}} · 项目制学习</view>
+    <view class="detail-summary">{{course.summary}}</view>
+  </view>
+
+  <view class="section-block card">
+    <view class="block-title">适合收获</view>
+    <view class="list-item" wx:for="{{course.outcomes}}" wx:key="*this">{{item}}</view>
+  </view>
+
+  <view class="section-block card">
+    <view class="block-title">典型项目</view>
+    <view class="project-grid">
+      <view class="project-item" wx:for="{{course.projects}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+
+  <view class="section-block card">
+    <view class="block-title">课堂关键词</view>
+    <view class="keyword-row">
+      <view class="keyword" wx:for="{{course.points}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+
+  <view class="fixed-actions">
+    <button class="ghost-button action" bindtap="copyLink">复制原文</button>
+    <button class="primary-button action" bindtap="bookCourse">预约这个课程</button>
+  </view>
+</view>
