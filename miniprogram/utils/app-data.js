@@ -1,9 +1,11 @@
+const { siteConfig } = require("./site-config");
+
 const campusList = [
   {
     id: "jiangmen-main",
-    city: "江门市",
-    name: "种子创客工坊 江门校区",
-    address: "广东江门，详细地址请预约后确认",
+    city: siteConfig.city,
+    name: siteConfig.campusName,
+    address: siteConfig.campusAddress,
     summary: "专注创客教育、STEAM 教育、机器人与数字制造的项目制学习空间。"
   }
 ];

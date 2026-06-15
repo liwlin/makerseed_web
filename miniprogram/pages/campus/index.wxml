@@ -1,11 +1,11 @@
 <view class="campus-page">
   <view class="hero-card">
     <view class="hero-top">
-      <view class="location-pill">⌖ 江门市</view>
+      <view class="location-pill">⌖ {{siteConfig.city}}</view>
       <image class="hero-logo" src="/images/logo.png" mode="aspectFit"></image>
     </view>
-    <view class="hero-title">Makerseed</view>
-    <view class="hero-subtitle">造物立志 · STEAM 创客教育空间</view>
+    <view class="hero-title">{{siteConfig.englishName}}</view>
+    <view class="hero-subtitle">{{siteConfig.slogan}}</view>
     <view class="hero-tools">
       <text>机器人</text>
       <text>3D打印</text>

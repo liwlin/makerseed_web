@@ -1,7 +1,9 @@
 const { profileActions } = require("../../utils/app-data");
+const { siteConfig } = require("../../utils/site-config");
 
 Page({
   data: {
+    siteConfig,
     bookings: [],
     profileActions
   },
@@ -25,7 +27,7 @@ Page({
   },
   copyWechat() {
     wx.setClipboardData({
-      data: "种子创客工坊",
+      data: siteConfig.publicAccount,
       success: () => wx.showToast({ title: "已复制" })
     });
   },

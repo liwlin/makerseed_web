@@ -1,7 +1,7 @@
 <view class="page signup-page">
   <view class="video-card card">
     <image src="/images/logo.png" mode="aspectFit"></image>
-    <view class="video-title">Makerseed 课程体系</view>
+    <view class="video-title">{{siteConfig.englishName}} 课程体系</view>
     <view class="video-subtitle">从兴趣启蒙到项目挑战，给孩子一条清晰的造物成长路径。</view>
   </view>
 
@@ -24,7 +24,7 @@
   <view class="intro-card card">
     <view class="intro-title">校区简介</view>
     <view class="intro-text">
-      种子创客工坊位于江门，专注青少年创客教育与 STEAM 教育。孩子将在真实项目中学习设计、建造、编程、调试与复盘。
+      {{siteConfig.brandName}}位于{{siteConfig.region}}，专注青少年创客教育与 STEAM 教育。孩子将在真实项目中学习设计、建造、编程、调试与复盘。
     </view>
   </view>
 

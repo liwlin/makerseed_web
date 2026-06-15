@@ -85,9 +85,15 @@ def check_miniprogram_navigation():
 
 def check_miniprogram_data_flows():
     passed = True
+    site_config = (ROOT / "miniprogram/utils/site-config.js").read_text(encoding="utf-8")
+    deployment_doc = (ROOT / "miniprogram/DEPLOYMENT.md").read_text(encoding="utf-8")
     manage_js = (ROOT / "miniprogram/pages/course-manage/index.js").read_text(encoding="utf-8")
     manage_wxml = (ROOT / "miniprogram/pages/course-manage/index.wxml").read_text(encoding="utf-8")
     profile_js = (ROOT / "miniprogram/pages/profile/index.js").read_text(encoding="utf-8")
+    if "publicAccount" not in site_config or "campusName" not in site_config:
+        passed = fail("site config is missing public account or campus fields") and passed
+    if "touristappid" not in deployment_doc or "webapi_getwxaasyncsecinfo" not in deployment_doc:
+        passed = fail("deployment notes are missing appid/troubleshooting guidance") and passed
     if 'wx.getStorageSync("bookings")' not in manage_js:
         passed = fail("course management does not read booking data") and passed
     if "visibleCourses.length" not in manage_wxml or "managed-card" not in manage_wxml:
@@ -132,6 +138,7 @@ def main():
         check_file("miniprogram/app.json"),
         check_file("miniprogram/project.config.json"),
         check_file("miniprogram/sitemap.json"),
+        check_file("miniprogram/DEPLOYMENT.md"),
         check_file(".github/workflows/pages.yml"),
         check_html_assets(),
         check_miniprogram_pages(),

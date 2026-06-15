@@ -20,7 +20,7 @@
       </view>
       <view class="managed-row">
         <text>校区</text>
-        <text>种子创客工坊 江门校区</text>
+        <text>{{siteConfig.campusName}}</text>
       </view>
       <view class="managed-row">
         <text>提交时间</text>

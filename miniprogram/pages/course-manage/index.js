@@ -1,5 +1,8 @@
+const { siteConfig } = require("../../utils/site-config");
+
 Page({
   data: {
+    siteConfig,
     active: "current",
     bookings: [],
     visibleCourses: [],

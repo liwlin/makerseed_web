@@ -1,9 +1,11 @@
 const { campusList } = require("../../utils/app-data");
+const { siteConfig } = require("../../utils/site-config");
 
 Page({
   data: {
-    cities: ["全部", "江门市"],
-    activeCity: "江门市",
+    siteConfig,
+    cities: ["全部", siteConfig.city],
+    activeCity: siteConfig.city,
     campusList
   },
   chooseCity(event) {

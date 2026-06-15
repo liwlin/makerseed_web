@@ -1,7 +1,7 @@
 <view class="page profile-page">
   <view class="profile-top">
     <image class="avatar" src="/images/logo.png" mode="aspectFit"></image>
-    <view class="nickname">makerseed</view>
+    <view class="nickname">{{siteConfig.englishName}}</view>
     <view class="top-icons">
       <view>✉</view>
       <view>⚙</view>
@@ -10,7 +10,7 @@
 
   <view class="level-card">
     <view class="level-row">
-      <view class="level-title">新星级</view>
+      <view class="level-title">{{siteConfig.memberLevel.name}}</view>
       <button bindtap="goBooking">查看预约记录</button>
     </view>
     <view class="progress">
@@ -19,8 +19,8 @@
     </view>
     <view class="level-meta">
       <text>0</text>
-      <text>当前创客值:0</text>
-      <text>12000</text>
+      <text>当前创客值:{{siteConfig.memberLevel.currentValue}}</text>
+      <text>{{siteConfig.memberLevel.targetValue}}</text>
     </view>
   </view>
 
@@ -54,5 +54,5 @@
     <view class="preview-line">{{bookings[0].createdAt}}</view>
   </view>
 
-  <view class="version">Makerseed © 1.0.0</view>
+  <view class="version">{{siteConfig.version}}</view>
 </view>

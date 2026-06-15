@@ -2,7 +2,7 @@
   <view class="club-head card">
     <image src="/images/logo.png" mode="aspectFit"></image>
     <view class="club-copy">
-      <view class="club-title"><text>MakerClub</text> 创客会权益</view>
+      <view class="club-title"><text>{{siteConfig.englishName}}</text> 创客会权益</view>
       <view class="price-pill">首购权益价：咨询后确认</view>
       <view class="club-note">仅常规课在读学员可购买</view>
     </view>
