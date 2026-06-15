@@ -1,9 +1,11 @@
 const { signupGroups } = require("../../utils/app-data");
 const { siteConfig } = require("../../utils/site-config");
+const { articleMaterials } = require("../../utils/articles");
 
 Page({
   data: {
     siteConfig,
+    articleMaterials,
     cards: [
       { title: "小学常规课", desc: "面向 1-6 年级的项目制创客课程", color: "purple", group: "primary" },
       { title: "初中赛事课", desc: "机器人、信息科技、工程挑战赛事训练", color: "orange", group: "middle" },
@@ -16,6 +18,13 @@ Page({
   },
   goBooking() {
     wx.navigateTo({ url: "/pages/booking/index" });
+  },
+  copyArticle(event) {
+    const link = event.currentTarget.dataset.link;
+    wx.setClipboardData({
+      data: link,
+      success: () => wx.showToast({ title: "原文链接已复制" })
+    });
   },
   onReady() {
     this.setData({ groups: signupGroups });

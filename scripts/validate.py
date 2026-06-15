@@ -86,14 +86,20 @@ def check_miniprogram_navigation():
 def check_miniprogram_data_flows():
     passed = True
     site_config = (ROOT / "miniprogram/utils/site-config.js").read_text(encoding="utf-8")
+    articles_js = (ROOT / "miniprogram/utils/articles.js").read_text(encoding="utf-8")
     deployment_doc = (ROOT / "miniprogram/DEPLOYMENT.md").read_text(encoding="utf-8")
     manage_js = (ROOT / "miniprogram/pages/course-manage/index.js").read_text(encoding="utf-8")
     manage_wxml = (ROOT / "miniprogram/pages/course-manage/index.wxml").read_text(encoding="utf-8")
     booking_js = (ROOT / "miniprogram/pages/booking/index.js").read_text(encoding="utf-8")
     booking_wxml = (ROOT / "miniprogram/pages/booking/index.wxml").read_text(encoding="utf-8")
     profile_js = (ROOT / "miniprogram/pages/profile/index.js").read_text(encoding="utf-8")
+    signup_js = (ROOT / "miniprogram/pages/signup/index.js").read_text(encoding="utf-8")
     if "publicAccount" not in site_config or "campusName" not in site_config:
         passed = fail("site config is missing public account or campus fields") and passed
+    if "positioning" not in site_config:
+        passed = fail("site config is missing official positioning") and passed
+    if "autumn-2025" not in articles_js or "science-workshop-2025" not in articles_js:
+        passed = fail("article materials are missing imported WeChat course sources") and passed
     if "touristappid" not in deployment_doc or "webapi_getwxaasyncsecinfo" not in deployment_doc:
         passed = fail("deployment notes are missing appid/troubleshooting guidance") and passed
     if 'wx.getStorageSync("bookings")' not in manage_js:
@@ -102,10 +108,14 @@ def check_miniprogram_data_flows():
         passed = fail("course management is missing non-empty course rendering") and passed
     if "selectedGrade" not in booking_js or "gradeOptions" not in booking_wxml:
         passed = fail("booking flow is missing student grade capture") and passed
+    if "interestOptions" not in booking_js:
+        passed = fail("booking flow does not dedupe course interest options") and passed
     if "item.status" not in manage_wxml or "item.grade" not in manage_wxml:
         passed = fail("course management is missing booking status or grade display") and passed
     if "handleAction" not in profile_js:
         passed = fail("profile action grid is missing tap handlers") and passed
+    if "articleMaterials" not in signup_js:
+        passed = fail("signup page is missing official article materials") and passed
     return ok("miniprogram data flows") if passed else False
 
 
@@ -122,10 +132,13 @@ def check_miniprogram_course_detail():
             passed = fail(f"missing {path}") and passed
 
     courses_js = (ROOT / "miniprogram/utils/courses.js").read_text(encoding="utf-8")
+    courses_page_js = (ROOT / "miniprogram/pages/courses/index.js").read_text(encoding="utf-8")
     detail_js = (ROOT / "miniprogram/pages/course-detail/index.js").read_text(encoding="utf-8")
     detail_wxml = (ROOT / "miniprogram/pages/course-detail/index.wxml").read_text(encoding="utf-8")
     if "spring-autumn-steam" not in courses_js or "summer-maker-camp" not in courses_js:
         passed = fail("course data is missing seasonal course ids") and passed
+    if "winter-maker-camp" not in courses_js or "science-workshop" not in courses_js:
+        passed = fail("course data is missing imported winter camp or workshop ids") and passed
     if "pendingCourse" not in detail_js or "copyLink" not in detail_js:
         passed = fail("course detail page is missing booking/link actions") and passed
     if "course.outcomes" not in detail_wxml or "course.projects" not in detail_wxml:
@@ -134,6 +147,10 @@ def check_miniprogram_course_detail():
         passed = fail("course detail page is missing grouped course matrix interactions") and passed
     if "packageItems" not in courses_js or "packageItems" not in detail_wxml:
         passed = fail("course detail page is missing package/material rendering") and passed
+    if "course.source" not in detail_wxml:
+        passed = fail("course detail page is missing official article source rendering") and passed
+    if '"event"' not in courses_page_js:
+        passed = fail("course list page is missing event category") and passed
 
     return ok("miniprogram course detail flow") if passed else False
 
@@ -149,6 +166,7 @@ def main():
         check_file("miniprogram/project.config.json"),
         check_file("miniprogram/sitemap.json"),
         check_file("miniprogram/DEPLOYMENT.md"),
+        check_file("miniprogram/utils/articles.js"),
         check_file(".github/workflows/pages.yml"),
         check_html_assets(),
         check_miniprogram_pages(),

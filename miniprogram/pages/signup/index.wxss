@@ -94,6 +94,67 @@
   background: #4b1f68;
 }
 
+.article-section {
+  display: grid;
+  gap: 20rpx;
+  margin-top: 46rpx;
+}
+
+.article-title {
+  font-size: 38rpx;
+  font-weight: 950;
+}
+
+.article-card {
+  display: grid;
+  grid-template-columns: 150rpx 1fr 92rpx;
+  gap: 20rpx;
+  align-items: center;
+  min-height: 150rpx;
+  padding: 20rpx;
+}
+
+.article-cover {
+  width: 150rpx;
+  height: 110rpx;
+  border-radius: 18rpx;
+  background-color: #e8eef5;
+  background-position: center;
+  background-size: cover;
+}
+
+.article-name {
+  color: #23112f;
+  font-size: 29rpx;
+  line-height: 1.28;
+  font-weight: 950;
+}
+
+.article-desc {
+  margin-top: 8rpx;
+  color: #777777;
+  font-size: 24rpx;
+  line-height: 1.35;
+}
+
+.article-date {
+  margin-top: 8rpx;
+  color: #9a42df;
+  font-size: 23rpx;
+  font-weight: 850;
+}
+
+.article-action {
+  display: grid;
+  place-items: center;
+  min-height: 62rpx;
+  border-radius: 22rpx;
+  color: #ffffff;
+  background: #ff5a36;
+  font-size: 25rpx;
+  font-weight: 900;
+}
+
 .intro-card {
   margin-top: 46rpx;
   padding: 36rpx;

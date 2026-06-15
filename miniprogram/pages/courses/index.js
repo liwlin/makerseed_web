@@ -7,7 +7,8 @@ Page({
       { label: "季节课", value: "season" },
       { label: "编程", value: "code" },
       { label: "制造", value: "make" },
-      { label: "机器人", value: "robot" }
+      { label: "机器人", value: "robot" },
+      { label: "活动", value: "event" }
     ],
     activeCategory: "all",
     visibleCourses: allCourses

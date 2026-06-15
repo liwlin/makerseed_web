@@ -80,6 +80,16 @@
     <view class="detail-summary">{{course.summary}}</view>
   </view>
 
+  <view class="source-card card" wx:if="{{course.source}}">
+    <view class="source-cover" style="background-image: url({{course.source.cover}});"></view>
+    <view class="source-main">
+      <view class="source-label">公众号课程资料</view>
+      <view class="source-title">{{course.source.title}}</view>
+      <view class="source-desc">{{course.source.desc}}</view>
+      <view class="source-date">{{course.source.publishedAt}}</view>
+    </view>
+  </view>
+
   <view class="section-block card">
     <view class="block-title">适合收获</view>
     <view class="list-item" wx:for="{{course.outcomes}}" wx:key="*this">{{item}}</view>

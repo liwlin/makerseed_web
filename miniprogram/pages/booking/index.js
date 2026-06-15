@@ -7,14 +7,16 @@ const groupCourseNames = signupGroups.reduce((names, group) => {
   return names;
 }, []);
 
+const interestOptions = Array.from(new Set([
+  ...courses.map((course) => course.title),
+  ...groupCourseNames,
+  "综合项目制课程"
+]));
+
 Page({
   data: {
     siteConfig,
-    interests: [
-      ...courses.map((course) => course.title),
-      ...groupCourseNames,
-      "综合项目制课程"
-    ],
+    interests: interestOptions,
     gradeOptions: ["幼儿园大班", "小学一年级", "小学二年级", "小学三年级", "小学四年级", "小学五年级", "小学六年级", "初中一年级", "初中二年级", "初中三年级"],
     selectedInterest: "",
     selectedGrade: "",

@@ -21,10 +21,29 @@
     </view>
   </view>
 
+  <view class="article-section">
+    <view class="article-title">官方课程资料</view>
+    <view
+      class="article-card card"
+      wx:for="{{articleMaterials}}"
+      wx:key="id"
+      data-link="{{item.link}}"
+      bindtap="copyArticle"
+    >
+      <view class="article-cover" style="background-image: url({{item.cover}});"></view>
+      <view class="article-main">
+        <view class="article-name">{{item.title}}</view>
+        <view class="article-desc">{{item.desc}}</view>
+        <view class="article-date">{{item.publishedAt}}</view>
+      </view>
+      <view class="article-action">复制</view>
+    </view>
+  </view>
+
   <view class="intro-card card">
     <view class="intro-title">校区简介</view>
     <view class="intro-text">
-      {{siteConfig.brandName}}位于{{siteConfig.region}}，专注青少年创客教育与 STEAM 教育。孩子将在真实项目中学习设计、建造、编程、调试与复盘。
+      {{siteConfig.brandName}}位于{{siteConfig.region}}，{{siteConfig.positioning}}孩子将在真实项目中学习设计、建造、编程、调试与复盘。
     </view>
   </view>
 

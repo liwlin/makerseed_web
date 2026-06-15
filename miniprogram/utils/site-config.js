@@ -2,6 +2,7 @@ const siteConfig = {
   brandName: "种子创客工坊",
   englishName: "Makerseed",
   slogan: "造物立志，认识世界，改变世界",
+  positioning: "江门市科普教育基地，本地首家以人工智能、创客、STEAM 教育为主题的青少年科技创新创客空间。",
   publicAccount: "种子创客工坊",
   videoAccount: "MakerSeed种子创客",
   city: "江门市",

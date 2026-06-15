@@ -6,7 +6,7 @@ const campusList = [
     city: siteConfig.city,
     name: siteConfig.campusName,
     address: siteConfig.campusAddress,
-    summary: "专注创客教育、STEAM 教育、机器人与数字制造的项目制学习空间。"
+    summary: siteConfig.positioning
   }
 ];
 
@@ -126,22 +126,22 @@ const signupGroups = [
     ],
     courses: [
       {
-        id: "summer-2026",
-        title: "2026 夏令营",
+        id: "summer-maker-camp",
+        title: "暑假造物营",
         short: "Summer Camp",
-        subtitle: "机器人、FPV、RC 与数字制造主题营",
+        subtitle: "硬核课程持续更新输出",
         fit: "假期集中项目制学习",
         accent: "#ff5a36",
         outcomes: ["集中完成一个主题作品", "体验高反馈调试过程", "完成营期展示与作品带回"]
       },
       {
-        id: "independent-camp",
-        title: "2026 独立营",
-        short: "Boarding Camp",
-        subtitle: "独立完成设计、建造、调试与展示",
-        fit: "适合有项目基础的学生",
+        id: "winter-maker-camp",
+        title: "寒假造物营",
+        short: "Winter Camp",
+        subtitle: "精彩依旧，造物不停",
+        fit: "寒假集中项目制学习",
         accent: "#4b1f68",
-        outcomes: ["独立拆解项目目标", "持续调试并记录问题", "完成公开展示和复盘"]
+        outcomes: ["完成一个假期主题作品", "持续调试并记录问题", "完成公开展示和复盘"]
       }
     ],
     packageItems: ["营期材料", "项目任务书", "作品展示"],
