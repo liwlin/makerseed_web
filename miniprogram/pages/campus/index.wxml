@@ -1,0 +1,49 @@
+<view class="campus-page">
+  <view class="hero-card">
+    <view class="hero-top">
+      <view class="location-pill">⌖ {{siteConfig.city}}</view>
+      <image class="hero-logo" src="/images/logo.png" mode="aspectFit"></image>
+    </view>
+    <view class="hero-title">{{siteConfig.englishName}}</view>
+    <view class="hero-subtitle">{{siteConfig.slogan}}</view>
+    <view class="hero-tools">
+      <text>机器人</text>
+      <text>3D打印</text>
+      <text>FPV</text>
+      <text>格斗机器人</text>
+    </view>
+  </view>
+
+  <view class="city-tabs card">
+    <view
+      class="city-tab {{activeCity === item ? 'active' : ''}}"
+      wx:for="{{cities}}"
+      wx:key="*this"
+      data-city="{{item}}"
+      bindtap="chooseCity"
+    >{{item}}</view>
+  </view>
+
+  <view class="campus-heading">
+    <text>Choose</text>
+    <text class="orange">Your</text><text>Campus</text>
+  </view>
+
+  <view class="campus-list">
+    <view class="campus-card card" wx:for="{{campusList}}" wx:key="id">
+      <view class="campus-photo">
+        <image src="/images/logo-wide-white.png" mode="aspectFit"></image>
+        <view>数字制造 · 编程 · 机器人</view>
+      </view>
+      <view class="campus-body">
+        <view class="campus-name">{{item.name}}</view>
+        <view class="campus-address">{{item.address}}</view>
+        <view class="campus-summary">{{item.summary}}</view>
+        <view class="campus-actions">
+          <button class="ghost-button small" data-address="{{item.address}}" bindtap="copyAddress">复制地址</button>
+          <button class="primary-button small" bindtap="goSignup">立即报名</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

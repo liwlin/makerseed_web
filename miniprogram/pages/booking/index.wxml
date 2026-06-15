@@ -1,0 +1,40 @@
+<view class="page booking-page">
+  <view class="section-title">预约体验课</view>
+  <view class="tip card">
+    <image src="/images/logo-wide-white.png" mode="aspectFit"></image>
+    <view>预约信息会先保存在本机，方便开发测试。正式上线后可接入云开发数据库、短信通知或自有报名后台。</view>
+    <view class="campus-line">{{siteConfig.campusName}}</view>
+  </view>
+
+  <form class="form card" bindsubmit="submitBooking">
+    <view class="field">
+      <view class="label">学生姓名</view>
+      <input name="student" placeholder="请输入学生姓名" value="{{form.student}}" />
+    </view>
+    <view class="field">
+      <view class="label">年龄</view>
+      <input name="age" type="number" placeholder="例如：9" value="{{form.age}}" />
+    </view>
+    <view class="field">
+      <view class="label">孩子年级</view>
+      <picker mode="selector" range="{{gradeOptions}}" bindchange="changeGrade">
+        <view class="picker-value">{{selectedGrade || '请选择当前年级'}}</view>
+      </picker>
+    </view>
+    <view class="field">
+      <view class="label">联系电话</view>
+      <input name="phone" type="number" placeholder="请输入手机号" value="{{form.phone}}" />
+    </view>
+    <view class="field">
+      <view class="label">感兴趣课程</view>
+      <picker mode="selector" range="{{interests}}" bindchange="changeInterest">
+        <view class="picker-value">{{selectedInterest || '请选择课程方向'}}</view>
+      </picker>
+    </view>
+    <view class="field">
+      <view class="label">备注</view>
+      <textarea name="note" placeholder="孩子基础、兴趣或希望体验的内容" maxlength="200"></textarea>
+    </view>
+    <button class="primary-button submit" formType="submit">提交预约</button>
+  </form>
+</view>

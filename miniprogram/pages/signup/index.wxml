@@ -1,0 +1,51 @@
+<view class="page signup-page">
+  <view class="video-card card">
+    <image src="/images/logo.png" mode="aspectFit"></image>
+    <view class="video-title">{{siteConfig.englishName}} 课程体系</view>
+    <view class="video-subtitle">从兴趣启蒙到项目挑战，给孩子一条清晰的造物成长路径。</view>
+  </view>
+
+  <view class="path-list">
+    <view
+      class="path-card {{item.color}}"
+      wx:for="{{cards}}"
+      wx:key="title"
+      data-group="{{item.group}}"
+      bindtap="viewGroup"
+    >
+      <view>
+        <view class="path-title">{{item.title}}</view>
+        <view class="path-desc">{{item.desc}}</view>
+      </view>
+      <view class="path-button">查看</view>
+    </view>
+  </view>
+
+  <view class="article-section">
+    <view class="article-title">官方课程资料</view>
+    <view
+      class="article-card card"
+      wx:for="{{articleMaterials}}"
+      wx:key="id"
+      data-link="{{item.link}}"
+      bindtap="copyArticle"
+    >
+      <view class="article-cover" style="background-image: url({{item.cover}});"></view>
+      <view class="article-main">
+        <view class="article-name">{{item.title}}</view>
+        <view class="article-desc">{{item.desc}}</view>
+        <view class="article-date">{{item.publishedAt}}</view>
+      </view>
+      <view class="article-action">复制</view>
+    </view>
+  </view>
+
+  <view class="intro-card card">
+    <view class="intro-title">校区简介</view>
+    <view class="intro-text">
+      {{siteConfig.brandName}}位于{{siteConfig.region}}，{{siteConfig.positioning}}孩子将在真实项目中学习设计、建造、编程、调试与复盘。
+    </view>
+  </view>
+
+  <button class="primary-button fixed-main" bindtap="goBooking">立即报名</button>
+</view>
