@@ -2,7 +2,8 @@
   <view class="section-title">预约体验课</view>
   <view class="tip card">
     <image src="/images/logo-wide-white.png" mode="aspectFit"></image>
-    <view>提交后会保存在本机，方便开发测试。正式上线时可改为云开发数据库或自有接口。</view>
+    <view>预约信息会先保存在本机，方便开发测试。正式上线后可接入云开发数据库、短信通知或自有报名后台。</view>
+    <view class="campus-line">{{siteConfig.campusName}}</view>
   </view>
 
   <form class="form card" bindsubmit="submitBooking">
@@ -13,6 +14,12 @@
     <view class="field">
       <view class="label">年龄</view>
       <input name="age" type="number" placeholder="例如：9" value="{{form.age}}" />
+    </view>
+    <view class="field">
+      <view class="label">孩子年级</view>
+      <picker mode="selector" range="{{gradeOptions}}" bindchange="changeGrade">
+        <view class="picker-value">{{selectedGrade || '请选择当前年级'}}</view>
+      </picker>
     </view>
     <view class="field">
       <view class="label">联系电话</view>

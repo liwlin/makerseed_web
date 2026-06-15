@@ -89,6 +89,8 @@ def check_miniprogram_data_flows():
     deployment_doc = (ROOT / "miniprogram/DEPLOYMENT.md").read_text(encoding="utf-8")
     manage_js = (ROOT / "miniprogram/pages/course-manage/index.js").read_text(encoding="utf-8")
     manage_wxml = (ROOT / "miniprogram/pages/course-manage/index.wxml").read_text(encoding="utf-8")
+    booking_js = (ROOT / "miniprogram/pages/booking/index.js").read_text(encoding="utf-8")
+    booking_wxml = (ROOT / "miniprogram/pages/booking/index.wxml").read_text(encoding="utf-8")
     profile_js = (ROOT / "miniprogram/pages/profile/index.js").read_text(encoding="utf-8")
     if "publicAccount" not in site_config or "campusName" not in site_config:
         passed = fail("site config is missing public account or campus fields") and passed
@@ -98,6 +100,10 @@ def check_miniprogram_data_flows():
         passed = fail("course management does not read booking data") and passed
     if "visibleCourses.length" not in manage_wxml or "managed-card" not in manage_wxml:
         passed = fail("course management is missing non-empty course rendering") and passed
+    if "selectedGrade" not in booking_js or "gradeOptions" not in booking_wxml:
+        passed = fail("booking flow is missing student grade capture") and passed
+    if "item.status" not in manage_wxml or "item.grade" not in manage_wxml:
+        passed = fail("course management is missing booking status or grade display") and passed
     if "handleAction" not in profile_js:
         passed = fail("profile action grid is missing tap handlers") and passed
     return ok("miniprogram data flows") if passed else False
@@ -124,6 +130,10 @@ def check_miniprogram_course_detail():
         passed = fail("course detail page is missing booking/link actions") and passed
     if "course.outcomes" not in detail_wxml or "course.projects" not in detail_wxml:
         passed = fail("course detail page is missing outcomes/projects rendering") and passed
+    if "group.matrix" not in detail_wxml or "activeCourse" not in detail_js:
+        passed = fail("course detail page is missing grouped course matrix interactions") and passed
+    if "packageItems" not in courses_js or "packageItems" not in detail_wxml:
+        passed = fail("course detail page is missing package/material rendering") and passed
 
     return ok("miniprogram course detail flow") if passed else False
 

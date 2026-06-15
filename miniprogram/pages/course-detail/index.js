@@ -4,7 +4,8 @@ const { signupGroups } = require("../../utils/app-data");
 Page({
   data: {
     course: null,
-    group: null
+    group: null,
+    activeCourse: null
   },
   onLoad(options) {
     if (options.group) {
@@ -14,7 +15,10 @@ Page({
         setTimeout(() => wx.navigateBack(), 800);
         return;
       }
-      this.setData({ group });
+      this.setData({
+        group,
+        activeCourse: group.courses[0]
+      });
       wx.setNavigationBarTitle({ title: group.label });
       return;
     }
@@ -28,8 +32,20 @@ Page({
     this.setData({ course });
     wx.setNavigationBarTitle({ title: course.title });
   },
+  selectGroupCourse(event) {
+    const { id } = event.currentTarget.dataset;
+    const activeCourse = this.data.group.courses.find((item) => item.id === id);
+    if (activeCourse) {
+      this.setData({ activeCourse });
+    }
+  },
   bookCourse(event) {
-    const title = event?.currentTarget?.dataset?.title || this.data.course?.title || this.data.group?.label || "综合项目制课程";
+    const dataset = event && event.currentTarget ? event.currentTarget.dataset : {};
+    const title = dataset.title
+      || (this.data.course && this.data.course.title)
+      || (this.data.activeCourse && this.data.activeCourse.title)
+      || (this.data.group && this.data.group.label)
+      || "综合项目制课程";
     wx.setStorageSync("pendingCourse", title);
     wx.navigateTo({ url: "/pages/booking/index" });
   },

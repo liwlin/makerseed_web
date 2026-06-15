@@ -49,8 +49,13 @@
   </view>
 
   <view class="booking-preview card" wx:if="{{bookings.length}}">
-    <view class="preview-title">最近预约</view>
-    <view class="preview-line">{{bookings[0].student}} · {{bookings[0].interest}}</view>
+    <view class="preview-head">
+      <view class="preview-title">最近预约</view>
+      <view class="preview-status">{{bookings[0].status || '待联系'}}</view>
+    </view>
+    <view class="preview-line" wx:if="{{bookings[0].grade}}">{{bookings[0].student}} · {{bookings[0].grade}}</view>
+    <view class="preview-line" wx:else>{{bookings[0].student}} · {{bookings[0].age}} 岁</view>
+    <view class="preview-line">{{bookings[0].interest}}</view>
     <view class="preview-line">{{bookings[0].createdAt}}</view>
   </view>
 

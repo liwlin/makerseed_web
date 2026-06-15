@@ -8,3 +8,5 @@ build/
 .env
 .env.*
 miniprogram/project.private.config.json
+miniprogram/.git/
+miniprogram/.gitignore
