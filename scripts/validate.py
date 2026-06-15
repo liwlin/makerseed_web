@@ -100,8 +100,8 @@ def check_miniprogram_data_flows():
         passed = fail("site config is missing official positioning") and passed
     if "autumn-2025" not in articles_js or "science-workshop-2025" not in articles_js:
         passed = fail("article materials are missing imported WeChat course sources") and passed
-    if "touristappid" not in deployment_doc or "webapi_getwxaasyncsecinfo" not in deployment_doc:
-        passed = fail("deployment notes are missing appid/troubleshooting guidance") and passed
+    if "wx967632af57c4d7ea" not in deployment_doc or "webapi_getwxaasyncsecinfo" not in deployment_doc or "cli upload" not in deployment_doc:
+        passed = fail("deployment notes are missing official appid/troubleshooting/upload guidance") and passed
     if 'wx.getStorageSync("bookings")' not in manage_js:
         passed = fail("course management does not read booking data") and passed
     if "visibleCourses.length" not in manage_wxml or "managed-card" not in manage_wxml:

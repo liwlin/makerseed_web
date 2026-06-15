@@ -60,7 +60,7 @@ http://localhost:8080
 1. 打开微信开发者工具。
 2. 选择“导入项目”。
 3. 项目目录选择本仓库里的 `miniprogram`。
-4. AppID 可先使用测试号，正式发布前替换为工坊的小程序 AppID。
+4. AppID 已配置为种子创客工坊正式小程序 `wx967632af57c4d7ea`。
 5. 在开发者工具中点击“编译”，测试首页、课程、预约、我的四个 Tab。
 
 命令行预览可用：
@@ -73,7 +73,7 @@ http://localhost:8080
   --port 9420
 ```
 
-当前 `project.config.json` 使用占位 `touristappid`，微信开发者工具 CLI 会返回 `AppID 不合法`。替换为正式小程序 AppID 后，再运行预览或上传。
+当前 `project.config.json` 已使用正式小程序 AppID。开发者工具登录后，可通过 CLI 生成预览二维码或上传版本。
 
 ## 校验
 
@@ -92,7 +92,7 @@ python3 scripts/validate.py
 3. Source 选择 `GitHub Actions`。
 4. 等待 `Deploy static website to Pages` 工作流完成。
 
-小程序需要在微信公众平台完成 AppID、类目、服务器域名和版本提审配置；当前版本无需后端接口即可在开发者工具中验证主要流程。
+小程序已配置正式 AppID，并可通过微信开发者工具 CLI 上传。发布前仍需在微信公众平台完成类目、版本提审与发布配置；当前版本无需后端接口即可在开发者工具中验证主要流程。
 
 ## 预约接口配置
 

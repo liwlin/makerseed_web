@@ -2,19 +2,19 @@
 
 ## 当前开发状态
 
-当前项目可以在微信开发者工具中导入、编译和本地调试页面逻辑。仓库中的 `project.config.json` 仍使用占位：
+当前项目可以在微信开发者工具中导入、编译、本地调试、生成预览二维码并上传体验版本。仓库中的 `project.config.json` 已使用正式 AppID：
 
 ```json
-"appid": "touristappid"
+"appid": "wx967632af57c4d7ea"
 ```
 
-这适合前期页面开发，但不适合生成正式预览二维码、上传体验版或提交审核。
+已验证微信开发者工具 CLI 可生成预览二维码，并已上传 `0.1.0` 版本。
 
 ## 必须替换的正式信息
 
-上线前请替换：
+上线前请确认：
 
-- `project.config.json` 中的 `appid`
+- 微信公众平台中的类目、主体信息、体验成员与版本提审配置
 - `utils/site-config.js` 中的校区地址、电话、公众号、版本展示
 - 如需远程保存报名数据，需要接入云开发或自有后端接口
 
@@ -29,18 +29,17 @@
 
 这些来自微信开发者工具或基础库提示。
 
-以下日志与当前 `touristappid` / 游客模式有关：
+以下日志常见于游客模式、未登录或基础库模拟环境：
 
 ```text
 webapi_getwxaasyncsecinfo:fail
 Error: timeout
-AppID 不合法, invalid appid
 ```
 
 处理方式：
 
 1. 登录微信开发者工具。
-2. 将 `project.config.json` 的 `appid` 改为种子创客工坊正式小程序 AppID。
+2. 确认 `project.config.json` 的 `appid` 为 `wx967632af57c4d7ea`。
 3. 重新编译。
 4. 再运行预览或上传。
 
@@ -60,4 +59,14 @@ AppID 不合法, invalid appid
   --port 9420
 ```
 
-若仍使用 `touristappid`，预览可能失败，这是平台身份问题，不是页面代码问题。
+已验证当前正式 AppID 可执行预览与上传。如果预览或上传失败，优先检查开发者工具是否登录、项目 AppID 是否匹配、账号是否有该小程序的开发权限。
+
+## 已验证命令
+
+```bash
+/Applications/wechatwebdevtools.app/Contents/MacOS/cli upload \
+  --project /Users/lwl/Desktop/makerseed_web/miniprogram \
+  --version 0.1.0 \
+  --desc "种子创客工坊小程序首版：校区、报名、课程资料、会员与我的" \
+  --port 9420
+```
