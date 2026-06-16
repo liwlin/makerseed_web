@@ -1,10 +1,13 @@
 const { siteConfig } = require("../../utils/site-config");
+const { courseFamilies, projectPosters } = require("../../utils/app-data");
 
 Page({
   data: {
     siteConfig,
     active: "current",
     bookings: [],
+    courseFamilies,
+    projectPosters,
     visibleCourses: [],
     tabs: [
       { label: "当前课程", value: "current" },

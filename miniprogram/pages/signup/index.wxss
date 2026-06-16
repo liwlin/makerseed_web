@@ -3,30 +3,53 @@
 }
 
 .video-card {
-  display: grid;
-  place-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   min-height: 420rpx;
-  padding: 48rpx 36rpx;
-  background: #f7f7f7;
+  padding: 40rpx;
+  overflow: hidden;
+  color: #ffffff;
 }
 
-.video-card image {
-  width: 180rpx;
-  height: 180rpx;
-  margin-bottom: 18rpx;
+.video-bg,
+.video-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-mask {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.58));
+}
+
+.video-logo {
+  position: relative;
+  width: 330rpx;
+  height: 96rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+  background: rgba(255, 255, 255, 0.88);
 }
 
 .video-title {
+  position: relative;
+  margin-top: 48rpx;
   font-size: 44rpx;
   font-weight: 950;
 }
 
 .video-subtitle {
+  position: relative;
   margin-top: 12rpx;
-  color: #888888;
+  color: rgba(255, 255, 255, 0.86);
   font-size: 27rpx;
   line-height: 1.5;
-  text-align: center;
 }
 
 .path-list {
@@ -84,6 +107,93 @@
   background: rgba(255, 255, 255, 0.18);
   font-size: 38rpx;
   font-weight: 950;
+}
+
+.family-section,
+.project-section {
+  margin-top: 46rpx;
+}
+
+.family-scroll {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.family-card {
+  position: relative;
+  display: inline-block;
+  width: 252rpx;
+  min-height: 330rpx;
+  margin-right: 24rpx;
+  overflow: hidden;
+  border: 4rpx solid #0079c8;
+  border-radius: 28rpx;
+  background: #ffffff;
+  box-shadow: 0 14rpx 30rpx rgba(0, 0, 0, 0.10);
+  vertical-align: top;
+}
+
+.family-card image {
+  width: 100%;
+  height: 142rpx;
+  display: block;
+}
+
+.family-dot {
+  width: 34rpx;
+  height: 34rpx;
+  margin: -17rpx 0 0 22rpx;
+  border: 6rpx solid #ffffff;
+  border-radius: 50%;
+}
+
+.family-title {
+  padding: 18rpx 20rpx 0;
+  color: #16121f;
+  font-size: 30rpx;
+  font-weight: 950;
+}
+
+.family-subtitle,
+.family-age {
+  padding: 8rpx 20rpx 0;
+  color: #777777;
+  font-size: 23rpx;
+  line-height: 1.3;
+  white-space: normal;
+}
+
+.family-age {
+  color: #6144d8;
+  font-weight: 850;
+}
+
+.poster-card {
+  display: grid;
+  grid-template-columns: 190rpx 1fr;
+  gap: 24rpx;
+  align-items: center;
+  min-height: 156rpx;
+  margin-top: 22rpx;
+  padding: 22rpx;
+}
+
+.poster-card image {
+  width: 190rpx;
+  height: 112rpx;
+  border-radius: 12rpx;
+}
+
+.poster-title {
+  color: #4b1f68;
+  font-size: 31rpx;
+  font-weight: 950;
+}
+
+.poster-subtitle {
+  margin-top: 10rpx;
+  color: #777777;
+  font-size: 25rpx;
 }
 
 .orange .path-button {

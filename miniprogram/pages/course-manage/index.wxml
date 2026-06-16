@@ -42,4 +42,27 @@
     <view class="empty-text">暂无课程数据哦~</view>
     <button class="primary-button signup-button" bindtap="goSignup">去报名课程</button>
   </view>
+
+  <view class="system-card card">
+    <view class="system-title">课程体系</view>
+    <view class="system-desc">从创客启蒙到 AI 创意应用，用项目制路径承接常规课、营期和竞赛集训。</view>
+    <view class="system-grid">
+      <view class="system-item" wx:for="{{courseFamilies}}" wx:key="id">
+        <view class="system-dot" style="background: {{item.color}};"></view>
+        <view>{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="project-list">
+    <view class="section-title">可预约项目</view>
+    <view class="project-row card" wx:for="{{projectPosters}}" wx:key="title">
+      <image src="{{item.image}}" mode="aspectFill"></image>
+      <view>
+        <view class="project-title">{{item.title}}</view>
+        <view class="project-subtitle">{{item.subtitle}}</view>
+      </view>
+      <button class="primary-button mini" data-title="{{item.title}}" bindtap="goBooking">预约</button>
+    </view>
+  </view>
 </view>

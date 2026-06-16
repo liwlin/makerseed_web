@@ -1,9 +1,10 @@
-const { profileActions } = require("../../utils/app-data");
+const { media, profileActions } = require("../../utils/app-data");
 const { siteConfig } = require("../../utils/site-config");
 
 Page({
   data: {
     siteConfig,
+    media,
     bookings: [],
     profileActions
   },

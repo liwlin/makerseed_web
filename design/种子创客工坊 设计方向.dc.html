@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0}
+  ::selection{background:#0079c8;color:#fff}
+</style>
+</helmet>
+
+<div style="background:#eceef1;min-height:100vh;padding:0 0 90px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#0f1722;-webkit-font-smoothing:antialiased">
+
+  <!-- ===== TOP BAR ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:34px 32px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:14px">
+      <img src="assets/brand/logo.png" alt="种子创客工坊" style="width:50px;height:50px;object-fit:contain;display:block">
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;letter-spacing:.04em;color:#0f1722;white-space:nowrap">MAKERSEED · 种子创客工坊</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8a94a3">Design directions · 设计方向探索</div>
+      </div>
+    </div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8a94a3;text-transform:uppercase">REV 01 · 2026.06</div>
+  </div>
+
+  <!-- ===== TITLE + DESIGNER NOTE ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:40px 32px 0">
+    <h1 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:clamp(34px,5vw,58px);line-height:1.04;font-weight:700;letter-spacing:-.01em;max-width:18ch">网页 & 小程序<br>整体方向探索</h1>
+    <div style="margin-top:28px;display:grid;grid-template-columns:1.15fr 1fr;gap:24px;align-items:start">
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:16px;padding:26px 28px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#0079c8;margin-bottom:12px">设计师说明 · Brief</div>
+        <p style="margin:0 0 12px;font-size:15px;line-height:1.7;color:#3a4655">现有官网是干净的蓝白企业风。基于你的反馈——<b style="color:#0f1722">受众以家长决策为主、青少年兼顾、少用照片多用品牌图形</b>——我准备了三条视觉方向，每条给出配色 + 字体气质、官网 Hero、课程卡片，并在底部给出三种小程序首页结构。</p>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:#3a4655">请挑出最想深入的一条（可以混搭，例如 A 的稳重 + B 的活力色）。下一轮我把官网做成<b style="color:#0f1722">可交互</b>，把小程序补全各 Tab。</p>
+      </div>
+      <div style="background:#0f1722;border-radius:16px;padding:26px 28px;color:#fff">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5fc0ff;margin-bottom:14px">品牌母题 · The mark</div>
+        <div style="display:flex;align-items:center;gap:18px">
+          <img src="assets/brand/全白logo.png" alt="" style="width:64px;height:64px;object-fit:contain;opacity:.95">
+          <div style="font-size:13.5px;line-height:1.65;color:#c3ccd6">齿轮 + 加号 + 减号 的三联结构 = <b style="color:#fff">造物 · 正负电路 · 工程</b>。三条方向都会复用这个母题作为图形语言。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION: DIRECTIONS OVERVIEW ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:64px 32px 0">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:22px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#0079c8;letter-spacing:.1em">01</span>
+      <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600">三条视觉方向</h2>
+      <span style="font-size:13px;color:#8a94a3">配色 · 字体 · 气质</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+
+      <!-- Direction A card -->
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:16px;overflow:hidden">
+        <div style="height:96px;background:linear-gradient(135deg,#075f9b,#0079c8);position:relative">
+          <span style="position:absolute;left:18px;top:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:rgba(255,255,255,.7)">DIRECTION</span>
+          <span style="position:absolute;left:16px;bottom:12px;font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;color:#fff;line-height:1">A</span>
+        </div>
+        <div style="padding:20px 22px 24px">
+          <div style="font-weight:700;font-size:17px">专业信赖</div>
+          <div style="font-size:13px;color:#7a8593;margin:4px 0 16px">沉稳蓝白 · 大留白 · 家长安心</div>
+          <div style="display:flex;gap:6px;margin-bottom:16px">
+            <span style="flex:1;height:34px;border-radius:7px;background:#0079c8"></span>
+            <span style="flex:1;height:34px;border-radius:7px;background:#075f9b"></span>
+            <span style="flex:1;height:34px;border-radius:7px;background:#25a66a"></span>
+            <span style="flex:1;height:34px;border-radius:7px;background:#e8f5ff;border:1px solid #d9e4ee"></span>
+          </div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;line-height:1">Aa 造物立志</div>
+          <div style="font-size:12px;color:#9aa4b1;margin-top:6px">Space Grotesk + 系统黑体</div>
+        </div>
+      </div>
+
+      <!-- Direction B card -->
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:16px;overflow:hidden">
+        <div style="height:96px;background:#fff7f2;position:relative;overflow:hidden">
+          <span style="position:absolute;right:-14px;top:-14px;width:80px;height:80px;border-radius:50%;background:#ff5a36"></span>
+          <span style="position:absolute;right:30px;bottom:-18px;width:54px;height:54px;border-radius:50%;background:#6144d8"></span>
+          <span style="position:absolute;left:18px;top:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:#b58a78">DIRECTION</span>
+          <span style="position:absolute;left:16px;bottom:12px;font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;color:#16121f;line-height:1">B</span>
+        </div>
+        <div style="padding:20px 22px 24px">
+          <div style="font-weight:700;font-size:17px">活力造物</div>
+          <div style="font-size:13px;color:#7a8593;margin:4px 0 16px">鲜明撞色 · 圆润 · 青少年向</div>
+          <div style="display:flex;gap:6px;margin-bottom:16px">
+            <span style="flex:1;height:34px;border-radius:7px;background:#ff5a36"></span>
+            <span style="flex:1;height:34px;border-radius:7px;background:#0079c8"></span>
+            <span style="flex:1;height:34px;border-radius:7px;background:#6144d8"></span>
+            <span style="flex:1;height:34px;border-radius:7px;background:#ffb020"></span>
+          </div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;line-height:1">Aa 造物立志</div>
+          <div style="font-size:12px;color:#9aa4b1;margin-top:6px">Space Grotesk 粗体 + 圆体中文</div>
+        </div>
+      </div>
+
+      <!-- Direction C card -->
+      <div style="background:#0b1620;border:1px solid #1c2c3a;border-radius:16px;overflow:hidden">
+        <div style="height:96px;background:#0e1c28;position:relative;background-image:linear-gradient(#16293a 1px,transparent 1px),linear-gradient(90deg,#16293a 1px,transparent 1px);background-size:22px 22px">
+          <span style="position:absolute;left:18px;top:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:#4f6a82">DIRECTION</span>
+          <span style="position:absolute;left:16px;bottom:12px;font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;color:#2fb8ff;line-height:1">C</span>
+        </div>
+        <div style="padding:20px 22px 24px">
+          <div style="font-weight:700;font-size:17px;color:#fff">工程硬核</div>
+          <div style="font-size:13px;color:#7e8c9a;margin:4px 0 16px">深色蓝图 · 网格 · 极客技术感</div>
+          <div style="display:flex;gap:6px;margin-bottom:16px">
+            <span style="flex:1;height:34px;border-radius:7px;background:#2fb8ff"></span>
+            <span style="flex:1;height:34px;border-radius:7px;background:#0079c8"></span>
+            <span style="flex:1;height:34px;border-radius:7px;background:#11212f"></span>
+            <span style="flex:1;height:34px;border-radius:7px;background:#16293a;border:1px solid #24394c"></span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:500;line-height:1;color:#fff">Aa 造物立志</div>
+          <div style="font-size:12px;color:#5f6e7c;margin-top:6px">IBM Plex Mono + 系统黑体</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== SECTION: HERO VARIATIONS ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:72px 32px 0">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#0079c8;letter-spacing:.1em">02</span>
+      <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600">官网首页 Hero</h2>
+      <span style="font-size:13px;color:#8a94a3">三种布局 / 风格</span>
+    </div>
+    <p style="margin:0 0 26px;font-size:13.5px;color:#8a94a3;max-width:60ch">每个 Hero 用对应方向的配色与字体，桌面端预览。下面的 A/B/C 与上方方向一一对应。</p>
+  </div>
+
+  <!-- HERO A -->
+  <div style="max-width:1240px;margin:0 auto;padding:0 32px 28px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="width:26px;height:26px;border-radius:7px;background:#0079c8;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;display:grid;place-items:center;font-size:14px">A</span><span style="font-weight:600">专业信赖 — 左文右标，稳重分栏</span></div>
+    <div style="border:1px solid #e2e5ea;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(9,35,63,.10)">
+      <div style="height:52px;background:#f8fbfd;border-bottom:1px solid #eaf0f5;display:flex;align-items:center;padding:0 26px;gap:14px">
+        <span style="width:11px;height:11px;border-radius:50%;background:#ddd"></span><span style="width:11px;height:11px;border-radius:50%;background:#ddd"></span><span style="width:11px;height:11px;border-radius:50%;background:#ddd"></span>
+        <div style="margin-left:8px;display:flex;align-items:center;gap:9px"><img src="assets/brand/logo.png" style="width:26px;height:26px;object-fit:contain"><span style="font-family:'Space Grotesk';font-weight:700;font-size:13px;color:#075f9b">种子创客工坊</span></div>
+        <div style="margin-left:auto;display:flex;gap:22px;font-size:13px;color:#3a4655"><span>课程</span><span>方法</span><span>空间</span><span>预约</span><span style="color:#0079c8;font-weight:700">联系</span></div>
+      </div>
+      <div style="background:#f8fbfd;display:grid;grid-template-columns:1.06fr .94fr;gap:30px;padding:54px 50px;align-items:center">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.04em;color:#0079c8;text-transform:uppercase;margin-bottom:16px">江门首家创客 / STEAM 教育空间</div>
+          <h3 style="margin:0 0 18px;font-family:'Space Grotesk',sans-serif;font-size:46px;line-height:1.08;font-weight:700;letter-spacing:-.01em;color:#0f1722">让青少年在造物中立志，在真实项目里长出创造力。</h3>
+          <p style="margin:0 0 26px;font-size:16px;line-height:1.7;color:#5d6b7a;max-width:42ch">数字制造、开源软硬件、机器人、编程、物联网、FPV 与格斗机器人——带孩子经历设计、建造、编程、调试、反思与改进。</p>
+          <div style="display:flex;gap:12px;margin-bottom:34px">
+            <span style="background:#0079c8;color:#fff;font-weight:700;font-size:15px;padding:14px 24px;border-radius:9px;box-shadow:0 12px 24px rgba(0,121,200,.22)">预约体验</span>
+            <span style="background:#fff;color:#075f9b;font-weight:700;font-size:15px;padding:14px 24px;border-radius:9px;border:1px solid #d9e4ee;white-space:nowrap">查看课程</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #e2e5ea;border-radius:12px;overflow:hidden;background:#e2e5ea;gap:1px">
+            <div style="background:#fff;padding:16px 18px"><div style="font-family:'Space Grotesk';font-weight:700;font-size:24px;color:#075f9b">6+</div><div style="font-size:12.5px;color:#7a8593;margin-top:2px">项目方向</div></div>
+            <div style="background:#fff;padding:16px 18px"><div style="font-family:'Space Grotesk';font-weight:700;font-size:24px;color:#075f9b">STEAM</div><div style="font-size:12.5px;color:#7a8593;margin-top:2px">学科融合</div></div>
+            <div style="background:#fff;padding:16px 18px"><div style="font-family:'Space Grotesk';font-weight:700;font-size:18px;color:#075f9b">设计·建造·编程</div><div style="font-size:12.5px;color:#7a8593;margin-top:2px">项目制方法</div></div>
+          </div>
+        </div>
+        <div style="position:relative;display:grid;place-items:center;min-height:340px">
+          <div style="width:300px;padding:34px;background:#fff;border:1px solid #d9e4ee;border-radius:14px;box-shadow:0 24px 60px rgba(9,35,63,.12)"><img src="assets/brand/logo.png" style="width:100%"></div>
+          <div style="position:absolute;bottom:6px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:340px">
+            <span style="background:rgba(255,255,255,.9);border:1px solid #d9e4ee;border-radius:8px;padding:6px 11px;font-size:12px;font-weight:600;color:#243548">3D 打印</span>
+            <span style="background:rgba(255,255,255,.9);border:1px solid #d9e4ee;border-radius:8px;padding:6px 11px;font-size:12px;font-weight:600;color:#243548">激光切割</span>
+            <span style="background:rgba(255,255,255,.9);border:1px solid #d9e4ee;border-radius:8px;padding:6px 11px;font-size:12px;font-weight:600;color:#243548">机器人</span>
+            <span style="background:rgba(255,255,255,.9);border:1px solid #d9e4ee;border-radius:8px;padding:6px 11px;font-size:12px;font-weight:600;color:#243548">FPV</span>
+            <span style="background:rgba(255,255,255,.9);border:1px solid #d9e4ee;border-radius:8px;padding:6px 11px;font-size:12px;font-weight:600;color:#243548">CNC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO B -->
+  <div style="max-width:1240px;margin:0 auto;padding:18px 32px 28px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="width:26px;height:26px;border-radius:7px;background:#ff5a36;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;display:grid;place-items:center;font-size:14px">B</span><span style="font-weight:600">活力造物 — 超大标题 + 撞色图形母题</span></div>
+    <div style="border:1px solid #e2e5ea;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(9,35,63,.10)">
+      <div style="height:52px;background:#fff;border-bottom:1px solid #f0eaf4;display:flex;align-items:center;padding:0 26px;gap:14px">
+        <div style="display:flex;align-items:center;gap:9px"><img src="assets/brand/logo.png" style="width:26px;height:26px;object-fit:contain"><span style="font-family:'Space Grotesk';font-weight:700;font-size:13px;color:#16121f">种子创客工坊</span></div>
+        <div style="margin-left:auto;display:flex;align-items:center;gap:20px;font-size:13px;color:#3a4655">课程 营地 关于<span style="background:#16121f;color:#fff;font-weight:700;padding:7px 16px;border-radius:20px">预约体验</span></div>
+      </div>
+      <div style="background:#fff7f2;position:relative;overflow:hidden;padding:58px 50px 64px">
+        <span style="position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:#ff5a36;opacity:.16"></span>
+        <span style="position:absolute;right:130px;bottom:-40px;width:120px;height:120px;border-radius:50%;background:#6144d8;opacity:.14"></span>
+        <div style="position:relative;max-width:760px">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #ffd9cd;border-radius:30px;padding:7px 14px;font-size:13px;font-weight:700;color:#ff5a36;margin-bottom:22px;white-space:nowrap">🛠 6–18 岁 · 项目制造者课程</div>
+          <h3 style="margin:0 0 20px;font-family:'Space Grotesk',sans-serif;font-size:62px;line-height:1.0;font-weight:700;letter-spacing:-.02em;color:#16121f">在这里，<span style="color:#ff5a36">造</span>出<br>属于你的<span style="color:#0079c8">作品</span>。</h3>
+          <p style="margin:0 0 30px;font-size:17px;line-height:1.65;color:#564f60;max-width:40ch">编程、机器人、3D 打印、FPV 竞速……把脑子里的点子，亲手做成跑得起来、说得清楚的真东西。</p>
+          <div style="display:flex;gap:12px;align-items:center">
+            <span style="background:#ff5a36;color:#fff;font-weight:700;font-size:16px;padding:15px 28px;border-radius:30px;box-shadow:0 14px 28px rgba(255,90,54,.3)">预约一节体验课 →</span>
+            <span style="color:#16121f;font-weight:700;font-size:15px;padding:15px 6px;border-bottom:2px solid #16121f">看看孩子能做什么</span>
+          </div>
+        </div>
+        <!-- floating motif tokens -->
+        <div style="position:absolute;right:60px;top:80px;display:grid;gap:14px">
+          <span style="width:84px;height:84px;border-radius:24px;background:#0079c8;display:grid;place-items:center;color:#fff;font-size:44px;font-weight:300;box-shadow:0 16px 30px rgba(0,121,200,.3);transform:rotate(-6deg)">+</span>
+          <span style="width:84px;height:84px;border-radius:24px;background:#ffb020;display:grid;place-items:center;color:#16121f;font-size:44px;font-weight:300;box-shadow:0 16px 30px rgba(255,176,32,.32);transform:rotate(5deg);margin-left:40px">−</span>
+          <span style="width:84px;height:84px;border-radius:50%;background:#6144d8;display:grid;place-items:center;box-shadow:0 16px 30px rgba(97,68,216,.3);transform:rotate(-3deg)"><img src="assets/brand/全白logo.png" style="width:48px;height:48px;object-fit:contain"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO C -->
+  <div style="max-width:1240px;margin:0 auto;padding:18px 32px 28px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span style="width:26px;height:26px;border-radius:7px;background:#0b1620;color:#2fb8ff;font-family:'Space Grotesk',sans-serif;font-weight:700;display:grid;place-items:center;font-size:14px;border:1px solid #2fb8ff">C</span><span style="font-weight:600">工程硬核 — 深色蓝图 + 工程流程标注</span></div>
+    <div style="border:1px solid #1c2c3a;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(9,35,63,.18)">
+      <div style="height:52px;background:#0e1c28;border-bottom:1px solid #1c2c3a;display:flex;align-items:center;padding:0 26px;gap:14px">
+        <div style="display:flex;align-items:center;gap:9px"><img src="assets/brand/全白logo.png" style="width:24px;height:24px;object-fit:contain"><span style="font-family:'Space Grotesk';font-weight:700;font-size:13px;color:#fff">MAKERSEED</span></div>
+        <div style="margin-left:auto;display:flex;gap:20px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#7e8c9a">COURSES METHOD LAB <span style="color:#2fb8ff">BOOK_</span></div>
+      </div>
+      <div style="background:#0b1620;background-image:linear-gradient(#13212e 1px,transparent 1px),linear-gradient(90deg,#13212e 1px,transparent 1px);background-size:34px 34px;position:relative;padding:56px 50px 60px">
+        <div style="max-width:780px;position:relative">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;color:#2fb8ff;margin-bottom:20px">// JIANGMEN MAKERSPACE · STEAM</div>
+          <h3 style="margin:0 0 22px;font-family:'Space Grotesk',sans-serif;font-size:52px;line-height:1.08;font-weight:700;color:#fff;letter-spacing:-.01em">造物立志，<br>把想法工程化。</h3>
+          <p style="margin:0 0 30px;font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:1.75;color:#9fb3c4;max-width:52ch">DESIGN → BUILD → CODE → DEBUG → REFLECT → IMPROVE.<br>用项目制方法，训练青少年的创造力、计算思维与解决真实问题的能力。</p>
+          <div style="display:flex;gap:12px;align-items:center;margin-bottom:40px">
+            <span style="background:#2fb8ff;color:#06121c;font-weight:700;font-size:15px;padding:14px 26px;border-radius:8px">预约体验 →</span>
+            <span style="color:#cfe0ee;font-weight:600;font-size:14px;padding:14px 20px;border:1px solid #2a3e50;border-radius:8px;white-space:nowrap">查看课程</span>
+          </div>
+          <!-- pipeline -->
+          <div style="display:flex;gap:0;align-items:stretch;border:1px solid #1f3242;border-radius:10px;overflow:hidden;max-width:620px">
+            <div style="flex:1;padding:13px 14px;border-right:1px solid #1f3242"><div style="font-family:'IBM Plex Mono';font-size:11px;color:#4f6a82">01</div><div style="font-size:14px;color:#fff;font-weight:600;margin-top:3px">设计</div></div>
+            <div style="flex:1;padding:13px 14px;border-right:1px solid #1f3242"><div style="font-family:'IBM Plex Mono';font-size:11px;color:#4f6a82">02</div><div style="font-size:14px;color:#fff;font-weight:600;margin-top:3px">建造</div></div>
+            <div style="flex:1;padding:13px 14px;border-right:1px solid #1f3242"><div style="font-family:'IBM Plex Mono';font-size:11px;color:#4f6a82">03</div><div style="font-size:14px;color:#fff;font-weight:600;margin-top:3px">编程</div></div>
+            <div style="flex:1;padding:13px 14px;background:#11212f"><div style="font-family:'IBM Plex Mono';font-size:11px;color:#2fb8ff">04</div><div style="font-size:14px;color:#2fb8ff;font-weight:600;margin-top:3px">调试</div></div>
+          </div>
+        </div>
+        <img src="assets/brand/全白logo.png" style="position:absolute;right:30px;top:40px;width:220px;opacity:.08">
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION: COURSE CARDS ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:64px 32px 0">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#0079c8;letter-spacing:.1em">03</span>
+      <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600">课程卡片</h2>
+      <span style="font-size:13px;color:#8a94a3">三种样式</span>
+    </div>
+    <p style="margin:0 0 26px;font-size:13.5px;color:#8a94a3;max-width:60ch">同一门课「机器人与自动控制」用三种卡片样式呈现，方便对比信息密度与气质。</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start">
+
+      <!-- Card style 1: 专业 -->
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8a94a3;margin-bottom:10px;letter-spacing:.08em">样式 1 · 专业清单</div>
+        <div style="background:#fff;border:1px solid #d9e4ee;border-radius:12px;padding:24px;display:flex;flex-direction:column;min-height:330px">
+          <span style="align-self:flex-start;background:#e8f5ff;color:#075f9b;font-size:12px;font-weight:800;padding:5px 10px;border-radius:7px;margin-bottom:16px">机器人</span>
+          <h4 style="margin:0 0 8px;font-size:20px;color:#0f1722">机器人与自动控制</h4>
+          <p style="margin:0 0 16px;font-size:14px;line-height:1.6;color:#5d6b7a">学习传感器、执行器、机械结构与控制策略，完成挑战任务。</p>
+          <ul style="margin:auto 0 0;padding:0;list-style:none;display:grid;gap:8px">
+            <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#314358"><span style="width:7px;height:7px;border-radius:50%;background:#25a66a"></span>结构搭建 · 传感器应用</li>
+            <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#314358"><span style="width:7px;height:7px;border-radius:50%;background:#25a66a"></span>循迹 · 避障 · 机械臂</li>
+            <li style="display:flex;align-items:center;gap:9px;font-size:13.5px;color:#314358"><span style="width:7px;height:7px;border-radius:50%;background:#25a66a"></span>适合 8–16 岁</li>
+          </ul>
+          <span style="margin-top:18px;color:#075f9b;font-weight:800;font-size:14px">了解课程 ›</span>
+        </div>
+      </div>
+
+      <!-- Card style 2: 活力色块 -->
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8a94a3;margin-bottom:10px;letter-spacing:.08em">样式 2 · 活力色块</div>
+        <div style="background:#fff;border:1px solid #efe9f3;border-radius:18px;overflow:hidden;min-height:330px;display:flex;flex-direction:column;box-shadow:0 14px 30px rgba(20,18,31,.06)">
+          <div style="background:linear-gradient(135deg,#6144d8,#8f3dd6);padding:22px 22px 20px;position:relative;overflow:hidden">
+            <span style="position:absolute;right:-20px;top:-20px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.12)"></span>
+            <span style="display:inline-block;background:rgba(255,255,255,.9);color:#6144d8;font-size:11px;font-weight:800;padding:4px 10px;border-radius:20px">ROBOT</span>
+            <h4 style="margin:14px 0 0;font-size:22px;color:#fff;font-weight:700">机器人与<br>自动控制</h4>
+          </div>
+          <div style="padding:20px 22px;display:flex;flex-direction:column;flex:1">
+            <p style="margin:0 0 16px;font-size:14px;line-height:1.6;color:#564f60">传感器 + 执行器 + 控制策略，在任务驱动里调参、复盘、闯关。</p>
+            <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:auto">
+              <span style="background:#f4f0fb;color:#6144d8;font-size:12px;font-weight:700;padding:6px 11px;border-radius:20px">循迹</span>
+              <span style="background:#f4f0fb;color:#6144d8;font-size:12px;font-weight:700;padding:6px 11px;border-radius:20px">避障</span>
+              <span style="background:#f4f0fb;color:#6144d8;font-size:12px;font-weight:700;padding:6px 11px;border-radius:20px">机械臂</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px">
+              <span style="font-size:13px;color:#9a93a8;font-weight:600">8–16 岁</span>
+              <span style="background:#ff5a36;color:#fff;font-size:13px;font-weight:700;padding:9px 16px;border-radius:20px">立即报名</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card style 3: 工程规格 -->
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8a94a3;margin-bottom:10px;letter-spacing:.08em">样式 3 · 工程规格</div>
+        <div style="background:#0b1620;border:1px solid #1f3242;border-radius:12px;padding:22px;min-height:330px;display:flex;flex-direction:column;background-image:linear-gradient(#11212f 1px,transparent 1px),linear-gradient(90deg,#11212f 1px,transparent 1px);background-size:26px 26px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">
+            <span style="font-family:'IBM Plex Mono';font-size:11px;color:#2fb8ff;letter-spacing:.1em">MOD.ROBOT-02</span>
+            <span style="font-family:'IBM Plex Mono';font-size:11px;color:#4f6a82">8–16Y</span>
+          </div>
+          <h4 style="margin:0 0 10px;font-family:'Space Grotesk';font-size:21px;color:#fff;font-weight:600">机器人与自动控制</h4>
+          <p style="margin:0 0 18px;font-size:13px;line-height:1.6;color:#9fb3c4">传感器 / 执行器 / 机械结构 / 控制策略，任务驱动完成挑战。</p>
+          <div style="margin-top:auto;display:grid;gap:1px;background:#1f3242;border:1px solid #1f3242;border-radius:8px;overflow:hidden">
+            <div style="background:#0b1620;padding:9px 12px;display:flex;justify-content:space-between"><span style="font-family:'IBM Plex Mono';font-size:11px;color:#5f7589">PROJECTS</span><span style="font-size:12px;color:#cfe0ee">循迹 · 避障 · 机械臂</span></div>
+            <div style="background:#0b1620;padding:9px 12px;display:flex;justify-content:space-between"><span style="font-family:'IBM Plex Mono';font-size:11px;color:#5f7589">SKILL</span><span style="font-size:12px;color:#cfe0ee">结构 · 传感 · 调参</span></div>
+          </div>
+          <span style="margin-top:16px;font-family:'IBM Plex Mono';font-size:13px;color:#2fb8ff;font-weight:600">VIEW_COURSE →</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== SECTION: MINI-PROGRAM ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:72px 32px 0">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:8px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#0079c8;letter-spacing:.1em">04</span>
+      <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600">小程序首页</h2>
+      <span style="font-size:13px;color:#8a94a3">三种结构</span>
+    </div>
+    <p style="margin:0 0 30px;font-size:13.5px;color:#8a94a3;max-width:64ch">浅灰底、大圆角白卡、底部 5 Tab 的基础上，给三种首页信息结构。静态高保真，下一轮可补全各 Tab。</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;justify-items:center">
+
+      <!-- PHONE 1: 经典导览 -->
+      <div style="width:100%;max-width:300px">
+        <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">结构 1 · 经典导览</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">入口最齐 · 家长易上手</div></div>
+        <div style="background:#0f1722;border-radius:40px;padding:8px;box-shadow:0 24px 50px rgba(9,35,63,.18)">
+          <div style="background:#f1f3f6;border-radius:33px;overflow:hidden;height:600px;position:relative;display:flex;flex-direction:column">
+            <div style="background:#fff;padding:14px 18px 12px;border-bottom:1px solid #eef0f3">
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <div style="display:flex;align-items:center;gap:7px"><img src="assets/brand/logo.png" style="width:24px;height:24px;object-fit:contain"><b style="font-size:14px">种子创客工坊</b></div>
+                <span style="font-size:12px;color:#0079c8;font-weight:700">江门 ▾</span>
+              </div>
+            </div>
+            <div style="flex:1;overflow:hidden;padding:14px">
+              <div style="background:linear-gradient(135deg,#075f9b,#0079c8);border-radius:16px;padding:18px;color:#fff;position:relative;overflow:hidden;margin-bottom:14px">
+                <span style="position:absolute;right:-16px;top:-16px;width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.12)"></span>
+                <div style="font-size:11px;opacity:.8;font-weight:600">2025 秋季 STEAM 项目课</div>
+                <div style="font-size:18px;font-weight:700;margin:6px 0 12px;line-height:1.3">造物立志<br>真实项目里长出创造力</div>
+                <span style="background:#fff;color:#075f9b;font-size:12px;font-weight:700;padding:7px 14px;border-radius:18px">立即报名</span>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px">
+                <div style="text-align:center"><div style="height:46px;border-radius:14px;background:#e8f5ff;display:grid;place-items:center;color:#0079c8;font-size:20px;font-weight:300">+</div><div style="font-size:11px;color:#3a4655;margin-top:5px">常规课</div></div>
+                <div style="text-align:center"><div style="height:46px;border-radius:14px;background:#fff1ec;display:grid;place-items:center;color:#ff5a36;font-size:18px">🏁</div><div style="font-size:11px;color:#3a4655;margin-top:5px">赛事课</div></div>
+                <div style="text-align:center"><div style="height:46px;border-radius:14px;background:#f4f0fb;display:grid;place-items:center;color:#6144d8;font-size:18px">⛺</div><div style="font-size:11px;color:#3a4655;margin-top:5px">冬夏营</div></div>
+                <div style="text-align:center"><div style="height:46px;border-radius:14px;background:#fff6e6;display:grid;place-items:center;color:#f6b73c;font-size:18px">★</div><div style="font-size:11px;color:#3a4655;margin-top:5px">创客会</div></div>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><b style="font-size:14px">本季推荐</b><span style="font-size:11px;color:#8a94a3">全部 ›</span></div>
+              <div style="background:#fff;border-radius:14px;padding:12px;display:flex;gap:11px;margin-bottom:10px">
+                <div style="width:52px;height:52px;border-radius:11px;background:#e8f5ff;display:grid;place-items:center;color:#0079c8;font-size:13px;font-weight:800;flex-shrink:0">机器人</div>
+                <div style="flex:1"><div style="font-size:13.5px;font-weight:700">机器人与自动控制</div><div style="font-size:11.5px;color:#8a94a3;margin:3px 0 6px">8–16 岁 · 任务驱动</div><span style="font-size:11px;background:#fff1ec;color:#ff5a36;font-weight:700;padding:3px 9px;border-radius:12px">立即报名</span></div>
+              </div>
+              <div style="background:#fff;border-radius:14px;padding:12px;display:flex;gap:11px">
+                <div style="width:52px;height:52px;border-radius:11px;background:#f4f0fb;display:grid;place-items:center;color:#6144d8;font-size:13px;font-weight:800;flex-shrink:0">编程</div>
+                <div style="flex:1"><div style="font-size:13.5px;font-weight:700">少儿编程与计算思维</div><div style="font-size:11.5px;color:#8a94a3;margin:3px 0 6px">6–14 岁 · 软硬结合</div><span style="font-size:11px;background:#fff1ec;color:#ff5a36;font-weight:700;padding:3px 9px;border-radius:12px">立即报名</span></div>
+              </div>
+            </div>
+            <div style="background:#fff;border-top:1px solid #eef0f3;display:flex;padding:8px 6px 10px">
+              <div style="flex:1;text-align:center"><div style="font-size:17px">📍</div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">校区</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#b6c0cc">📝</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">报名</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#b6c0cc">★</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">会员</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#b6c0cc">📚</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">课程</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#b6c0cc">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHONE 2: 卡片故事流 -->
+      <div style="width:100%;max-width:300px">
+        <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">结构 2 · 卡片故事流</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">按季筛选 · 大图沉浸</div></div>
+        <div style="background:#0f1722;border-radius:40px;padding:8px;box-shadow:0 24px 50px rgba(9,35,63,.18)">
+          <div style="background:#f1f3f6;border-radius:33px;overflow:hidden;height:600px;position:relative;display:flex;flex-direction:column">
+            <div style="background:#fff;padding:16px 18px 12px">
+              <div style="font-size:12px;color:#8a94a3">你好，准备造物 👋</div>
+              <div style="font-size:19px;font-weight:800;margin-top:2px">选一季开始</div>
+              <div style="display:flex;gap:8px;margin-top:12px">
+                <span style="background:#16121f;color:#fff;font-size:12px;font-weight:700;padding:7px 14px;border-radius:18px">秋季班</span>
+                <span style="background:#f1f3f6;color:#5d6b7a;font-size:12px;font-weight:700;padding:7px 14px;border-radius:18px">寒假营</span>
+                <span style="background:#f1f3f6;color:#5d6b7a;font-size:12px;font-weight:700;padding:7px 14px;border-radius:18px">暑假营</span>
+              </div>
+            </div>
+            <div style="flex:1;overflow:hidden;padding:6px 14px 14px">
+              <div style="background:#fff;border-radius:18px;overflow:hidden;margin-bottom:14px;box-shadow:0 10px 24px rgba(20,18,31,.07)">
+                <div style="height:120px;background:linear-gradient(135deg,#ff5a36,#ff8a5c);position:relative;display:grid;place-items:center">
+                  <img src="assets/brand/全白logo.png" style="width:60px;height:60px;object-fit:contain;opacity:.92">
+                  <span style="position:absolute;left:14px;top:12px;background:rgba(255,255,255,.92);color:#ff5a36;font-size:11px;font-weight:800;padding:4px 9px;border-radius:12px">秋季 · 项目制</span>
+                </div>
+                <div style="padding:14px 16px">
+                  <div style="font-size:16px;font-weight:700">秋季 STEAM 项目课</div>
+                  <div style="font-size:12px;color:#8a94a3;margin:5px 0 12px">7–15 岁 · 每周稳定推进 · 阶段展示</div>
+                  <div style="display:flex;align-items:center;justify-content:space-between">
+                    <span style="font-size:12px;color:#564f60">结构 · 电子 · 编程 · 展示</span>
+                    <span style="background:#ff5a36;color:#fff;font-size:12px;font-weight:700;padding:8px 16px;border-radius:18px">报名</span>
+                  </div>
+                </div>
+              </div>
+              <div style="background:#fff;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+                <div style="width:48px;height:48px;border-radius:12px;background:#e8f5ff;display:grid;place-items:center;color:#0079c8;font-weight:800;font-size:12px;flex-shrink:0">机器人</div>
+                <div style="flex:1"><div style="font-size:14px;font-weight:700">机器人与自动控制</div><div style="font-size:11.5px;color:#8a94a3;margin-top:3px">8–16 岁 · 赛事方向</div></div>
+                <span style="color:#c2ccd6;font-size:18px">›</span>
+              </div>
+            </div>
+            <div style="background:#fff;border-top:1px solid #eef0f3;display:flex;padding:8px 6px 10px">
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#b6c0cc">📍</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">校区</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px">📝</div><div style="font-size:10px;color:#ff5a36;font-weight:700;margin-top:1px">报名</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#b6c0cc">★</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">会员</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#b6c0cc">📚</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">课程</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#b6c0cc">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHONE 3: 成长仪表盘 -->
+      <div style="width:100%;max-width:300px">
+        <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">结构 3 · 成长仪表盘</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">学员成长 · 创客值 · 会员</div></div>
+        <div style="background:#0f1722;border-radius:40px;padding:8px;box-shadow:0 24px 50px rgba(9,35,63,.18)">
+          <div style="background:#0b1620;border-radius:33px;overflow:hidden;height:600px;position:relative;display:flex;flex-direction:column">
+            <div style="padding:18px 18px 16px;background:linear-gradient(160deg,#11212f,#0b1620);background-image:linear-gradient(#13212e 1px,transparent 1px),linear-gradient(90deg,#13212e 1px,transparent 1px);background-size:26px 26px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="width:46px;height:46px;border-radius:14px;background:#2fb8ff;display:grid;place-items:center;color:#06121c;font-weight:800;font-size:16px">明</div>
+                <div style="flex:1"><div style="font-size:15px;font-weight:700;color:#fff">小明 · 创造者 Lv.4</div><div style="font-family:'IBM Plex Mono';font-size:11px;color:#7e8c9a;margin-top:2px">G4 · Technology 方向</div></div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px">
+                <div style="background:#11212f;border:1px solid #1f3242;border-radius:12px;padding:11px"><div style="font-family:'Space Grotesk';font-size:20px;font-weight:700;color:#2fb8ff">1280</div><div style="font-size:10.5px;color:#7e8c9a;margin-top:2px">创客值</div></div>
+                <div style="background:#11212f;border:1px solid #1f3242;border-radius:12px;padding:11px"><div style="font-family:'Space Grotesk';font-size:20px;font-weight:700;color:#fff">7</div><div style="font-size:10.5px;color:#7e8c9a;margin-top:2px">完成作品</div></div>
+                <div style="background:#11212f;border:1px solid #1f3242;border-radius:12px;padding:11px"><div style="font-family:'Space Grotesk';font-size:20px;font-weight:700;color:#fff">23</div><div style="font-size:10.5px;color:#7e8c9a;margin-top:2px">课时</div></div>
+              </div>
+            </div>
+            <div style="flex:1;overflow:hidden;padding:14px;background:#0b1620">
+              <div style="font-family:'IBM Plex Mono';font-size:11px;color:#2fb8ff;letter-spacing:.1em;margin-bottom:10px">// 当前课程</div>
+              <div style="background:#11212f;border:1px solid #1f3242;border-radius:14px;padding:14px;margin-bottom:14px">
+                <div style="display:flex;justify-content:space-between;align-items:center"><b style="font-size:14px;color:#fff">机器人与自动控制</b><span style="font-family:'IBM Plex Mono';font-size:11px;color:#2fb8ff">62%</span></div>
+                <div style="height:6px;border-radius:4px;background:#1f3242;margin-top:10px;overflow:hidden"><div style="width:62%;height:100%;background:#2fb8ff"></div></div>
+                <div style="font-size:11.5px;color:#7e8c9a;margin-top:9px">下一节：自动避障挑战 · 周六 10:00</div>
+              </div>
+              <div style="font-family:'IBM Plex Mono';font-size:11px;color:#5f7589;letter-spacing:.1em;margin-bottom:10px">// 创客会权益</div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+                <div style="background:#11212f;border:1px solid #1f3242;border-radius:11px;padding:9px 4px;text-align:center"><div style="font-size:15px">🎁</div><div style="font-size:10px;color:#9fb3c4;margin-top:4px">礼盒</div></div>
+                <div style="background:#11212f;border:1px solid #1f3242;border-radius:11px;padding:9px 4px;text-align:center"><div style="font-size:15px">📊</div><div style="font-size:10px;color:#9fb3c4;margin-top:4px">评估</div></div>
+                <div style="background:#11212f;border:1px solid #1f3242;border-radius:11px;padding:9px 4px;text-align:center"><div style="font-size:15px">🎓</div><div style="font-size:10px;color:#9fb3c4;margin-top:4px">讲座</div></div>
+                <div style="background:#11212f;border:1px solid #1f3242;border-radius:11px;padding:9px 4px;text-align:center"><div style="font-size:15px">🛒</div><div style="font-size:10px;color:#9fb3c4;margin-top:4px">商城</div></div>
+              </div>
+            </div>
+            <div style="background:#0e1c28;border-top:1px solid #1f3242;display:flex;padding:8px 6px 10px">
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#4f6a82">📍</div><div style="font-size:10px;color:#5f7589;margin-top:1px">校区</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#4f6a82">📝</div><div style="font-size:10px;color:#5f7589;margin-top:1px">报名</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#4f6a82">★</div><div style="font-size:10px;color:#5f7589;margin-top:1px">会员</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px;color:#4f6a82">📚</div><div style="font-size:10px;color:#5f7589;margin-top:1px">课程</div></div>
+              <div style="flex:1;text-align:center"><div style="font-size:17px">👤</div><div style="font-size:10px;color:#2fb8ff;font-weight:700;margin-top:1px">我的</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== NEXT STEPS ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:72px 32px 0">
+    <div style="background:#0f1722;border-radius:18px;padding:34px 36px;color:#fff;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#5fc0ff;margin-bottom:12px">NEXT STEPS · 下一步</div>
+        <h3 style="margin:0 0 14px;font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:600">告诉我选哪条方向，我来落地</h3>
+        <p style="margin:0;font-size:14.5px;line-height:1.7;color:#aeb9c4">回复方向（A / B / C，可混搭），以及最想先做的部分。我会把官网做成<b style="color:#fff">完整可交互页面</b>（课程筛选、预约表单校验、移动端导航），再把小程序补全<b style="color:#fff">校区 / 报名 / 课程 / 我的</b>各 Tab 的高保真稿。</p>
+      </div>
+      <div style="display:grid;gap:10px">
+        <div style="display:flex;align-items:center;gap:12px;background:#16222e;border-radius:12px;padding:13px 16px"><span style="width:24px;height:24px;border-radius:7px;background:#0079c8;color:#fff;font-family:'Space Grotesk';font-weight:700;display:grid;place-items:center;font-size:13px">A</span><span style="font-size:14px;color:#dbe3ea">专业信赖 · 家长决策</span></div>
+        <div style="display:flex;align-items:center;gap:12px;background:#16222e;border-radius:12px;padding:13px 16px"><span style="width:24px;height:24px;border-radius:7px;background:#ff5a36;color:#fff;font-family:'Space Grotesk';font-weight:700;display:grid;place-items:center;font-size:13px">B</span><span style="font-size:14px;color:#dbe3ea">活力造物 · 青少年向</span></div>
+        <div style="display:flex;align-items:center;gap:12px;background:#16222e;border-radius:12px;padding:13px 16px"><span style="width:24px;height:24px;border-radius:7px;background:#0b1620;border:1px solid #2fb8ff;color:#2fb8ff;font-family:'Space Grotesk';font-weight:700;display:grid;place-items:center;font-size:13px">C</span><span style="font-size:14px;color:#dbe3ea">工程硬核 · 极客技术感</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

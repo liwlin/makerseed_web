@@ -1,10 +1,12 @@
-const { campusList } = require("../../utils/app-data");
+const { campusList, heroStories, media } = require("../../utils/app-data");
 const { siteConfig } = require("../../utils/site-config");
 
 Page({
   data: {
     siteConfig,
-    cities: ["全部", siteConfig.city],
+    media,
+    heroStories,
+    cities: ["全部", "江门市"],
     activeCity: siteConfig.city,
     campusList
   },

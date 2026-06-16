@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0}
+  ::selection{background:#0079c8;color:#fff}
+</style>
+</helmet>
+
+<div style="background:#eceef1;min-height:100vh;padding:0 0 90px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#16121f;-webkit-font-smoothing:antialiased">
+
+  <!-- TOP BAR -->
+  <div style="max-width:1240px;margin:0 auto;padding:34px 32px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:14px">
+      <img src="assets/brand/logo.png" alt="种子创客工坊" style="width:50px;height:50px;object-fit:contain;display:block">
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;letter-spacing:.02em">种子创客工坊 · 配色系统</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a94a3">Color system · A 克制 vs B 表达</div>
+      </div>
+    </div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;color:#8a94a3;text-transform:uppercase">REV 01</div>
+  </div>
+
+  <!-- TITLE -->
+  <div style="max-width:1240px;margin:0 auto;padding:36px 32px 0">
+    <h1 style="margin:0 0 18px;font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,4.6vw,52px);line-height:1.04;font-weight:700;letter-spacing:-.01em;max-width:20ch">从 Logo 出发的配色方案</h1>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px">
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:16px;padding:24px 26px">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#0079c8;margin-bottom:12px">出发点 · Logo</div>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:#3a4655">Logo 本身只有 <b>黑、白、蓝</b> 三色——品牌内核是 <b>1 个色相（蓝）+ 黑白中性</b>。这是优势：能干净落在任何背景。问题不是"用几种色"，而是<b>要不要在这纯净底子上，加几种表达色</b>。</p>
+      </div>
+      <div style="background:#16121f;border-radius:16px;padding:24px 26px;color:#fff">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5fc0ff;margin-bottom:12px">核心纪律 · 60 / 30 / 10</div>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:#c3ccd6"><b style="color:#fff">60%</b> 中性打底（白+灰+墨），<b style="color:#fff">30%</b> 蓝建立品牌，<b style="color:#fff">10%</b> 橙驱动行动。紫/金黄不计入这 10%——它们是分类/奖励的<b style="color:#fff">功能色</b>。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 01 LOGO SOURCE PALETTE ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:56px 32px 0">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:18px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#0079c8;letter-spacing:.1em">01</span>
+      <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600">Logo 源色 + 角色分工</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
+      <!-- swatch -->
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:14px;overflow:hidden">
+        <div style="height:88px;background:#0079c8"></div>
+        <div style="padding:13px 15px"><div style="font-weight:700;font-size:14px">蓝 · 品牌身份</div><div style="font-family:'IBM Plex Mono';font-size:11px;color:#8a94a3;margin-top:3px">#0079C8 · 来自 logo</div><div style="font-size:11.5px;color:#5d6b7a;margin-top:7px;line-height:1.4">Logo / 链接 / 信任信号 / 主卡</div></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:14px;overflow:hidden">
+        <div style="height:88px;background:#16121f"></div>
+        <div style="padding:13px 15px"><div style="font-weight:700;font-size:14px">墨黑 · 结构文字</div><div style="font-family:'IBM Plex Mono';font-size:11px;color:#8a94a3;margin-top:3px">#16121F · 来自 logo</div><div style="font-size:11.5px;color:#5d6b7a;margin-top:7px;line-height:1.4">正文 / 导航 / 深色区块</div></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:14px;overflow:hidden">
+        <div style="height:88px;background:#fff;border-bottom:1px solid #eef0f3;position:relative"><span style="position:absolute;inset:0;display:grid;place-items:center;font-family:'IBM Plex Mono';font-size:11px;color:#c2ccd6">paper</span></div>
+        <div style="padding:13px 15px"><div style="font-weight:700;font-size:14px">白 + 暖灰 · 背景</div><div style="font-family:'IBM Plex Mono';font-size:11px;color:#8a94a3;margin-top:3px">#FFFFFF / #FFF7F2</div><div style="font-size:11.5px;color:#5d6b7a;margin-top:7px;line-height:1.4">页面底 / 卡片 / 留白</div></div>
+      </div>
+      <div style="background:#fff;border:2px solid #ff5a36;border-radius:14px;overflow:hidden">
+        <div style="height:88px;background:#ff5a36;position:relative"><span style="position:absolute;left:12px;top:11px;font-family:'IBM Plex Mono';font-size:10px;color:rgba(255,255,255,.85);letter-spacing:.1em">+1 行动色</span></div>
+        <div style="padding:13px 15px"><div style="font-weight:700;font-size:14px">橙 · 唯一行动色</div><div style="font-family:'IBM Plex Mono';font-size:11px;color:#8a94a3;margin-top:3px">#FF5A36 · 蓝的暖补色</div><div style="font-size:11.5px;color:#5d6b7a;margin-top:7px;line-height:1.4">只给「立即报名 / 预约」</div></div>
+      </div>
+    </div>
+    <!-- functional colors -->
+    <div style="display:flex;align-items:center;gap:12px;margin:22px 0 14px"><span style="font-family:'IBM Plex Mono';font-size:11px;color:#8a94a3;letter-spacing:.1em;text-transform:uppercase">功能色 · 仅限定场景，不进 UI 主干</span><span style="flex:1;height:1px;background:#dfe3e8"></span></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:14px;padding:16px;display:flex;align-items:center;gap:14px">
+        <span style="width:52px;height:52px;border-radius:12px;background:#6144d8;flex-shrink:0"></span>
+        <div><div style="font-weight:700;font-size:14px">紫 · 分类色</div><div style="font-family:'IBM Plex Mono';font-size:11px;color:#8a94a3;margin-top:3px">#6144D8</div><div style="font-size:11.5px;color:#5d6b7a;margin-top:5px">课程分类标签 / 图形母题</div></div>
+      </div>
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:14px;padding:16px;display:flex;align-items:center;gap:14px">
+        <span style="width:52px;height:52px;border-radius:12px;background:#ffb020;flex-shrink:0"></span>
+        <div><div style="font-weight:700;font-size:14px">金黄 · 奖励色</div><div style="font-family:'IBM Plex Mono';font-size:11px;color:#8a94a3;margin-top:3px">#FFB020</div><div style="font-size:11.5px;color:#5d6b7a;margin-top:5px">创客值 / 会员等级 / 成长进度</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 02 A vs B COMPARISON ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:64px 32px 0">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:6px">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#0079c8;letter-spacing:.1em">02</span>
+      <h2 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600">两个落点并排对比</h2>
+    </div>
+    <p style="margin:0 0 26px;font-size:13.5px;color:#8a94a3;max-width:64ch">同一组真实组件（按钮 / 课程卡 / 会员卡 / Tab），左边克制、右边表达，你直接感受差别。</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px;align-items:start">
+
+      <!-- ===== OPTION A ===== -->
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:20px;overflow:hidden">
+        <div style="padding:22px 24px;border-bottom:1px solid #eef0f3;display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="display:flex;align-items:center;gap:9px"><span style="width:26px;height:26px;border-radius:7px;background:#0079c8;color:#fff;font-family:'Space Grotesk';font-weight:700;display:grid;place-items:center;font-size:14px">A</span><b style="font-size:17px">克制版</b></div>
+            <div style="font-size:12.5px;color:#8a94a3;margin-top:6px">蓝 + 黑 + 白 + 橙 · 4 色</div>
+          </div>
+          <div style="display:flex;gap:5px">
+            <span style="width:18px;height:18px;border-radius:5px;background:#0079c8"></span>
+            <span style="width:18px;height:18px;border-radius:5px;background:#16121f"></span>
+            <span style="width:18px;height:18px;border-radius:5px;background:#fff;border:1px solid #e2e5ea"></span>
+            <span style="width:18px;height:18px;border-radius:5px;background:#ff5a36"></span>
+          </div>
+        </div>
+        <div style="padding:24px;background:#fff7f2">
+          <!-- buttons -->
+          <div style="font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;color:#a99c91;text-transform:uppercase;margin-bottom:11px">按钮层级</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px">
+            <span style="background:#ff5a36;color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:24px;box-shadow:0 10px 20px rgba(255,90,54,.24)">立即报名</span>
+            <span style="background:#0079c8;color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:24px">查看课程</span>
+            <span style="background:#fff;color:#16121f;font-weight:700;font-size:14px;padding:12px 22px;border-radius:24px;border:1px solid #d9dee4">了解更多</span>
+          </div>
+          <!-- course cards -->
+          <div style="font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;color:#a99c91;text-transform:uppercase;margin-bottom:11px">课程卡 · 分类靠文字区分</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px">
+            <div style="background:#fff;border:1px solid #eef0f3;border-radius:16px;overflow:hidden">
+              <div style="background:#0079c8;padding:14px 15px;position:relative;overflow:hidden"><span style="position:absolute;right:-14px;top:-14px;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.12)"></span><span style="background:rgba(255,255,255,.92);color:#075f9b;font-size:10px;font-weight:800;padding:3px 8px;border-radius:11px">编程</span><div style="color:#fff;font-size:14px;font-weight:700;margin-top:9px">少儿编程</div></div>
+              <div style="padding:12px 14px"><div style="font-size:11px;color:#8a94a3">6–14 岁</div><span style="display:inline-block;margin-top:8px;color:#ff5a36;font-weight:700;font-size:12px">立即报名 ›</span></div>
+            </div>
+            <div style="background:#fff;border:1px solid #eef0f3;border-radius:16px;overflow:hidden">
+              <div style="background:#16121f;padding:14px 15px;position:relative;overflow:hidden"><span style="position:absolute;right:-14px;top:-14px;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.07)"></span><span style="background:#0079c8;color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:11px">机器人</span><div style="color:#fff;font-size:14px;font-weight:700;margin-top:9px">自动控制</div></div>
+              <div style="padding:12px 14px"><div style="font-size:11px;color:#8a94a3">8–16 岁</div><span style="display:inline-block;margin-top:8px;color:#ff5a36;font-weight:700;font-size:12px">立即报名 ›</span></div>
+            </div>
+          </div>
+          <!-- member card -->
+          <div style="font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;color:#a99c91;text-transform:uppercase;margin-bottom:11px">会员卡 · 进度用蓝</div>
+          <div style="border-radius:16px;padding:17px;background:linear-gradient(135deg,#075f9b,#0079c8);color:#fff;position:relative;overflow:hidden;margin-bottom:22px">
+            <span style="position:absolute;right:-18px;top:-18px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.1)"></span>
+            <div style="display:flex;align-items:center;gap:10px"><img src="assets/brand/全白logo.png" style="width:32px;height:32px;object-fit:contain"><div><div style="font-size:14.5px;font-weight:800">种子科创 · 新星级</div><div style="font-size:11px;color:rgba(255,255,255,.8)">绑定学员解锁权益</div></div></div>
+            <div style="margin-top:13px"><div style="display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.9);margin-bottom:5px"><span>创客值</span><span style="font-family:'Space Grotesk';font-weight:700">0 / 12000</span></div><div style="height:6px;border-radius:4px;background:rgba(255,255,255,.25);overflow:hidden"><div style="width:8%;height:100%;background:#fff"></div></div></div>
+          </div>
+          <!-- tabbar -->
+          <div style="font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;color:#a99c91;text-transform:uppercase;margin-bottom:11px">Tab · 选中蓝</div>
+          <div style="background:#fff;border:1px solid #eef0f3;border-radius:14px;display:flex;padding:9px 4px">
+            <div style="flex:1;text-align:center"><div style="font-size:16px">📍</div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">校区</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:16px;opacity:.4">📝</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">报名</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:16px;opacity:.4">⬡</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">会员</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:16px;opacity:.4">📚</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">课程</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:16px;opacity:.4">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+          </div>
+        </div>
+        <div style="padding:18px 24px;background:#fff;border-top:1px solid #eef0f3">
+          <div style="display:flex;gap:8px;align-items:flex-start"><span style="color:#1c8f5a;font-weight:800;font-size:14px">＋</span><span style="font-size:12.5px;color:#5d6b7a;line-height:1.55">最像 logo、最高级、家长最买账；视觉极稳。</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;margin-top:7px"><span style="color:#d99a1c;font-weight:800;font-size:14px">－</span><span style="font-size:12.5px;color:#5d6b7a;line-height:1.55">课程分类只能靠文字/图标区分，丰富度较低。</span></div>
+        </div>
+      </div>
+
+      <!-- ===== OPTION B ===== -->
+      <div style="background:#fff;border:1px solid #e2e5ea;border-radius:20px;overflow:hidden">
+        <div style="padding:22px 24px;border-bottom:1px solid #eef0f3;display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="display:flex;align-items:center;gap:9px"><span style="width:26px;height:26px;border-radius:7px;background:#6144d8;color:#fff;font-family:'Space Grotesk';font-weight:700;display:grid;place-items:center;font-size:14px">B</span><b style="font-size:17px">表达版</b></div>
+            <div style="font-size:12.5px;color:#8a94a3;margin-top:6px">A ＋ 紫/金黄功能色 · 6 色</div>
+          </div>
+          <div style="display:flex;gap:5px">
+            <span style="width:18px;height:18px;border-radius:5px;background:#0079c8"></span>
+            <span style="width:18px;height:18px;border-radius:5px;background:#16121f"></span>
+            <span style="width:18px;height:18px;border-radius:5px;background:#ff5a36"></span>
+            <span style="width:18px;height:18px;border-radius:5px;background:#6144d8"></span>
+            <span style="width:18px;height:18px;border-radius:5px;background:#ffb020"></span>
+          </div>
+        </div>
+        <div style="padding:24px;background:#fff7f2">
+          <!-- buttons -->
+          <div style="font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;color:#a99c91;text-transform:uppercase;margin-bottom:11px">按钮层级 · 与 A 相同（不变）</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px">
+            <span style="background:#ff5a36;color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:24px;box-shadow:0 10px 20px rgba(255,90,54,.24)">立即报名</span>
+            <span style="background:#0079c8;color:#fff;font-weight:700;font-size:14px;padding:12px 22px;border-radius:24px">查看课程</span>
+            <span style="background:#fff;color:#16121f;font-weight:700;font-size:14px;padding:12px 22px;border-radius:24px;border:1px solid #d9dee4">了解更多</span>
+          </div>
+          <!-- course cards -->
+          <div style="font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;color:#a99c91;text-transform:uppercase;margin-bottom:11px">课程卡 · 分类靠<b style="color:#6144d8">颜色</b>区分</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px">
+            <div style="background:#fff;border:1px solid #eef0f3;border-radius:16px;overflow:hidden">
+              <div style="background:linear-gradient(135deg,#6144d8,#9166e8);padding:14px 15px;position:relative;overflow:hidden"><span style="position:absolute;right:-14px;top:-14px;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.13)"></span><span style="background:rgba(255,255,255,.92);color:#6144d8;font-size:10px;font-weight:800;padding:3px 8px;border-radius:11px">编程</span><div style="color:#fff;font-size:14px;font-weight:700;margin-top:9px">少儿编程</div></div>
+              <div style="padding:12px 14px"><div style="font-size:11px;color:#8a94a3">6–14 岁</div><span style="display:inline-block;margin-top:8px;color:#ff5a36;font-weight:700;font-size:12px">立即报名 ›</span></div>
+            </div>
+            <div style="background:#fff;border:1px solid #eef0f3;border-radius:16px;overflow:hidden">
+              <div style="background:linear-gradient(135deg,#ff5a36,#ff8a4c);padding:14px 15px;position:relative;overflow:hidden"><span style="position:absolute;right:-14px;top:-14px;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.14)"></span><span style="background:rgba(255,255,255,.92);color:#e0492f;font-size:10px;font-weight:800;padding:3px 8px;border-radius:11px">机器人</span><div style="color:#fff;font-size:14px;font-weight:700;margin-top:9px">自动控制</div></div>
+              <div style="padding:12px 14px"><div style="font-size:11px;color:#8a94a3">8–16 岁</div><span style="display:inline-block;margin-top:8px;color:#ff5a36;font-weight:700;font-size:12px">立即报名 ›</span></div>
+            </div>
+          </div>
+          <!-- member card -->
+          <div style="font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;color:#a99c91;text-transform:uppercase;margin-bottom:11px">会员卡 · 进度用<b style="color:#d99a1c">金黄</b></div>
+          <div style="border-radius:16px;padding:17px;background:linear-gradient(135deg,#075f9b,#0079c8);color:#fff;position:relative;overflow:hidden;margin-bottom:22px">
+            <span style="position:absolute;right:-18px;top:-18px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.1)"></span>
+            <div style="display:flex;align-items:center;gap:10px"><img src="assets/brand/全白logo.png" style="width:32px;height:32px;object-fit:contain"><div><div style="font-size:14.5px;font-weight:800;display:flex;align-items:center;gap:6px">种子科创 · <span style="color:#ffd470">新星级</span></div><div style="font-size:11px;color:rgba(255,255,255,.8)">绑定学员解锁权益</div></div></div>
+            <div style="margin-top:13px"><div style="display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.9);margin-bottom:5px"><span>创客值</span><span style="font-family:'Space Grotesk';font-weight:700;color:#ffd470">0 / 12000</span></div><div style="height:6px;border-radius:4px;background:rgba(255,255,255,.25);overflow:hidden"><div style="width:8%;height:100%;background:#ffb020"></div></div></div>
+          </div>
+          <!-- tabbar -->
+          <div style="font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:.1em;color:#a99c91;text-transform:uppercase;margin-bottom:11px">Tab · 选中蓝（不变）</div>
+          <div style="background:#fff;border:1px solid #eef0f3;border-radius:14px;display:flex;padding:9px 4px">
+            <div style="flex:1;text-align:center"><div style="font-size:16px">📍</div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">校区</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:16px;opacity:.4">📝</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">报名</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:16px;opacity:.4">⬡</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">会员</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:16px;opacity:.4">📚</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">课程</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:16px;opacity:.4">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+          </div>
+        </div>
+        <div style="padding:18px 24px;background:#fff;border-top:1px solid #eef0f3">
+          <div style="display:flex;gap:8px;align-items:flex-start"><span style="color:#1c8f5a;font-weight:800;font-size:14px">＋</span><span style="font-size:12.5px;color:#5d6b7a;line-height:1.55">课程分类一眼可辨、活力足；会员/奖励有"成就感"。</span></div>
+          <div style="display:flex;gap:8px;align-items:flex-start;margin-top:7px"><span style="color:#d99a1c;font-weight:800;font-size:14px">－</span><span style="font-size:12.5px;color:#5d6b7a;line-height:1.55">需要纪律：紫/金黄只能待在分类与奖励，不可乱用。</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== 03 RULE STRIP ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:56px 32px 0">
+    <div style="background:#16121f;border-radius:18px;padding:32px 34px;color:#fff">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#5fc0ff;margin-bottom:18px">一句话记忆</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,2.6vw,28px);font-weight:600;line-height:1.5;letter-spacing:-.01em">
+        <span style="color:#5fc0ff">蓝</span>是身份，<span style="color:#ff7a59">橙</span>是行动，<span style="color:#fff">黑</span>是骨架，<span style="color:#a98cff">紫</span>和<span style="color:#ffd470">金黄</span>各管一摊（分类 / 奖励）。
+      </div>
+      <div style="margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+        <div style="background:#1c1726;border:1px solid #2c2638;border-radius:12px;padding:14px 16px"><div style="font-family:'Space Grotesk';font-weight:700;font-size:22px;color:#5fc0ff">30%</div><div style="font-size:12.5px;color:#aeb9c4;margin-top:3px">蓝 · 品牌</div></div>
+        <div style="background:#1c1726;border:1px solid #2c2638;border-radius:12px;padding:14px 16px"><div style="font-family:'Space Grotesk';font-weight:700;font-size:22px;color:#ff7a59">10%</div><div style="font-size:12.5px;color:#aeb9c4;margin-top:3px">橙 · 行动</div></div>
+        <div style="background:#1c1726;border:1px solid #2c2638;border-radius:12px;padding:14px 16px"><div style="font-family:'Space Grotesk';font-weight:700;font-size:22px;color:#fff">60%</div><div style="font-size:12.5px;color:#aeb9c4;margin-top:3px">中性 · 背景文字</div></div>
+        <div style="background:#1c1726;border:1px solid #2c2638;border-radius:12px;padding:14px 16px"><div style="font-family:'Space Grotesk';font-weight:700;font-size:22px;color:#a98cff">＋</div><div style="font-size:12.5px;color:#aeb9c4;margin-top:3px">紫/金黄 · 功能色</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NEXT ===== -->
+  <div style="max-width:1240px;margin:0 auto;padding:34px 32px 0">
+    <div style="background:#fff;border:1px solid #e2e5ea;border-radius:16px;padding:24px 28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px">
+      <div style="flex:1;min-width:240px">
+        <b style="font-size:16px">选 A 还是 B？</b>
+        <p style="margin:6px 0 0;font-size:13.5px;color:#5d6b7a;line-height:1.6">告诉我你的选择，我就把<b>官网</b>和<b>小程序</b >两套都统一到这套配色规则上。我的推荐：<b style="color:#16121f">B 表达版</b>——你已有的设计就在这个方向，既专业又有活力，只要守住"紫/金黄只管分类和奖励"的纪律。</p>
+      </div>
+      <div style="display:flex;gap:10px">
+        <span style="display:flex;align-items:center;gap:8px;background:#fff7f2;border:1px solid #efe2dc;border-radius:12px;padding:11px 16px;font-size:13.5px;font-weight:700"><span style="width:20px;height:20px;border-radius:6px;background:#0079c8;color:#fff;display:grid;place-items:center;font-size:11px;font-family:'Space Grotesk'">A</span>克制</span>
+        <span style="display:flex;align-items:center;gap:8px;background:#fff7f2;border:1px solid #efe2dc;border-radius:12px;padding:11px 16px;font-size:13.5px;font-weight:700"><span style="width:20px;height:20px;border-radius:6px;background:#6144d8;color:#fff;display:grid;place-items:center;font-size:11px;font-family:'Space Grotesk'">B</span>表达</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

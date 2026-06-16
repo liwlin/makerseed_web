@@ -1,9 +1,10 @@
 <view class="page booking-page">
   <view class="section-title">预约体验课</view>
   <view class="tip card">
-    <image src="/images/logo-wide-white.png" mode="aspectFit"></image>
-    <view>预约信息会先保存在本机，方便开发测试。正式上线后可接入云开发数据库、短信通知或自有报名后台。</view>
+    <image src="/images/media/brand/logo-horizontal.png" mode="aspectFit"></image>
+    <view>提交后我们会通过电话或微信联系你确认体验时间。当前开发版会先保存在本机，正式上线后接入云开发数据库与后台通知。</view>
     <view class="campus-line">{{siteConfig.campusName}}</view>
+    <view class="campus-line">{{siteConfig.campusAddress}}</view>
   </view>
 
   <form class="form card" bindsubmit="submitBooking">

@@ -1,8 +1,10 @@
 <view class="page signup-page">
   <view class="video-card card">
-    <image src="/images/logo.png" mode="aspectFit"></image>
-    <view class="video-title">{{siteConfig.englishName}} 课程体系</view>
-    <view class="video-subtitle">从兴趣启蒙到项目挑战，给孩子一条清晰的造物成长路径。</view>
+    <image class="video-bg" src="{{media.handsOn}}" mode="aspectFill"></image>
+    <view class="video-mask"></view>
+    <image class="video-logo" src="{{media.logoHorizontal}}" mode="aspectFit"></image>
+    <view class="video-title">课程报名</view>
+    <view class="video-subtitle">设计 · 建造 · 编程 · 调试 · 反思 · 改进</view>
   </view>
 
   <view class="path-list">
@@ -18,6 +20,35 @@
         <view class="path-desc">{{item.desc}}</view>
       </view>
       <view class="path-button">查看</view>
+    </view>
+  </view>
+
+  <view class="family-section">
+    <view class="section-title">五大课程方向</view>
+    <scroll-view scroll-x class="family-scroll" enhanced show-scrollbar="{{false}}">
+      <view
+        class="family-card"
+        wx:for="{{courseFamilies}}"
+        wx:key="id"
+        style="border-color: {{item.color}};"
+      >
+        <image src="{{item.image}}" mode="aspectFill"></image>
+        <view class="family-dot" style="background: {{item.color}};"></view>
+        <view class="family-title">{{item.title}}</view>
+        <view class="family-subtitle">{{item.subtitle}}</view>
+        <view class="family-age">{{item.startAge}}</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="project-section">
+    <view class="section-title">项目制造物主题</view>
+    <view class="poster-card card" wx:for="{{projectPosters}}" wx:key="title">
+      <image src="{{item.image}}" mode="aspectFill"></image>
+      <view>
+        <view class="poster-title">{{item.title}}</view>
+        <view class="poster-subtitle">{{item.subtitle}}</view>
+      </view>
     </view>
   </view>
 

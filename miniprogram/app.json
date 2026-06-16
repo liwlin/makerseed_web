@@ -36,13 +36,13 @@
       },
       {
         "pagePath": "pages/makerclub/index",
-        "text": "Makerclub",
+        "text": "MakerSeed",
         "iconPath": "images/tab/club-normal.png",
         "selectedIconPath": "images/tab/club-active.png"
       },
       {
         "pagePath": "pages/course-manage/index",
-        "text": "课程管理",
+        "text": "课程",
         "iconPath": "images/tab/course-normal.png",
         "selectedIconPath": "images/tab/course-active.png"
       },

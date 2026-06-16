@@ -1,16 +1,20 @@
 <view class="campus-page">
   <view class="hero-card">
+    <image class="hero-image" src="{{media.campusHero}}" mode="aspectFill"></image>
+    <view class="hero-mask"></view>
     <view class="hero-top">
       <view class="location-pill">⌖ {{siteConfig.city}}</view>
-      <image class="hero-logo" src="/images/logo.png" mode="aspectFit"></image>
+      <view class="wechat-pill">•••  ━  ◎</view>
     </view>
-    <view class="hero-title">{{siteConfig.englishName}}</view>
-    <view class="hero-subtitle">{{siteConfig.slogan}}</view>
-    <view class="hero-tools">
-      <text>机器人</text>
-      <text>3D打印</text>
-      <text>FPV</text>
-      <text>格斗机器人</text>
+    <view class="hero-copy">
+      <image class="hero-logo" src="{{media.logoHorizontal}}" mode="aspectFit"></image>
+      <view class="hero-subtitle">{{siteConfig.slogan}}</view>
+      <view class="hero-tools">
+        <text>激光切割</text>
+        <text>3D打印</text>
+        <text>机器人</text>
+        <text>FPV</text>
+      </view>
     </view>
   </view>
 
@@ -31,18 +35,28 @@
 
   <view class="campus-list">
     <view class="campus-card card" wx:for="{{campusList}}" wx:key="id">
-      <view class="campus-photo">
-        <image src="/images/logo-wide-white.png" mode="aspectFit"></image>
-        <view>数字制造 · 编程 · 机器人</view>
-      </view>
+      <image class="campus-photo" src="{{item.image}}" mode="aspectFill"></image>
       <view class="campus-body">
         <view class="campus-name">{{item.name}}</view>
         <view class="campus-address">{{item.address}}</view>
-        <view class="campus-summary">{{item.summary}}</view>
+        <view class="tag-row">
+          <text wx:for="{{item.tags}}" wx:key="*this">{{item}}</text>
+        </view>
         <view class="campus-actions">
           <button class="ghost-button small" data-address="{{item.address}}" bindtap="copyAddress">复制地址</button>
           <button class="primary-button small" bindtap="goSignup">立即报名</button>
         </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="story-section">
+    <view class="section-title">往期精彩回顾</view>
+    <view class="story-card card" wx:for="{{heroStories}}" wx:key="title">
+      <image src="{{item.image}}" mode="aspectFill"></image>
+      <view>
+        <view class="story-title">{{item.title}}</view>
+        <view class="story-desc">{{item.desc}}</view>
       </view>
     </view>
   </view>
