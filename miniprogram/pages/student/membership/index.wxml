@@ -1,38 +1,87 @@
-<view class="page membership-page">
-  <view class="member-card">
-    <view class="circle"></view>
-    <view class="member-head">
+<view class="page makerseed-page">
+  <view class="subnav">
+    <view class="sub-title">机构介绍</view>
+    <view class="toggle">
+      <view class="{{active === 'strength' ? 'active' : ''}}" bindtap="showStrength">实力</view>
+      <view class="{{active === 'faculty' ? 'active' : ''}}" bindtap="showFaculty">师资研发</view>
+    </view>
+  </view>
+
+  <block wx:if="{{active === 'strength'}}">
+    <view class="dark-head">
       <image src="{{media.whiteLogo}}" mode="aspectFit"></image>
-      <view>
-        <view class="member-title">{{siteConfig.membershipName}} · <text>{{siteConfig.memberLevel.name}}</text></view>
-        <view class="member-subtitle">绑定学员，解锁专属成长权益</view>
+      <view class="company">江门种子科创培训有限公司</view>
+      <view class="badge-row">
+        <text>首家科技类培训机构</text>
+        <text>首批科普教育基地</text>
       </view>
     </view>
-    <view class="progress-meta">
-      <text>{{siteConfig.pointsName}}</text>
-      <text>{{siteConfig.memberLevel.currentValue}} / {{siteConfig.memberLevel.targetValue}}</text>
-    </view>
-    <view class="progress-bar">
-      <view style="width: 3%;"></view>
-    </view>
-  </view>
 
-  <view class="bind-card card">
-    <view class="bind-icon">🎓</view>
-    <view class="bind-copy">
-      <view>绑定我的孩子</view>
-      <text>关联学员后查看课程与成长</text>
-    </view>
-    <button bindtap="goProfile">去绑定</button>
-  </view>
+    <view class="content-wrap">
+      <view class="mono-label blue">权威授牌</view>
+      <view class="license-list">
+        <view class="license card">
+          <text class="license-icon shield">盾</text>
+          <view>工信部教育与考试中心 · 创客教育合作机构</view>
+        </view>
+        <view class="license card">
+          <text class="license-icon power">电</text>
+          <view>中国电子学会 · 激光加工 / 开源机器人中心</view>
+        </view>
+      </view>
 
-  <view class="section-head">
-    <view class="section-title">会员权益</view>
-  </view>
-  <view class="benefit-grid">
-    <view class="benefit-card" wx:for="{{memberBenefits}}" wx:key="title">
-      <view>{{item.icon}}</view>
-      <text>{{item.title}}</text>
+      <view class="mono-label gold">部分省 / 国家级获奖</view>
+      <view class="honor-list card">
+        <view wx:for="{{honors}}" wx:key="year">
+          <text>{{item.year}}</text>
+          <view>{{item.title}}</view>
+        </view>
+      </view>
+
+      <view class="mono-label blue">进校园 · 实景</view>
+      <view class="photo-strip">
+        <view>
+          <image src="{{media.schoolVisitCrowd}}" mode="aspectFill"></image>
+          <text>科普游园</text>
+        </view>
+        <view>
+          <image src="{{media.teacherHandson}}" mode="aspectFill"></image>
+          <text>师资培训</text>
+        </view>
+        <view>
+          <image src="{{media.schoolVisitMakerseed}}" mode="aspectFill"></image>
+          <text>课程展示</text>
+        </view>
+      </view>
+
+      <view class="mono-label green">科普进校园 · 合作学校</view>
+      <view class="school-tags">
+        <text wx:for="{{schools}}" wx:key="*this">{{item}}</text>
+      </view>
     </view>
-  </view>
+  </block>
+
+  <block wx:else>
+    <view class="content-wrap">
+      <view class="faculty-list">
+        <view class="faculty-card card" wx:for="{{faculty}}" wx:key="name">
+          <image src="{{item.image}}" mode="aspectFill"></image>
+          <view class="faculty-main">
+            <view class="name">{{item.name}}</view>
+            <view class="role">{{item.role}}</view>
+            <view class="desc">{{item.desc}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="mono-label green">研发科普资源能力及成果</view>
+      <view class="rnd-card card">
+        <image src="{{media.rndOverview}}" mode="widthFix"></image>
+        <view class="rnd-bottom">
+          <text>自研系列科普教具 · 课程套件</text>
+          <view>查看 ›</view>
+        </view>
+      </view>
+    </view>
+  </block>
 </view>

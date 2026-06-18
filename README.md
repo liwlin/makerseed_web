@@ -22,7 +22,8 @@
 学生/家长端：
 
 - 校区、报名、MakerSeed、课程、我的 5 个底部 Tab，严格对应 `design/` 学生端方案。
-- 预约填写、课程详情、机构实力、师资研发等二级页面。
+- MakerSeed Tab 为机构介绍页，内含“实力 / 师资研发”切换，不再显示旧会员权益页。
+- 预约填写、课程详情、机构实力、师资研发等页面。
 - 预约表单已接入统一 `booking.service`，管理端可读取同一份开发版数据。
 - “MakerSeed”Tab 图标使用公司 Logo：`makerseed-logo-normal.png` / `makerseed-logo-active.png`。
 
@@ -48,7 +49,7 @@
 
 - GitHub 只维护 `main` 作为干净主线，阶段成果直接合入 `main`。
 - 官网生产入口已经迁移到 `website/`，根目录不再保留旧版 `index.html`、`styles.css`、`app.js` 等入口文件。
-- 小程序 `0.0.2` 开发版已按三端结构上传过，可继续用微信开发者工具 CLI 生成预览码。
+- 小程序 `0.0.2` 开发版按三端结构维护；每次阶段改动后使用微信开发者工具 CLI 生成预览码。
 - 当前阶段是可演示 MVP：官网预约和小程序部分业务流使用本地 mock/local storage；正式运营前需要接入微信云开发和权限校验。
 
 详细阶段记录见 `docs/implementation-status.md`。
@@ -131,6 +132,7 @@ python3 scripts/validate.py
 - `content/` 共享内容源 JSON
 - 小程序三端页面结构和所有页面文件
 - 学生端 5 Tab：校区、报名、MakerSeed、课程、我的，以及 MakerSeed 公司 Logo 图标
+- MakerSeed Tab 必须显示 design 里的机构介绍 / 师资研发，不允许回退成会员权益页
 - 旧页面、旧数据源、旧图标、旧 WOWKIDS 关键词清理
 - 服务层、模型、组件、云函数和文档骨架
 

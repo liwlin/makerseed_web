@@ -1,13 +1,17 @@
-const { memberBenefits, media } = require("../../../utils/app-data");
-const { siteConfig } = require("../../../utils/site-config");
+const { media, honors, schools, faculty } = require("../../../utils/app-data");
 
 Page({
   data: {
-    siteConfig,
+    active: "strength",
     media,
-    memberBenefits
+    honors,
+    schools,
+    faculty
   },
-  goProfile() {
-    wx.switchTab({ url: "/pages/student/profile/index" });
+  showStrength() {
+    this.setData({ active: "strength" });
+  },
+  showFaculty() {
+    this.setData({ active: "faculty" });
   }
 });

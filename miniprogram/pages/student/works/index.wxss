@@ -38,8 +38,125 @@
   width: 72rpx;
   height: 72rpx;
   border-radius: 22rpx;
+}
+
+.course-glyph {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.text-glyph {
+  display: grid;
+  place-items: center;
+  width: 52rpx;
   font-size: 24rpx;
   font-weight: 900;
+}
+
+.robot-glyph {
+  display: grid;
+  place-items: center;
+  gap: 5rpx;
+  padding: 6rpx;
+  border: 4rpx solid currentColor;
+  border-radius: 12rpx;
+  box-sizing: border-box;
+}
+
+.robot-eyes {
+  display: flex;
+  gap: 8rpx;
+}
+
+.robot-eyes text {
+  width: 7rpx;
+  height: 7rpx;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.robot-mouth {
+  width: 18rpx;
+  height: 4rpx;
+  border-radius: 6rpx;
+  background: currentColor;
+}
+
+.chip-glyph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rpx;
+  border: 4rpx solid currentColor;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+}
+
+.chip-core {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 4rpx;
+  background: currentColor;
+}
+
+.chip-pin-row {
+  display: flex;
+  gap: 5rpx;
+}
+
+.chip-pin-row text {
+  width: 5rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+  background: currentColor;
+}
+
+.model-glyph {
+  position: relative;
+}
+
+.model-line {
+  position: absolute;
+  left: 17rpx;
+  top: 10rpx;
+  width: 5rpx;
+  height: 26rpx;
+  border-radius: 5rpx;
+  background: currentColor;
+  transform-origin: top center;
+}
+
+.model-line-left {
+  transform: rotate(55deg);
+}
+
+.model-line-right {
+  transform: rotate(-55deg);
+}
+
+.model-glyph text {
+  position: absolute;
+  width: 13rpx;
+  height: 13rpx;
+  border: 4rpx solid currentColor;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.model-glyph text:nth-child(3) {
+  left: 13rpx;
+  top: 0;
+}
+
+.model-glyph text:nth-child(4) {
+  left: 0;
+  bottom: 0;
+}
+
+.model-glyph text:nth-child(5) {
+  right: 0;
+  bottom: 0;
 }
 
 .family-main {

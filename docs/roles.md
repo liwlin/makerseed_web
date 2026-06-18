@@ -4,7 +4,7 @@ Student/parent:
 
 - Browse campus, course, organization strength and teacher/research pages.
 - Submit bookings and view personal booking status.
-- View MakerSeed membership benefits and profile actions.
+- View MakerSeed institution strength, faculty/research content and profile actions.
 
 Teacher:
 

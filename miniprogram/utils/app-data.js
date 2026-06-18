@@ -42,7 +42,7 @@ const courseFamilies = [
     fit: "6 岁 / 一年级+",
     color: "#39B0E3",
     soft: "#e7f5fc",
-    icon: "机",
+    icon: "robot",
     projects: ["结构小车", "自动避障", "机械任务"]
   },
   {
@@ -66,7 +66,7 @@ const courseFamilies = [
     fit: "9 岁 / 四年级+",
     color: "#3AAA4A",
     soft: "#e8f6ea",
-    icon: "芯",
+    icon: "chip",
     projects: ["物联网", "数字建模", "激光切割"]
   },
   {
@@ -78,7 +78,7 @@ const courseFamilies = [
     fit: "8 岁 / 三年级+",
     color: "#DE3B2F",
     soft: "#fdeceb",
-    icon: "航",
+    icon: "model",
     projects: ["FPV", "RC 竞速", "模拟飞行"]
   },
   {

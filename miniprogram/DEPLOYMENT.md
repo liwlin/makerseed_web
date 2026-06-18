@@ -67,6 +67,6 @@ Error: timeout
 /Applications/wechatwebdevtools.app/Contents/MacOS/cli upload \
   --project /Users/lwl/Desktop/makerseed_web/miniprogram \
   --version 0.1.0 \
-  --desc "种子创客工坊小程序首版：校区、报名、课程资料、会员与我的" \
+  --desc "种子创客工坊小程序首版：校区、报名、MakerSeed机构介绍、课程与我的" \
   --port 9420
 ```

@@ -20,10 +20,6 @@ Page({
   },
   handleAction(event) {
     const title = event.currentTarget.dataset.title;
-    if (title === "会员商城") {
-      wx.switchTab({ url: "/pages/student/membership/index" });
-      return;
-    }
     if (title === "我的孩子") {
       wx.navigateTo({ url: "/pages/student/booking/index" });
       return;

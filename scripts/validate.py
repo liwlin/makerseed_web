@@ -235,6 +235,9 @@ def check_design_alignment():
     design = (ROOT / "design/种子创客工坊 小程序-学生端.dc.html").read_text(encoding="utf-8")
     app_data = (ROOT / "miniprogram/utils/app-data.js").read_text(encoding="utf-8")
     app_wxss = (ROOT / "miniprogram/app.wxss").read_text(encoding="utf-8")
+    makerseed_page = (ROOT / "miniprogram/pages/student/membership/index.wxml").read_text(encoding="utf-8")
+    makerseed_config = read_json("miniprogram/pages/student/membership/index.json")
+    works_page = (ROOT / "miniprogram/pages/student/works/index.wxml").read_text(encoding="utf-8")
     passed = True
     if "① 校区" not in design or "⑨ 机构介绍" not in design:
         passed = fail("student-side design source is missing expected 9-screen markers") and passed
@@ -244,6 +247,17 @@ def check_design_alignment():
     for token in ["campus", "featuredSeason", "courseFamilies", "memberBenefits", "currentCourses", "profileActions", "honors", "faculty"]:
         if token not in app_data:
             passed = fail(f"design data model missing {token}") and passed
+    if makerseed_config.get("navigationBarTitleText") != "机构介绍":
+        passed = fail("MakerSeed tab must open the design institution-intro page, not the old member page") and passed
+    for token in ["机构介绍", "实力", "师资研发", "江门种子科创培训有限公司", "权威授牌", "研发科普资源能力及成果"]:
+        if token not in makerseed_page:
+            passed = fail(f"MakerSeed tab page missing design content: {token}") and passed
+    for stale in ["会员权益", "绑定我的孩子", "memberBenefits"]:
+        if stale in makerseed_page:
+            passed = fail(f"old member-center content remains in MakerSeed tab page: {stale}") and passed
+    for stale_icon in [">机<", ">芯<", ">航<"]:
+        if stale_icon in works_page or stale_icon in app_data:
+            passed = fail(f"course system still contains placeholder icon {stale_icon}") and passed
     return ok("design-source alignment") if passed else False
 
 

@@ -11,7 +11,24 @@
       bindtap="goCourse"
       style="border-left-color: {{item.color}};"
     >
-      <view class="family-icon" style="background: {{item.soft}}; color: {{item.color}};">{{item.icon}}</view>
+      <view class="family-icon" style="background: {{item.soft}}; color: {{item.color}};">
+        <view wx:if="{{item.id === 'brainstorm'}}" class="course-glyph robot-glyph">
+          <view class="robot-eyes"><text></text><text></text></view>
+          <view class="robot-mouth"></view>
+        </view>
+        <view wx:elif="{{item.id === 'coding'}}" class="course-glyph text-glyph">&lt;/&gt;</view>
+        <view wx:elif="{{item.id === 'smart'}}" class="course-glyph chip-glyph">
+          <view class="chip-pin-row"><text></text><text></text><text></text></view>
+          <view class="chip-core"></view>
+          <view class="chip-pin-row"><text></text><text></text><text></text></view>
+        </view>
+        <view wx:elif="{{item.id === 'rc'}}" class="course-glyph model-glyph">
+          <view class="model-line model-line-left"></view>
+          <view class="model-line model-line-right"></view>
+          <text></text><text></text><text></text>
+        </view>
+        <view wx:else class="course-glyph text-glyph">AI</view>
+      </view>
       <view class="family-main">
         <view class="family-title-row">
           <text class="family-title">{{item.title}}</text>
