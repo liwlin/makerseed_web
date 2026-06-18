@@ -24,3 +24,15 @@ Validation before deployment:
 ```bash
 python3 scripts/validate.py
 ```
+
+GitHub sync:
+
+- Default workflow is to commit locally, then sync the completed commit to `main` with the GitHub API script.
+- This avoids the repository's intermittent Git smart HTTP push stalls.
+- The script reads `GITHUB_TOKEN` / `GH_TOKEN`, or falls back to the existing `git credential` helper. It never prints the token.
+
+```bash
+node scripts/github-sync-main.js --branch main --base HEAD~1 --head HEAD
+```
+
+Use normal `git push` only when it is already known to be healthy for the current session.

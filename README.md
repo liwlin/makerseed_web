@@ -134,6 +134,16 @@ python3 scripts/validate.py
 - 旧页面、旧数据源、旧图标、旧 WOWKIDS 关键词清理
 - 服务层、模型、组件、云函数和文档骨架
 
+## GitHub 同步
+
+本仓库默认保持 `main` 干净主线。由于本机到 GitHub 的普通 `git push` 曾多次卡在 pack 传输，阶段提交后优先使用 API 同步脚本：
+
+```bash
+node scripts/github-sync-main.js --branch main --base HEAD~1 --head HEAD
+```
+
+脚本会读取本机 GitHub credential 或 `GITHUB_TOKEN` / `GH_TOKEN`，不会把 token 写入仓库或输出到终端。
+
 ## 云开发接入
 
 当前 `miniprogram/services/` 使用本地 mock 数据，便于开发者工具和手机预览立即跑通。
