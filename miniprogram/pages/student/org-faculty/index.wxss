@@ -1,8 +1,14 @@
+.faculty-page {
+  padding: 0 0 56rpx;
+}
+
 .subnav {
   display: flex;
   align-items: center;
   gap: 16rpx;
-  padding: 14rpx 18rpx;
+  padding: 18rpx 28rpx;
+  background: #ffffff;
+  border-bottom: 1rpx solid #eef1f4;
 }
 
 .sub-title {
@@ -35,26 +41,31 @@
 .toggle .active {
   color: #0079c8;
   background: #ffffff;
+  box-shadow: 0 2rpx 8rpx rgba(15, 30, 55, 0.08);
+}
+
+.content-wrap {
+  padding: 26rpx 28rpx 0;
 }
 
 .faculty-list {
   display: grid;
-  gap: 16rpx;
-  margin-top: 20rpx;
+  gap: 18rpx;
 }
 
 .faculty-card {
   display: flex;
   align-items: center;
   gap: 22rpx;
-  padding: 18rpx;
+  padding: 20rpx 24rpx;
+  box-shadow: none;
 }
 
 .faculty-card image {
   flex: 0 0 auto;
-  width: 96rpx;
-  height: 96rpx;
-  border-radius: 22rpx;
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 20rpx;
 }
 
 .faculty-main {
@@ -89,12 +100,13 @@
 
 .rnd-card {
   overflow: hidden;
+  box-shadow: none;
 }
 
 .rnd-card image {
   display: block;
   width: 100%;
-  max-height: 240rpx;
+  max-height: 300rpx;
 }
 
 .rnd-bottom {

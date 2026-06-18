@@ -1,5 +1,5 @@
 <view class="page faculty-page">
-  <view class="subnav card">
+  <view class="subnav">
     <view class="sub-title">机构介绍</view>
     <view class="toggle">
       <view bindtap="goStrength">实力</view>
@@ -7,7 +7,8 @@
     </view>
   </view>
 
-  <view class="faculty-list">
+  <view class="content-wrap">
+    <view class="faculty-list">
     <view class="faculty-card card" wx:for="{{faculty}}" wx:key="name">
       <image src="{{item.image}}" mode="aspectFill"></image>
       <view class="faculty-main">
@@ -16,14 +17,15 @@
         <view class="desc">{{item.desc}}</view>
       </view>
     </view>
-  </view>
+    </view>
 
-  <view class="mono-label green">研发科普资源能力及成果</view>
-  <view class="rnd-card card">
+    <view class="mono-label green">研发科普资源能力及成果</view>
+    <view class="rnd-card card">
     <image src="{{media.rndOverview}}" mode="widthFix"></image>
     <view class="rnd-bottom">
       <text>自研系列科普教具 · 课程套件</text>
       <view>查看 ›</view>
+    </view>
     </view>
   </view>
 </view>

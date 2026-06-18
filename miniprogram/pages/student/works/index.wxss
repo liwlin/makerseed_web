@@ -1,166 +1,97 @@
+.course-system-page {
+  padding-top: 26rpx;
+}
+
 .page-title {
   color: #1a2330;
   font-size: 38rpx;
   font-weight: 900;
 }
 
-.segmented {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8rpx;
-  width: 100%;
-  margin-top: 24rpx;
-  padding: 8rpx;
-  border-radius: 24rpx;
-  background: #e1e5ea;
+.page-subtitle {
+  margin-top: 8rpx;
+  color: #8a94a3;
+  font-size: 25rpx;
 }
 
-.segment {
-  display: grid;
-  place-items: center;
-  min-height: 64rpx;
-  border-radius: 18rpx;
-  color: #5d6b7a;
-  font-size: 26rpx;
-  font-weight: 800;
-}
-
-.segment.active {
-  color: #0079c8;
-  background: #ffffff;
-  box-shadow: 0 2rpx 8rpx rgba(15, 30, 55, 0.08);
-}
-
-.course-list {
+.family-list {
   display: grid;
   gap: 18rpx;
-  margin-top: 28rpx;
+  margin-top: 30rpx;
 }
 
-.course-card {
-  padding: 28rpx;
-}
-
-.course-top,
-.past-card {
+.family-card {
   display: flex;
   align-items: center;
-  gap: 20rpx;
+  gap: 22rpx;
+  min-height: 126rpx;
+  padding: 20rpx 26rpx;
+  border-left: 6rpx solid #39B0E3;
+  border-radius: 26rpx;
+  background: #ffffff;
 }
 
-.course-label {
+.family-icon {
   display: grid;
   place-items: center;
-  width: 84rpx;
-  height: 84rpx;
-  border-radius: 24rpx;
-  font-size: 21rpx;
+  flex: 0 0 auto;
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 22rpx;
+  font-size: 24rpx;
   font-weight: 900;
 }
 
-.course-main {
+.family-main {
   flex: 1;
   min-width: 0;
 }
 
-.course-title {
+.family-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.family-title {
   color: #1a2330;
   font-size: 29rpx;
-  font-weight: 800;
-}
-
-.course-time {
-  margin-top: 6rpx;
-  color: #8a94a3;
-  font-size: 22rpx;
-}
-
-.percent {
-  font-size: 26rpx;
   font-weight: 900;
 }
 
-.bar {
-  height: 14rpx;
-  margin-top: 22rpx;
-  overflow: hidden;
-  border-radius: 999rpx;
-  background: #eef1f4;
+.age-pill {
+  padding: 4rpx 12rpx;
+  border-radius: 14rpx;
+  font-size: 19rpx;
+  font-weight: 900;
 }
 
-.bar view {
-  height: 100%;
-}
-
-.next {
-  margin-top: 22rpx;
-  padding: 18rpx 22rpx;
-  border-radius: 22rpx;
-  color: #075f9b;
-  background: #e8f4ff;
-  font-size: 24rpx;
-}
-
-.past-card {
-  justify-content: space-between;
-  padding: 28rpx;
-}
-
-.done {
-  color: #3AAA4A;
-  font-size: 24rpx;
-  font-weight: 800;
-}
-
-.signup-card {
-  margin-top: 28rpx;
-  padding: 34rpx;
-  border: 2rpx dashed #cfd9e2;
-  border-radius: 28rpx;
-  background: #ffffff;
-  text-align: center;
-}
-
-.signup-card view {
+.family-desc {
+  margin-top: 8rpx;
   color: #8a94a3;
-  font-size: 25rpx;
+  font-size: 23rpx;
 }
 
-.signup-card text {
-  display: inline-block;
-  margin-top: 18rpx;
-  padding: 16rpx 38rpx;
-  border-radius: 34rpx;
-  color: #0079c8;
-  background: #e8f4ff;
-  font-size: 25rpx;
+.poster-label {
+  margin: 34rpx 0 18rpx;
+  color: #ff5a36;
+  font-family: "Menlo", "Consolas", monospace;
+  font-size: 22rpx;
   font-weight: 800;
+  letter-spacing: 1rpx;
 }
 
-.system-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16rpx;
-}
-
-.system-item {
+.poster-row {
   display: flex;
-  align-items: center;
-  gap: 14rpx;
-  min-height: 72rpx;
-  padding: 0 18rpx;
-  border-radius: 22rpx;
+  gap: 18rpx;
+  overflow: hidden;
+}
+
+.poster-row image {
+  flex: 1;
+  height: 220rpx;
+  min-width: 0;
+  border: 1rpx solid #dce3ea;
+  border-radius: 18rpx;
   background: #ffffff;
-}
-
-.system-item view {
-  width: 18rpx;
-  height: 18rpx;
-  border-radius: 50%;
-}
-
-.system-item text {
-  color: #1a2330;
-  font-size: 24rpx;
-  font-weight: 800;
 }

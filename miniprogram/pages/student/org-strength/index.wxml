@@ -1,5 +1,5 @@
 <view class="page org-page">
-  <view class="subnav card">
+  <view class="subnav">
     <view class="sub-title">机构介绍</view>
     <view class="toggle">
       <view class="active">实力</view>
@@ -16,8 +16,9 @@
     </view>
   </view>
 
-  <view class="mono-label">权威授牌</view>
-  <view class="license-list">
+  <view class="content-wrap">
+    <view class="mono-label">权威授牌</view>
+    <view class="license-list">
     <view class="license card">
       <text>🛡</text>
       <view>工信部教育与考试中心 · 创客教育合作机构</view>
@@ -26,18 +27,18 @@
       <text>⚡</text>
       <view>中国电子学会 · 激光加工 / 开源机器人中心</view>
     </view>
-  </view>
+    </view>
 
-  <view class="mono-label gold">部分省 / 国家级获奖</view>
-  <view class="honor-list card">
+    <view class="mono-label gold">部分省 / 国家级获奖</view>
+    <view class="honor-list card">
     <view wx:for="{{honors}}" wx:key="year">
       <text>{{item.year}}</text>
       <view>{{item.title}}</view>
     </view>
-  </view>
+    </view>
 
-  <view class="mono-label">进校园 · 实景</view>
-  <view class="photo-grid">
+    <view class="mono-label">进校园 · 实景</view>
+    <view class="photo-strip">
     <view>
       <image src="{{media.schoolVisitCrowd}}" mode="aspectFill"></image>
       <text>科普游园</text>
@@ -46,10 +47,15 @@
       <image src="{{media.teacherHandson}}" mode="aspectFill"></image>
       <text>师资培训</text>
     </view>
-  </view>
+    <view>
+      <image src="{{media.schoolVisitMakerseed}}" mode="aspectFill"></image>
+      <text>课程展示</text>
+    </view>
+    </view>
 
-  <view class="mono-label green">科普进校园 · 合作学校</view>
-  <view class="school-tags">
+    <view class="mono-label green">科普进校园 · 合作学校</view>
+    <view class="school-tags">
     <text wx:for="{{schools}}" wx:key="*this">{{item}}</text>
+    </view>
   </view>
 </view>

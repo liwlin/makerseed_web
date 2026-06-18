@@ -171,7 +171,7 @@ const faculty = [
 const posters = [
   media.pblSmartToy,
   media.pblMechFactory,
-  media.pblDrone
+  media.pblProcessing
 ];
 
 module.exports = {
