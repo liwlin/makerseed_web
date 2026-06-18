@@ -21,7 +21,7 @@ Page({
   handleAction(event) {
     const title = event.currentTarget.dataset.title;
     if (title === "会员商城") {
-      wx.navigateTo({ url: "/pages/student/membership/index" });
+      wx.switchTab({ url: "/pages/student/membership/index" });
       return;
     }
     if (title === "我的孩子") {

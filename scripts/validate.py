@@ -29,6 +29,17 @@ def check_file(path):
 def check_website():
     passed = True
     for path in [
+        "index.html",
+        "styles.css",
+        "app.js",
+        "config.js",
+        "config.example.js",
+        "support.js",
+    ]:
+        if (ROOT / path).exists():
+            passed = fail(f"legacy root website file should not exist: {path}") and passed
+
+    for path in [
         "website/index.html",
         "website/styles.css",
         "website/app.js",
@@ -89,13 +100,13 @@ def check_three_end_structure():
         "pages/role-select/index",
         "pages/student/home/index",
         "pages/student/courses/index",
-        "pages/student/booking/index",
+        "pages/student/membership/index",
         "pages/student/works/index",
         "pages/student/profile/index",
         "pages/student/course-detail/index",
-        "pages/student/membership/index",
         "pages/student/org-strength/index",
         "pages/student/org-faculty/index",
+        "pages/student/booking/index",
         "pages/teacher/home/index",
         "pages/teacher/schedule/index",
         "pages/teacher/students/index",
@@ -133,6 +144,9 @@ def check_three_end_structure():
         if old_dir.exists() and any(old_dir.glob("*")):
             passed = fail(f"old miniprogram root page still exists: miniprogram/pages/{name}") and passed
 
+    for path in (ROOT / "miniprogram/pages").glob("* 2"):
+        passed = fail(f"duplicate copied page directory remains: {path.relative_to(ROOT)}") and passed
+
     for path in [
         "miniprogram/utils/courses.js",
         "miniprogram/utils/articles.js",
@@ -147,11 +161,15 @@ def check_three_end_structure():
 
 def check_miniprogram_tabbar():
     app_config = read_json("miniprogram/app.json")
+    handoff = (ROOT / "design/DESIGN_HANDOFF.md").read_text(encoding="utf-8")
+    if "校区 · 报名 · MakerSeed · 课程 · 我的" not in handoff:
+        return fail("design handoff must declare the student tabBar source of truth")
+
     expected = [
-        ("pages/student/home/index", "首页"),
-        ("pages/student/courses/index", "课程"),
-        ("pages/student/booking/index", "预约"),
-        ("pages/student/works/index", "成长"),
+        ("pages/student/home/index", "校区"),
+        ("pages/student/courses/index", "报名"),
+        ("pages/student/membership/index", "MakerSeed"),
+        ("pages/student/works/index", "课程"),
         ("pages/student/profile/index", "我的"),
     ]
     actual = [(item["pagePath"], item["text"]) for item in app_config["tabBar"]["list"]]
@@ -159,11 +177,11 @@ def check_miniprogram_tabbar():
     if actual != expected:
         passed = fail(f"tabBar differs from expected student layout: {actual}") and passed
 
-    maker_tab = app_config["tabBar"]["list"][3]
+    maker_tab = app_config["tabBar"]["list"][2]
     if maker_tab["iconPath"] != "images/tab/makerseed-logo-normal.png":
-        passed = fail("growth tab normal icon must use MakerSeed logo") and passed
+        passed = fail("MakerSeed tab normal icon must use MakerSeed logo") and passed
     if maker_tab["selectedIconPath"] != "images/tab/makerseed-logo-active.png":
-        passed = fail("growth tab selected icon must use MakerSeed logo") and passed
+        passed = fail("MakerSeed tab selected icon must use MakerSeed logo") and passed
 
     for item in app_config["tabBar"]["list"]:
         for key in ["iconPath", "selectedIconPath"]:
@@ -265,6 +283,8 @@ def check_cloud_docs():
         "docs/roles.md",
         "docs/deployment.md",
         "docs/roadmap.md",
+        "docs/implementation-status.md",
+        "docs/design-alignment-audit.md",
     ]:
         passed = check_file(path) and passed
 

@@ -10,6 +10,7 @@
 - `miniprogram/`：微信原生小程序，包含学生/家长端、教师端、管理端。
 - `cloud/`：微信云开发数据库说明、索引建议、安全规则和云函数骨架。
 - `content/`：品牌、校区、课程、师资、荣誉、文章等共享内容源。
+- `assets/`：设计源素材与高质量原始素材库，不直接作为 GitHub Pages 发布入口。
 - `design/`：Claude Code 输出的设计方案，是当前视觉和页面结构的来源。
 - `docs/`：架构、数据模型、角色权限、部署和路线图文档。
 - `scripts/validate.py`：本地结构和关键规则校验脚本。
@@ -20,10 +21,10 @@
 
 学生/家长端：
 
-- 首页、课程、预约、成长、我的 5 个底部 Tab。
-- 课程详情、MakerSeed 会员、机构实力、师资研发等二级页面。
+- 校区、报名、MakerSeed、课程、我的 5 个底部 Tab，严格对应 `design/` 学生端方案。
+- 预约填写、课程详情、机构实力、师资研发等二级页面。
 - 预约表单已接入统一 `booking.service`，管理端可读取同一份开发版数据。
-- “成长”Tab 图标使用公司 Logo：`makerseed-logo-normal.png` / `makerseed-logo-active.png`。
+- “MakerSeed”Tab 图标使用公司 Logo：`makerseed-logo-normal.png` / `makerseed-logo-active.png`。
 
 教师端：
 
@@ -42,6 +43,15 @@
 - 旧图标：`miniprogram/images/tab/club-normal.png`、`miniprogram/images/tab/club-active.png`
 
 `scripts/validate.py` 会阻止这些旧入口和旧 WOWKIDS 关键词重新混入。
+
+## 当前状态
+
+- GitHub 只维护 `main` 作为干净主线，阶段成果直接合入 `main`。
+- 官网生产入口已经迁移到 `website/`，根目录不再保留旧版 `index.html`、`styles.css`、`app.js` 等入口文件。
+- 小程序 `0.0.2` 开发版已按三端结构上传过，可继续用微信开发者工具 CLI 生成预览码。
+- 当前阶段是可演示 MVP：官网预约和小程序部分业务流使用本地 mock/local storage；正式运营前需要接入微信云开发和权限校验。
+
+详细阶段记录见 `docs/implementation-status.md`。
 
 ## 官网
 
@@ -117,9 +127,10 @@ python3 scripts/validate.py
 校验内容包括：
 
 - 官网资源引用与 Pages 部署目录
+- 根目录旧官网入口清理
 - `content/` 共享内容源 JSON
 - 小程序三端页面结构和所有页面文件
-- 学生端 5 Tab 与 MakerSeed 公司 Logo 图标
+- 学生端 5 Tab：校区、报名、MakerSeed、课程、我的，以及 MakerSeed 公司 Logo 图标
 - 旧页面、旧数据源、旧图标、旧 WOWKIDS 关键词清理
 - 服务层、模型、组件、云函数和文档骨架
 

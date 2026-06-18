@@ -10,12 +10,14 @@ Authoritative planning source:
 Current implementation checkpoint:
 
 - The website currently follows the visual handoff in `design/`.
-- The mini program currently implements the student/parent-facing MVP shell.
-- Future development should migrate toward a structured monorepo:
+- The website production entry is `website/index.html`; root-level website files are intentionally absent.
+- The mini program currently implements a three-end MVP shell for student/parent, teacher and admin roles.
+- The repository now uses this structured layout:
   - `website/` for the official website
   - `miniprogram/` for the WeChat mini program
   - `cloud/` for WeChat Cloud Functions and database rules
   - `content/` for shared brand/course/campus data
+  - `assets/` for source/high-resolution design assets
   - `docs/` for architecture, roles, data models, and deployment notes
   - `design/` for design source files
 
@@ -28,12 +30,11 @@ Important product direction:
 Near-term roadmap:
 
 1. Keep the current website and mini program running.
-2. Move website production files into `website/` and deploy only that directory.
-3. Add role-based mini program structure under `pages/student/`, `pages/teacher/`, and `pages/admin/`.
-4. Add shared `content/` data sources.
-5. Add role and auth utilities.
-6. Move booking data from local storage fallback toward WeChat Cloud Database.
-7. Build admin booking MVP and teacher schedule/check-in MVP.
+2. Continue validating design fidelity against `design/`.
+3. Move booking data from local storage fallback toward WeChat Cloud Database.
+4. Bind roles to WeChat login and server-side permissions.
+5. Replace mock admin/teacher data with real operational data.
+6. Add payment, membership and class-hour workflows after CloudBase persistence is stable.
 
 Implementation guardrails:
 
