@@ -13,21 +13,43 @@
     >
       <view class="family-icon" style="background: {{item.soft}}; color: {{item.color}};">
         <view wx:if="{{item.id === 'brainstorm'}}" class="course-glyph robot-glyph">
-          <view class="robot-eyes"><text></text><text></text></view>
-          <view class="robot-mouth"></view>
+          <view class="robot-sensor"></view>
+          <view class="robot-stem"></view>
+          <view class="robot-body">
+            <text></text>
+            <text></text>
+          </view>
         </view>
-        <view wx:elif="{{item.id === 'coding'}}" class="course-glyph text-glyph">&lt;/&gt;</view>
+        <view wx:elif="{{item.id === 'coding'}}" class="course-glyph code-glyph">
+          <text class="code-left">&lt;</text>
+          <text class="code-right">&gt;</text>
+        </view>
         <view wx:elif="{{item.id === 'smart'}}" class="course-glyph chip-glyph">
-          <view class="chip-pin-row"><text></text><text></text><text></text></view>
-          <view class="chip-core"></view>
-          <view class="chip-pin-row"><text></text><text></text><text></text></view>
+          <view class="pin top pin-a"></view>
+          <view class="pin top pin-b"></view>
+          <view class="pin right pin-a"></view>
+          <view class="pin right pin-b"></view>
+          <view class="pin bottom pin-a"></view>
+          <view class="pin bottom pin-b"></view>
+          <view class="pin left pin-a"></view>
+          <view class="pin left pin-b"></view>
+          <view class="chip-box"></view>
         </view>
         <view wx:elif="{{item.id === 'rc'}}" class="course-glyph model-glyph">
-          <view class="model-line model-line-left"></view>
-          <view class="model-line model-line-right"></view>
-          <text></text><text></text><text></text>
+          <view class="rotor rotor-tl"></view>
+          <view class="rotor rotor-tr"></view>
+          <view class="rotor rotor-bl"></view>
+          <view class="rotor rotor-br"></view>
+          <view class="model-core"></view>
         </view>
-        <view wx:else class="course-glyph text-glyph">AI</view>
+        <view wx:else class="course-glyph ai-glyph">
+          <view class="ai-line ai-line-main"></view>
+          <view class="ai-line ai-line-left"></view>
+          <view class="ai-line ai-line-right"></view>
+          <text class="ai-node ai-top"></text>
+          <text class="ai-node ai-left"></text>
+          <text class="ai-node ai-right"></text>
+        </view>
       </view>
       <view class="family-main">
         <view class="family-title-row">

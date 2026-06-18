@@ -267,6 +267,9 @@ def check_design_alignment():
     for stale_icon in [">机<", ">芯<", ">航<"]:
         if stale_icon in works_page or stale_icon in app_data:
             passed = fail(f"course system still contains placeholder icon {stale_icon}") and passed
+    for token in ["robot-sensor", "code-glyph", "chip-box", "rotor-tl", "ai-line-main"]:
+        if token not in works_page:
+            passed = fail(f"course system icon missing design glyph structure: {token}") and passed
     for path in (ROOT / "miniprogram/pages/teacher").glob("**/*.wxml"):
         if "primary-button" in path.read_text(encoding="utf-8"):
             passed = fail(f"teacher internal action should not use orange primary-button: {path.relative_to(ROOT)}") and passed

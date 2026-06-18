@@ -45,117 +45,231 @@
   height: 40rpx;
 }
 
-.text-glyph {
-  display: grid;
-  place-items: center;
-  width: 52rpx;
-  font-size: 24rpx;
-  font-weight: 900;
+.robot-glyph {
+  position: relative;
 }
 
-.robot-glyph {
-  display: grid;
-  place-items: center;
-  gap: 5rpx;
-  padding: 6rpx;
+.robot-sensor {
+  position: absolute;
+  left: 17rpx;
+  top: 0;
+  width: 6rpx;
+  height: 6rpx;
+  border: 3rpx solid currentColor;
+  border-radius: 50%;
+}
+
+.robot-stem {
+  position: absolute;
+  left: 19rpx;
+  top: 9rpx;
+  width: 3rpx;
+  height: 7rpx;
+  border-radius: 3rpx;
+  background: currentColor;
+}
+
+.robot-body {
+  position: absolute;
+  left: 6rpx;
+  right: 6rpx;
+  bottom: 2rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rpx;
+  height: 23rpx;
   border: 4rpx solid currentColor;
-  border-radius: 12rpx;
+  border-radius: 6rpx;
   box-sizing: border-box;
 }
 
-.robot-eyes {
-  display: flex;
-  gap: 8rpx;
-}
-
-.robot-eyes text {
+.robot-body text {
   width: 7rpx;
   height: 7rpx;
   border-radius: 50%;
   background: currentColor;
 }
 
-.robot-mouth {
-  width: 18rpx;
-  height: 4rpx;
-  border-radius: 6rpx;
-  background: currentColor;
+.code-glyph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+  width: 48rpx;
+  font-family: "Menlo", "Consolas", monospace;
+  font-size: 32rpx;
+  font-weight: 900;
+  line-height: 40rpx;
 }
 
 .chip-glyph {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rpx;
+  position: relative;
+}
+
+.chip-box {
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+  width: 20rpx;
+  height: 20rpx;
   border: 4rpx solid currentColor;
   border-radius: 8rpx;
   box-sizing: border-box;
 }
 
-.chip-core {
-  width: 15rpx;
-  height: 15rpx;
+.pin {
+  position: absolute;
   border-radius: 4rpx;
   background: currentColor;
 }
 
-.chip-pin-row {
-  display: flex;
-  gap: 5rpx;
-}
-
-.chip-pin-row text {
-  width: 5rpx;
+.pin.top,
+.pin.bottom {
+  width: 4rpx;
   height: 8rpx;
-  border-radius: 4rpx;
-  background: currentColor;
+}
+
+.pin.left,
+.pin.right {
+  width: 8rpx;
+  height: 4rpx;
+}
+
+.pin.top {
+  top: 1rpx;
+}
+
+.pin.bottom {
+  bottom: 1rpx;
+}
+
+.pin.left {
+  left: 1rpx;
+}
+
+.pin.right {
+  right: 1rpx;
+}
+
+.pin.top.pin-a,
+.pin.bottom.pin-a {
+  left: 12rpx;
+}
+
+.pin.top.pin-b,
+.pin.bottom.pin-b {
+  right: 12rpx;
+}
+
+.pin.left.pin-a,
+.pin.right.pin-a {
+  top: 12rpx;
+}
+
+.pin.left.pin-b,
+.pin.right.pin-b {
+  bottom: 12rpx;
 }
 
 .model-glyph {
   position: relative;
 }
 
-.model-line {
+.rotor {
   position: absolute;
-  left: 17rpx;
-  top: 10rpx;
-  width: 5rpx;
-  height: 26rpx;
-  border-radius: 5rpx;
-  background: currentColor;
-  transform-origin: top center;
-}
-
-.model-line-left {
-  transform: rotate(55deg);
-}
-
-.model-line-right {
-  transform: rotate(-55deg);
-}
-
-.model-glyph text {
-  position: absolute;
-  width: 13rpx;
-  height: 13rpx;
+  width: 15rpx;
+  height: 15rpx;
   border: 4rpx solid currentColor;
   border-radius: 50%;
   box-sizing: border-box;
 }
 
-.model-glyph text:nth-child(3) {
-  left: 13rpx;
+.rotor-tl {
+  left: 0;
   top: 0;
 }
 
-.model-glyph text:nth-child(4) {
+.rotor-tr {
+  right: 0;
+  top: 0;
+}
+
+.rotor-bl {
   left: 0;
   bottom: 0;
 }
 
-.model-glyph text:nth-child(5) {
+.rotor-br {
   right: 0;
+  bottom: 0;
+}
+
+.model-core {
+  position: absolute;
+  left: 15rpx;
+  top: 15rpx;
+  width: 10rpx;
+  height: 10rpx;
+  border: 4rpx solid currentColor;
+  border-radius: 4rpx;
+  box-sizing: border-box;
+}
+
+.ai-glyph {
+  position: relative;
+}
+
+.ai-line {
+  position: absolute;
+  width: 4rpx;
+  border-radius: 4rpx;
+  background: currentColor;
+  transform-origin: top center;
+}
+
+.ai-line-main {
+  left: 18rpx;
+  top: 11rpx;
+  height: 11rpx;
+}
+
+.ai-line-left {
+  left: 18rpx;
+  top: 22rpx;
+  height: 17rpx;
+  transform: rotate(36deg);
+}
+
+.ai-line-right {
+  left: 21rpx;
+  top: 22rpx;
+  height: 17rpx;
+  transform: rotate(-36deg);
+}
+
+.ai-node {
+  position: absolute;
+  width: 14rpx;
+  height: 14rpx;
+  border: 4rpx solid currentColor;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.ai-top {
+  left: 13rpx;
+  top: 0;
+}
+
+.ai-left {
+  left: 1rpx;
+  bottom: 0;
+}
+
+.ai-right {
+  right: 1rpx;
   bottom: 0;
 }
 
