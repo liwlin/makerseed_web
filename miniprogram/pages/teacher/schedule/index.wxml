@@ -1,0 +1,9 @@
+<view class="page">
+  <view class="section-title">本周课表</view>
+  <view class="list-card" wx:for="{{lessons}}" wx:key="_id">
+    <view>
+      <view class="item-title">{{item.time}} · {{item.course}}</view>
+      <text>{{item.student}}</text>
+    </view>
+  </view>
+</view>

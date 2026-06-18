@@ -1,0 +1,9 @@
+.profile-card {
+  margin-top: 24rpx;
+  padding: 32rpx;
+}
+.profile-card view {
+  margin-bottom: 28rpx;
+  font-size: 28rpx;
+  font-weight: 800;
+}

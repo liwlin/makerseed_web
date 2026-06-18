@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0}
+  ::selection{background:#0079c8;color:#fff}
+</style>
+</helmet>
+
+<div style="background:#e7ebf0;min-height:100vh;padding:0 0 90px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif;color:#1a2330;-webkit-font-smoothing:antialiased">
+
+  <!-- ===== TOP BAR ===== -->
+  <div style="max-width:1280px;margin:0 auto;padding:34px 32px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:14px">
+      <img src="assets/brand/logo.png" alt="种子创客工坊" style="width:50px;height:50px;object-fit:contain;display:block">
+      <div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;letter-spacing:.02em">种子创客工坊 · 学生端</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#7a8593">Mini-program · 家长 + 学生</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px"><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#0079c8;background:#e8f4ff;border:1px solid #cfe6fb;border-radius:20px;padding:6px 12px;font-weight:700">学生端</span><span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:#b6c0cc;text-transform:uppercase">管理端 / 教师端 开发中</span></div>
+  </div>
+
+  <!-- ===== TITLE ===== -->
+  <div style="max-width:1280px;margin:0 auto;padding:30px 32px 0">
+    <h1 style="margin:0 0 12px;font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,4vw,44px);line-height:1.05;font-weight:700;letter-spacing:-.01em">学生端 · 高保真稿</h1>
+    <p style="margin:0;font-size:15px;line-height:1.6;color:#5d6b7a;max-width:62ch">面向<b style="color:#1a2330">家长与学生</b>：报名 / 课程 / 会员 / 成长。小程序整体将分为<b style="color:#1a2330">管理端、教师端、学生端</b>三端，本稿为学生端。底部 5 Tab + 故事流布局，<span style="color:#ff5a36;font-weight:700">立即报名</span> 为唯一强调色，内容取自仓库真实课程与校区配置。</p>
+  </div>
+
+  <!-- ===== PHONE GRID ===== -->
+  <div style="max-width:1280px;margin:0 auto;padding:40px 32px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:32px;justify-items:center">
+
+    <!-- ============ SCREEN 1: 校区 ============ -->
+    <div style="width:100%;max-width:320px">
+      <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">① 校区 · 首页</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">城市定位 · 本季课程故事流</div></div>
+      <div style="background:#0f1722;border-radius:42px;padding:9px;box-shadow:0 26px 54px rgba(15,30,55,.2)">
+        <div style="background:#f1f4f7;border-radius:34px;overflow:hidden;height:660px;display:flex;flex-direction:column;position:relative">
+          <!-- status -->
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 2px;font-size:12px;font-weight:700;color:#1a2330"><span style="font-family:'Space Grotesk'">9:41</span><span style="display:flex;align-items:center;gap:5px"><span style="width:16px;height:9px;border:1.5px solid #1a2330;border-radius:2px;display:inline-block"></span></span></div>
+          <!-- header -->
+          <div style="padding:8px 18px 14px;background:#fff;border-bottom:1px solid #eef1f4">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="display:flex;align-items:center;gap:8px"><img src="assets/brand/logo.png" style="width:26px;height:26px;object-fit:contain"><b style="font-size:15px">种子创客工坊</b></div>
+              <span style="display:inline-flex;align-items:center;gap:4px;font-size:13px;color:#0079c8;font-weight:700;background:#e8f4ff;padding:5px 11px;border-radius:16px">📍 江门市 ▾</span>
+            </div>
+          </div>
+          <!-- scroll body -->
+          <div style="flex:1;overflow:hidden;padding:12px 14px">
+            <!-- campus card with venue photo backdrop -->
+            <div style="position:relative;border-radius:16px;overflow:hidden;margin-bottom:9px;box-shadow:0 8px 20px rgba(15,30,55,.05);background:#fff">
+              <img src="assets/photos/workshop-space.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.14">
+              <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.82))"></div>
+              <div style="position:relative;padding:13px">
+                <div style="display:flex;align-items:flex-start;gap:11px">
+                  <div style="width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,#075f9b,#0079c8);display:grid;place-items:center;flex-shrink:0"><img src="assets/brand/全白logo.png" style="width:28px;height:28px;object-fit:contain"></div>
+                  <div style="flex:1;min-width:0"><div style="font-size:14.5px;font-weight:700">种子创客工坊 江门校区</div><div style="font-size:11.5px;color:#0079c8;font-weight:600;margin-top:2px">江门市科普教育基地 · 实景空间</div><div style="font-size:11.5px;color:#5d6b7a;margin-top:4px;line-height:1.45">蓬江区万达广场五邑老街 12 幢鹤山站二层 227–229 室</div><div style="font-size:11.5px;color:#ff5a36;font-weight:700;margin-top:4px">📞 130 6625 2826（微信同号）</div></div>
+                </div>
+                <div style="display:flex;gap:8px;margin-top:13px">
+                  <span style="flex:1;text-align:center;font-size:12.5px;font-weight:700;color:#0079c8;background:rgba(232,244,255,.9);padding:9px;border-radius:11px">复制地址</span>
+                  <span style="flex:1;text-align:center;font-size:12.5px;font-weight:700;color:#fff;background:#ff5a36;padding:9px;border-radius:11px">立即报名</span>
+                </div>
+              </div>
+            </div>
+            <!-- season switch -->
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px"><b style="font-size:14px">本季课程</b><span style="font-size:11px;color:#8a94a3">全部 ›</span></div>
+            <div style="display:flex;gap:6px;margin-bottom:8px">
+              <span style="background:#0079c8;color:#fff;font-size:12px;font-weight:700;padding:6px 11px;border-radius:16px">春季班</span>
+              <span style="background:#fff;color:#5d6b7a;font-size:12px;font-weight:700;padding:6px 11px;border-radius:16px">暑假营</span>
+              <span style="background:#fff;color:#5d6b7a;font-size:12px;font-weight:700;padding:6px 11px;border-radius:16px">秋季班</span>
+              <span style="background:#fff;color:#5d6b7a;font-size:12px;font-weight:700;padding:6px 11px;border-radius:16px">寒假营</span>
+            </div>
+            <!-- featured card -->
+            <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 24px rgba(15,30,55,.07);margin-bottom:10px">
+              <div style="height:44px;background:linear-gradient(135deg,#075f9b,#0aa0e0);position:relative;display:grid;place-items:center;overflow:hidden">
+                <img src="assets/brand/全白logo.png" style="width:26px;height:26px;object-fit:contain;opacity:.92">
+                <span style="position:absolute;left:12px;top:8px;background:rgba(255,255,255,.92);color:#075f9b;font-size:10.5px;font-weight:800;padding:3px 8px;border-radius:11px">春季 · 项目制</span>
+              </div>
+              <div style="padding:11px 14px">
+                <div style="font-size:15px;font-weight:700">春季 STEAM 项目课</div>
+                <div style="font-size:11.5px;color:#8a94a3;margin:3px 0 8px">7–15 岁 · 周末班 · 结构·电子·编程·展示</div>
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <span style="font-size:11.5px;color:#5d6b7a">智械骋旧轮，科创承来路</span>
+                  <span style="background:#ff5a36;color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:16px">报名</span>
+                </div>
+              </div>
+            </div>
+            <!-- honor strip -->
+            <div style="background:linear-gradient(135deg,#fff6e6,#ffeccc);border:1px solid #f3e0b6;border-radius:14px;padding:10px 13px;display:flex;align-items:center;gap:10px">
+              <span style="font-size:18px">🏅</span>
+              <div style="flex:1"><div style="font-size:12px;color:#7a5a16;font-weight:700;line-height:1.3">全球发明大会中国区一等奖 · 省赛多项第一</div><div style="font-size:10.5px;color:#a98a4a;font-weight:600;margin-top:1px">江门市首家科技类培训机构 · 机构实力 ›</div></div>
+              <span style="color:#c8a85a;font-size:16px">›</span>
+            </div>
+            <!-- list item removed to fit honor strip -->
+          </div>
+          <!-- tabbar -->
+          <div style="background:#fff;border-top:1px solid #eef1f4;display:flex;padding:8px 4px 11px">
+            <div style="flex:1;text-align:center"><div style="font-size:17px">📍</div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">校区</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📝</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">报名</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4"><img src="assets/brand/logo.png" style="width:17px;height:17px;object-fit:contain;display:inline-block;vertical-align:middle"></div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">MakerSeed</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📚</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">课程</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 2: 报名 ============ -->
+    <div style="width:100%;max-width:320px">
+      <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">② 报名</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">学段分级 · 课程矩阵 · 固定 CTA</div></div>
+      <div style="background:#0f1722;border-radius:42px;padding:9px;box-shadow:0 26px 54px rgba(15,30,55,.2)">
+        <div style="background:#f1f4f7;border-radius:34px;overflow:hidden;height:660px;display:flex;flex-direction:column;position:relative">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 2px;font-size:12px;font-weight:700;color:#1a2330"><span style="font-family:'Space Grotesk'">9:41</span><span style="width:16px;height:9px;border:1.5px solid #1a2330;border-radius:2px;display:inline-block"></span></div>
+          <div style="padding:8px 18px 14px;background:#fff;border-bottom:1px solid #eef1f4">
+            <div style="font-size:18px;font-weight:800">选择课程报名</div>
+            <div style="font-size:12px;color:#8a94a3;margin-top:2px">按学段查看适合孩子的方向</div>
+          </div>
+          <div style="flex:1;overflow:hidden;padding:12px 14px 0">
+            <!-- 3 entries -->
+            <div style="display:flex;gap:8px;margin-bottom:11px">
+              <div style="flex:1;background:#fff;border-radius:13px;padding:12px 8px;text-align:center"><div style="width:34px;height:34px;border-radius:10px;background:#e8f4ff;display:grid;place-items:center;color:#0079c8;font-size:16px;margin:0 auto 6px">+</div><div style="font-size:11.5px;font-weight:700">常规课</div></div>
+              <div style="flex:1;background:#fff;border-radius:13px;padding:12px 8px;text-align:center"><div style="width:34px;height:34px;border-radius:10px;background:#fff1ec;display:grid;place-items:center;color:#ff5a36;font-size:15px;margin:0 auto 6px">🏁</div><div style="font-size:11.5px;font-weight:700">赛事课</div></div>
+              <div style="flex:1;background:#fff;border-radius:13px;padding:12px 8px;text-align:center"><div style="width:34px;height:34px;border-radius:10px;background:#f0ecff;display:grid;place-items:center;color:#6144d8;font-size:15px;margin:0 auto 6px">⛺</div><div style="font-size:11.5px;font-weight:700">冬夏令营</div></div>
+            </div>
+            <!-- segmented -->
+            <div style="display:flex;gap:7px;margin-bottom:11px">
+              <span style="background:#0079c8;color:#fff;font-size:12px;font-weight:700;padding:6px 14px;border-radius:16px">小学</span>
+              <span style="background:#fff;color:#5d6b7a;font-size:12px;font-weight:700;padding:6px 14px;border-radius:16px">初中</span>
+              <span style="background:#fff;color:#5d6b7a;font-size:12px;font-weight:700;padding:6px 14px;border-radius:16px">冬夏令营</span>
+            </div>
+            <!-- course cards · 真实 5 大类别 -->
+            <div style="background:#fff;border-radius:12px;padding:9px 11px;margin-bottom:7px;display:flex;gap:10px;align-items:center">
+              <div style="width:36px;height:36px;border-radius:10px;background:#e7f5fc;display:grid;place-items:center;color:#2C9FD4;font-weight:800;font-size:10px;flex-shrink:0">6岁+</div>
+              <div style="flex:1"><div style="font-size:13px;font-weight:700">头脑风暴</div><div style="font-size:10.5px;color:#8a94a3;margin-top:1px">STEAM 机器人类 · 1.0 / 2.0 / 3.0</div></div>
+              <span style="color:#c2ccd6;font-size:16px">›</span>
+            </div>
+            <div style="background:#fff;border-radius:12px;padding:9px 11px;margin-bottom:7px;display:flex;gap:10px;align-items:center">
+              <div style="width:36px;height:36px;border-radius:10px;background:#fdf3da;display:grid;place-items:center;color:#a9760a;font-weight:800;font-size:10px;flex-shrink:0">8岁+</div>
+              <div style="flex:1"><div style="font-size:13px;font-weight:700">编程研习社</div><div style="font-size:10.5px;color:#8a94a3;margin-top:1px">编程类 · Scratch / Python / C++</div></div>
+              <span style="color:#c2ccd6;font-size:16px">›</span>
+            </div>
+            <div style="background:#fff;border-radius:12px;padding:9px 11px;margin-bottom:7px;display:flex;gap:10px;align-items:center">
+              <div style="width:36px;height:36px;border-radius:10px;background:#e8f6ea;display:grid;place-items:center;color:#247d34;font-weight:800;font-size:10px;flex-shrink:0">9岁+</div>
+              <div style="flex:1"><div style="font-size:13px;font-weight:700">智能智造</div><div style="font-size:10.5px;color:#8a94a3;margin-top:1px">创客类 · 开源硬件 / 物联网 / 3D</div></div>
+              <span style="color:#c2ccd6;font-size:16px">›</span>
+            </div>
+            <div style="background:#fff;border-radius:12px;padding:9px 11px;margin-bottom:7px;display:flex;gap:10px;align-items:center">
+              <div style="width:36px;height:36px;border-radius:10px;background:#fdeceb;display:grid;place-items:center;color:#b3271d;font-weight:800;font-size:10px;flex-shrink:0">8岁+</div>
+              <div style="flex:1"><div style="font-size:13px;font-weight:700">科技模型</div><div style="font-size:10.5px;color:#8a94a3;margin-top:1px">RC 科技体育类 · 无人机 / 车模 / 航模</div></div>
+              <span style="color:#c2ccd6;font-size:16px">›</span>
+            </div>
+            <div style="background:#fff;border-radius:12px;padding:9px 11px;display:flex;gap:10px;align-items:center">
+              <div style="width:36px;height:36px;border-radius:10px;background:#e9edf8;display:grid;place-items:center;color:#1E3C8C;font-weight:800;font-size:10px;flex-shrink:0">12岁+</div>
+              <div style="flex:1"><div style="font-size:13px;font-weight:700">AI 创意应用</div><div style="font-size:10.5px;color:#8a94a3;margin-top:1px">人工智能类 · 视觉识别 / 深度学习</div></div>
+              <span style="color:#c2ccd6;font-size:16px">›</span>
+            </div>
+          </div>
+          <!-- fixed CTA + tab -->
+          <div style="padding:10px 14px;background:#fff;border-top:1px solid #eef1f4"><div style="background:#ff5a36;color:#fff;text-align:center;font-size:14.5px;font-weight:700;padding:12px;border-radius:24px;box-shadow:0 10px 20px rgba(255,90,54,.26)">立即报名 / 预约体验</div></div>
+          <div style="background:#fff;border-top:1px solid #eef1f4;display:flex;padding:8px 4px 11px">
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📍</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">校区</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px">📝</div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">报名</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4"><img src="assets/brand/logo.png" style="width:17px;height:17px;object-fit:contain;display:inline-block;vertical-align:middle"></div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">MakerSeed</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📚</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">课程</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 3: MakerSeed ============ -->
+    <div style="width:100%;max-width:320px">
+      <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">③ MakerSeed · 种子科创</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">会员等级 · 权益网格 · 绑定学员</div></div>
+      <div style="background:#0f1722;border-radius:42px;padding:9px;box-shadow:0 26px 54px rgba(15,30,55,.2)">
+        <div style="background:#f1f4f7;border-radius:34px;overflow:hidden;height:660px;display:flex;flex-direction:column;position:relative">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 2px;font-size:12px;font-weight:700;color:#1a2330"><span style="font-family:'Space Grotesk'">9:41</span><span style="width:16px;height:9px;border:1.5px solid #1a2330;border-radius:2px;display:inline-block"></span></div>
+          <div style="flex:1;overflow:hidden;padding:14px">
+            <!-- member card -->
+            <div style="border-radius:18px;padding:18px;background:linear-gradient(135deg,#075f9b,#0079c8);color:#fff;position:relative;overflow:hidden;margin-bottom:14px">
+              <span style="position:absolute;right:-20px;top:-20px;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.1)"></span>
+              <div style="display:flex;align-items:center;gap:11px;position:relative">
+                <img src="assets/brand/全白logo.png" style="width:38px;height:38px;object-fit:contain">
+                <div><div style="font-size:16px;font-weight:800">种子科创 · <span style="color:#ffd470">新星级</span></div><div style="font-size:11.5px;color:rgba(255,255,255,.82);margin-top:1px">绑定学员，解锁专属成长权益</div></div>
+              </div>
+              <div style="margin-top:16px;position:relative">
+                <div style="display:flex;justify-content:space-between;font-size:11.5px;color:rgba(255,255,255,.9);margin-bottom:6px"><span>创客值</span><span style="font-family:'Space Grotesk';font-weight:700;color:#ffd470">0 / 12000</span></div>
+                <div style="height:7px;border-radius:5px;background:rgba(255,255,255,.22);overflow:hidden"><div style="width:3%;height:100%;background:#ffb020"></div></div>
+              </div>
+            </div>
+            <!-- bind prompt -->
+            <div style="background:#fff;border-radius:14px;padding:13px 15px;display:flex;align-items:center;gap:11px;margin-bottom:16px">
+              <div style="width:40px;height:40px;border-radius:11px;background:#fff1ec;display:grid;place-items:center;font-size:18px">🎓</div>
+              <div style="flex:1"><div style="font-size:13.5px;font-weight:700">绑定我的孩子</div><div style="font-size:11px;color:#8a94a3;margin-top:2px">关联学员后查看课程与成长</div></div>
+              <span style="background:#0079c8;color:#fff;font-size:12px;font-weight:700;padding:7px 13px;border-radius:15px">去绑定</span>
+            </div>
+            <!-- benefits grid -->
+            <div style="font-size:14px;font-weight:700;margin-bottom:11px">会员权益</div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:9px">
+              <div style="background:#fff;border-radius:13px;padding:11px 4px;text-align:center"><div style="font-size:19px">🎁</div><div style="font-size:10.5px;color:#5d6b7a;margin-top:5px">生日礼盒</div></div>
+              <div style="background:#fff;border-radius:13px;padding:11px 4px;text-align:center"><div style="font-size:19px">📊</div><div style="font-size:10.5px;color:#5d6b7a;margin-top:5px">数理评估</div></div>
+              <div style="background:#fff;border-radius:13px;padding:11px 4px;text-align:center"><div style="font-size:19px">🎤</div><div style="font-size:10.5px;color:#5d6b7a;margin-top:5px">创客讲座</div></div>
+              <div style="background:#fff;border-radius:13px;padding:11px 4px;text-align:center"><div style="font-size:19px">💬</div><div style="font-size:10.5px;color:#5d6b7a;margin-top:5px">专属咨询</div></div>
+              <div style="background:#fff;border-radius:13px;padding:11px 4px;text-align:center"><div style="font-size:19px">🧭</div><div style="font-size:10.5px;color:#5d6b7a;margin-top:5px">升学规划</div></div>
+              <div style="background:#fff;border-radius:13px;padding:11px 4px;text-align:center"><div style="font-size:19px">🤖</div><div style="font-size:10.5px;color:#5d6b7a;margin-top:5px">人工智能</div></div>
+              <div style="background:#fff;border-radius:13px;padding:11px 4px;text-align:center"><div style="font-size:19px">🎫</div><div style="font-size:10.5px;color:#5d6b7a;margin-top:5px">礼卡</div></div>
+              <div style="background:#fff;border-radius:13px;padding:11px 4px;text-align:center"><div style="font-size:19px;color:#c2ccd6">⋯</div><div style="font-size:10.5px;color:#5d6b7a;margin-top:5px">更多</div></div>
+            </div>
+          </div>
+          <div style="background:#fff;border-top:1px solid #eef1f4;display:flex;padding:8px 4px 11px">
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📍</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">校区</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📝</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">报名</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px"><img src="assets/brand/logo.png" style="width:17px;height:17px;object-fit:contain;display:inline-block;vertical-align:middle"></div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">MakerSeed</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📚</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">课程</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 4: 课程管理 ============ -->
+    <div style="width:100%;max-width:320px">
+      <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">④ 课程管理</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">当前 / 以往课程 · 进度</div></div>
+      <div style="background:#0f1722;border-radius:42px;padding:9px;box-shadow:0 26px 54px rgba(15,30,55,.2)">
+        <div style="background:#f1f4f7;border-radius:34px;overflow:hidden;height:660px;display:flex;flex-direction:column;position:relative">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 2px;font-size:12px;font-weight:700;color:#1a2330"><span style="font-family:'Space Grotesk'">9:41</span><span style="width:16px;height:9px;border:1.5px solid #1a2330;border-radius:2px;display:inline-block"></span></div>
+          <div style="padding:8px 18px 14px;background:#fff;border-bottom:1px solid #eef1f4">
+            <div style="font-size:18px;font-weight:800">我的课程</div>
+            <div style="display:flex;gap:7px;margin-top:12px">
+              <span style="background:#0079c8;color:#fff;font-size:12.5px;font-weight:700;padding:7px 16px;border-radius:16px">当前课程</span>
+              <span style="background:#f1f4f7;color:#5d6b7a;font-size:12.5px;font-weight:700;padding:7px 16px;border-radius:16px">以往课程</span>
+            </div>
+          </div>
+          <div style="flex:1;overflow:hidden;padding:14px">
+            <!-- current course -->
+            <div style="background:#fff;border-radius:16px;padding:15px;margin-bottom:13px;box-shadow:0 8px 20px rgba(15,30,55,.05)">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:11px">
+                <div style="display:flex;align-items:center;gap:10px"><div style="width:42px;height:42px;border-radius:12px;background:#fff1ec;display:grid;place-items:center;color:#ff5a36;font-weight:800;font-size:11px">机器人</div><div><div style="font-size:14.5px;font-weight:700">机器人与自动控制</div><div style="font-size:11px;color:#8a94a3;margin-top:2px">周六 10:00 · 第 8/13 课</div></div></div>
+                <span style="font-family:'Space Grotesk';font-size:13px;font-weight:700;color:#0079c8">62%</span>
+              </div>
+              <div style="height:7px;border-radius:5px;background:#eef1f4;overflow:hidden;margin-bottom:11px"><div style="width:62%;height:100%;background:#0079c8"></div></div>
+              <div style="background:#e8f4ff;border-radius:11px;padding:9px 12px;font-size:12px;color:#075f9b"><b>下一节</b> · 自动避障挑战</div>
+            </div>
+            <div style="background:#fff;border-radius:16px;padding:15px;margin-bottom:13px">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:11px">
+                <div style="display:flex;align-items:center;gap:10px"><div style="width:42px;height:42px;border-radius:12px;background:#fff7e6;display:grid;place-items:center;color:#d98708;font-weight:800;font-size:11px">秋季</div><div><div style="font-size:14.5px;font-weight:700">秋季 STEAM 项目课</div><div style="font-size:11px;color:#8a94a3;margin-top:2px">周日 14:00 · 第 5/16 课</div></div></div>
+                <span style="font-family:'Space Grotesk';font-size:13px;font-weight:700;color:#d98708">31%</span>
+              </div>
+              <div style="height:7px;border-radius:5px;background:#eef1f4;overflow:hidden"><div style="width:31%;height:100%;background:#f0a008"></div></div>
+            </div>
+            <!-- go signup -->
+            <div style="background:#fff;border:1px dashed #cfd9e2;border-radius:16px;padding:18px;text-align:center">
+              <div style="font-size:13px;color:#8a94a3;margin-bottom:10px">想体验更多方向？</div>
+              <span style="display:inline-block;background:#e8f4ff;color:#0079c8;font-size:13px;font-weight:700;padding:9px 20px;border-radius:18px">去报名 →</span>
+            </div>
+          </div>
+          <div style="background:#fff;border-top:1px solid #eef1f4;display:flex;padding:8px 4px 11px">
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📍</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">校区</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📝</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">报名</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4"><img src="assets/brand/logo.png" style="width:17px;height:17px;object-fit:contain;display:inline-block;vertical-align:middle"></div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">MakerSeed</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px">📚</div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">课程</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 5: 我的 ============ -->
+    <div style="width:100%;max-width:320px">
+      <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">⑤ 我的</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">成长等级 · 创客值 · 功能入口</div></div>
+      <div style="background:#0f1722;border-radius:42px;padding:9px;box-shadow:0 26px 54px rgba(15,30,55,.2)">
+        <div style="background:#f1f4f7;border-radius:34px;overflow:hidden;height:660px;display:flex;flex-direction:column;position:relative">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 2px;font-size:12px;font-weight:700;color:#fff;position:relative;z-index:1"><span style="font-family:'Space Grotesk'">9:41</span><span style="width:16px;height:9px;border:1.5px solid #fff;border-radius:2px;display:inline-block"></span></div>
+          <div style="flex:1;overflow:hidden">
+            <!-- profile header -->
+            <div style="background:linear-gradient(150deg,#075f9b,#0079c8);padding:8px 18px 22px;color:#fff;position:relative;overflow:hidden">
+              <span style="position:absolute;right:-30px;top:-10px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.08)"></span>
+              <div style="display:flex;align-items:center;gap:13px;position:relative;margin-top:6px">
+                <div style="width:54px;height:54px;border-radius:50%;background:#ffb020;display:grid;place-items:center;color:#16121f;font-weight:800;font-size:20px;border:2px solid rgba(255,255,255,.6)">明</div>
+                <div><div style="font-size:17px;font-weight:800">小明</div><div style="display:inline-flex;align-items:center;gap:5px;font-size:11.5px;background:rgba(255,255,255,.18);padding:3px 9px;border-radius:12px;margin-top:4px">⭐ 种子科创 · 新星级</div></div>
+              </div>
+              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px;position:relative">
+                <div style="background:rgba(255,255,255,.14);border-radius:13px;padding:11px;text-align:center"><div style="font-family:'Space Grotesk';font-size:20px;font-weight:700">0</div><div style="font-size:10.5px;color:rgba(255,255,255,.82);margin-top:1px">创客值</div></div>
+                <div style="background:rgba(255,255,255,.14);border-radius:13px;padding:11px;text-align:center"><div style="font-family:'Space Grotesk';font-size:20px;font-weight:700">2</div><div style="font-size:10.5px;color:rgba(255,255,255,.82);margin-top:1px">在学课程</div></div>
+                <div style="background:rgba(255,255,255,.14);border-radius:13px;padding:11px;text-align:center"><div style="font-family:'Space Grotesk';font-size:20px;font-weight:700">3</div><div style="font-size:10.5px;color:rgba(255,255,255,.82);margin-top:1px">完成作品</div></div>
+              </div>
+            </div>
+            <!-- function grid -->
+            <div style="padding:14px">
+              <div style="background:#fff;border-radius:16px;padding:15px 6px;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:14px">
+                <div style="text-align:center"><div style="width:38px;height:38px;border-radius:11px;background:#f0ecff;display:grid;place-items:center;font-size:17px;margin:0 auto 5px">📦</div><div style="font-size:10.5px;color:#5d6b7a">我的订单</div></div>
+                <div style="text-align:center"><div style="width:38px;height:38px;border-radius:11px;background:#fff1ec;display:grid;place-items:center;font-size:17px;margin:0 auto 5px">🧾</div><div style="font-size:10.5px;color:#5d6b7a">我的发票</div></div>
+                <div style="text-align:center"><div style="width:38px;height:38px;border-radius:11px;background:#fff7e6;display:grid;place-items:center;font-size:17px;margin:0 auto 5px">👦</div><div style="font-size:10.5px;color:#5d6b7a">我的孩子</div></div>
+                <div style="text-align:center"><div style="width:38px;height:38px;border-radius:11px;background:#e8f4ff;display:grid;place-items:center;font-size:17px;margin:0 auto 5px">🛒</div><div style="font-size:10.5px;color:#5d6b7a">会员商城</div></div>
+              </div>
+              <!-- recent booking -->
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><b style="font-size:14px">最近预约</b><span style="font-size:11px;color:#8a94a3">全部 ›</span></div>
+              <div style="background:#fff;border-radius:14px;padding:13px;display:flex;align-items:center;gap:11px">
+                <div style="width:40px;height:40px;border-radius:11px;background:#e8f4ff;display:grid;place-items:center;color:#0079c8;font-size:17px">📅</div>
+                <div style="flex:1"><div style="font-size:13px;font-weight:700">机器人与自动控制 · 体验课</div><div style="font-size:11px;color:#8a94a3;margin-top:2px">待确认 · 提交于 06-12</div></div>
+                <span style="font-size:11px;color:#ff5a36;font-weight:700;background:#fff1ec;padding:4px 9px;border-radius:11px">待联系</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-top:1px solid #eef1f4;display:flex;padding:8px 4px 11px">
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📍</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">校区</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📝</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">报名</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4"><img src="assets/brand/logo.png" style="width:17px;height:17px;object-fit:contain;display:inline-block;vertical-align:middle"></div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">MakerSeed</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📚</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">课程</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px">👤</div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">我的</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 6: 课程详情 ============ -->
+    <div style="width:100%;max-width:320px">
+      <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">⑥ 课程详情</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">适合年级 · 项目方向 · 预约回填</div></div>
+      <div style="background:#0f1722;border-radius:42px;padding:9px;box-shadow:0 26px 54px rgba(15,30,55,.2)">
+        <div style="background:#f1f4f7;border-radius:34px;overflow:hidden;height:660px;display:flex;flex-direction:column;position:relative">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 2px;font-size:12px;font-weight:700;color:#fff;position:relative;z-index:1"><span style="font-family:'Space Grotesk'">9:41</span><span style="width:16px;height:9px;border:1.5px solid #fff;border-radius:2px;display:inline-block"></span></div>
+          <div style="flex:1;overflow:hidden">
+            <!-- header banner -->
+            <div style="background:linear-gradient(135deg,#075f9b,#0aa0e0);padding:6px 18px 22px;color:#fff;position:relative;overflow:hidden">
+              <span style="position:absolute;right:-24px;bottom:-24px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.1)"></span>
+              <div style="display:flex;align-items:center;gap:10px;font-size:12px;margin-top:4px"><span style="background:rgba(255,255,255,.2);padding:4px 9px;border-radius:11px">‹ 返回</span></div>
+              <span style="display:inline-block;background:rgba(255,255,255,.92);color:#075f9b;font-size:11px;font-weight:800;padding:4px 10px;border-radius:12px;margin:14px 0 10px">ROBOT · 机器人</span>
+              <div style="font-size:22px;font-weight:800;position:relative">机器人与自动控制</div>
+              <div style="font-size:12px;color:rgba(255,255,255,.85);margin-top:6px;position:relative">适合 8–16 岁 · 任务驱动项目课</div>
+            </div>
+            <div style="padding:14px">
+              <p style="margin:0 0 14px;font-size:13px;line-height:1.6;color:#5d6b7a">学习传感器、执行器、机械结构与控制策略，在测试与调参中完成挑战任务。</p>
+              <div style="font-size:13px;font-weight:700;margin-bottom:9px">项目方向</div>
+              <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px">
+                <span style="background:#e8f4ff;color:#075f9b;font-size:12px;font-weight:700;padding:7px 12px;border-radius:14px">循迹机器人</span>
+                <span style="background:#e8f4ff;color:#075f9b;font-size:12px;font-weight:700;padding:7px 12px;border-radius:14px">自动避障</span>
+                <span style="background:#e8f4ff;color:#075f9b;font-size:12px;font-weight:700;padding:7px 12px;border-radius:14px">机械臂任务</span>
+              </div>
+              <div style="font-size:13px;font-weight:700;margin-bottom:9px">你将获得</div>
+              <div style="display:grid;gap:8px">
+                <div style="display:flex;align-items:center;gap:9px;font-size:12.5px;color:#3a4655"><span style="width:6px;height:6px;border-radius:50%;background:#25a66a"></span>理解机器人的感知、决策与执行</div>
+                <div style="display:flex;align-items:center;gap:9px;font-size:12.5px;color:#3a4655"><span style="width:6px;height:6px;border-radius:50%;background:#25a66a"></span>搭建稳定结构并完成任务</div>
+                <div style="display:flex;align-items:center;gap:9px;font-size:12.5px;color:#3a4655"><span style="width:6px;height:6px;border-radius:50%;background:#25a66a"></span>根据测试结果调参优化</div>
+              </div>
+            </div>
+          </div>
+          <!-- sticky book bar -->
+          <div style="padding:11px 14px;background:#fff;border-top:1px solid #eef1f4;display:flex;align-items:center;gap:11px">
+            <div><div style="font-size:11px;color:#8a94a3">适合</div><div style="font-size:14px;font-weight:800;color:#0079c8">8–16 岁</div></div>
+            <div style="flex:1;text-align:center;background:#ff5a36;color:#fff;font-size:14.5px;font-weight:700;padding:12px;border-radius:24px;box-shadow:0 10px 20px rgba(255,90,54,.26)">预约这门课</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 7: 机构实力 ============ -->
+    <div style="width:100%;max-width:320px">
+      <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">⑦ 机构介绍 · 实力</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">资质 · 成绩 · 进校园</div></div>
+      <div style="background:#0f1722;border-radius:42px;padding:9px;box-shadow:0 26px 54px rgba(15,30,55,.2)">
+        <div style="background:#f1f4f7;border-radius:34px;overflow:hidden;height:660px;display:flex;flex-direction:column;position:relative">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 2px;font-size:12px;font-weight:700;color:#1a2330"><span style="font-family:'Space Grotesk'">9:41</span><span style="width:16px;height:9px;border:1.5px solid #1a2330;border-radius:2px;display:inline-block"></span></div>
+          <div style="display:flex;align-items:center;gap:8px;padding:6px 14px 9px;background:#fff;border-bottom:1px solid #eef1f4"><span style="font-size:13.5px;font-weight:800;flex-shrink:0">机构介绍</span><div style="display:flex;gap:5px;background:#eef1f4;border-radius:11px;padding:3px;flex:1"><span style="flex:1;text-align:center;font-size:11.5px;font-weight:700;padding:5px;border-radius:8px;background:#fff;color:#0079c8;box-shadow:0 1px 3px rgba(0,0,0,.08)">实力</span><span style="flex:1;text-align:center;font-size:11.5px;font-weight:700;padding:5px;border-radius:8px;color:#8a94a3">师资研发</span></div></div>
+          <div style="flex:1;overflow:hidden">
+            <!-- header -->
+            <div style="background:#0c1a26;background-image:linear-gradient(rgba(120,160,200,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(120,160,200,.07) 1px,transparent 1px);background-size:30px 30px;padding:6px 18px 10px;color:#fff;position:relative;overflow:hidden">
+              <img src="assets/brand/全白logo.png" style="position:absolute;right:-16px;bottom:-16px;width:92px;opacity:.16">
+              <div style="font-size:17px;font-weight:800;position:relative;margin-top:2px;color:#fff;letter-spacing:.01em">江门种子科创培训有限公司</div>
+              <div style="display:flex;gap:7px;margin-top:9px;position:relative;flex-wrap:wrap">
+                <span style="background:rgba(95,192,255,.16);border:1px solid rgba(95,192,255,.32);border-radius:13px;padding:5px 10px;font-size:10.5px;font-weight:700;color:#bfe3ff">首家科技类培训机构</span>
+                <span style="background:rgba(95,192,255,.16);border:1px solid rgba(95,192,255,.32);border-radius:13px;padding:5px 10px;font-size:10.5px;font-weight:700;color:#bfe3ff">首批科普教育基地</span>
+              </div>
+            </div>
+            <div style="padding:12px 14px">
+              <div style="font-family:'IBM Plex Mono';font-size:11px;color:#0079c8;letter-spacing:.08em;margin-bottom:8px;font-weight:600">权威授牌</div>
+              <div style="display:grid;gap:7px;margin-bottom:10px">
+                <div style="background:#fff;border-radius:12px;padding:8px 13px;display:flex;align-items:center;gap:10px"><span style="width:28px;height:28px;border-radius:8px;background:#e9edf8;display:grid;place-items:center;font-size:13px;flex-shrink:0">🛡</span><div style="font-size:11.5px;font-weight:600;color:#1a2330;line-height:1.35">工信部教育与考试中心 · 创客教育合作机构</div></div>
+                <div style="background:#fff;border-radius:12px;padding:8px 13px;display:flex;align-items:center;gap:10px"><span style="width:28px;height:28px;border-radius:8px;background:#fdeceb;display:grid;place-items:center;font-size:13px;flex-shrink:0">⚡</span><div style="font-size:11.5px;font-weight:600;color:#1a2330;line-height:1.35">中国电子学会 · 激光加工 / 开源机器人中心</div></div>
+              </div>
+              <!-- honors -->
+              <div style="font-family:'IBM Plex Mono';font-size:11px;color:#e09100;letter-spacing:.08em;margin-bottom:8px;font-weight:600">部分省 / 国家级获奖</div>
+              <div style="background:#fff;border-radius:13px;padding:4px 13px;margin-bottom:10px">
+                <div style="display:flex;gap:11px;align-items:center;padding:9px 0;border-bottom:1px solid #f1f4f7"><span style="font-family:'Space Grotesk';font-weight:700;font-size:13px;color:#e09100;min-width:34px">2024</span><span style="font-size:11.5px;color:#3a4655;line-height:1.35">全球发明大会中国区总决赛 一等奖</span></div>
+                <div style="display:flex;gap:11px;align-items:center;padding:9px 0"><span style="font-family:'Space Grotesk';font-weight:700;font-size:13px;color:#e09100;min-width:34px">2023</span><span style="font-size:11.5px;color:#3a4655;line-height:1.35">广东省青创大赛 小学组 一等奖（江门唯一）</span></div>
+              </div>
+              <!-- real photos -->
+              <div style="font-family:'IBM Plex Mono';font-size:11px;color:#0079c8;letter-spacing:.08em;margin-bottom:9px;font-weight:600">进校园 · 实景</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px">
+                <div style="position:relative;border-radius:11px;overflow:hidden;height:44px"><img src="assets/photos/school-visit-crowd.png" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;right:0;bottom:0;padding:4px 7px;background:linear-gradient(transparent,rgba(15,12,20,.75));color:#fff;font-size:9.5px;font-weight:700">科普游园</span></div>
+                <div style="position:relative;border-radius:11px;overflow:hidden;height:44px"><img src="assets/photos/teacher-handson.png" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;right:0;bottom:0;padding:4px 7px;background:linear-gradient(transparent,rgba(15,12,20,.75));color:#fff;font-size:9.5px;font-weight:700">师资培训</span></div>
+              </div>
+              <!-- school service -->
+              <div style="font-family:'IBM Plex Mono';font-size:11px;color:#247d34;letter-spacing:.08em;margin-bottom:9px;font-weight:600">科普进校园 · 合作学校</div>
+              <div style="display:flex;flex-wrap:wrap;gap:6px">
+                <span style="background:#fff;border-radius:11px;padding:5px 10px;font-size:11px;font-weight:600;color:#5d6b7a">范罗冈小学</span>
+                <span style="background:#fff;border-radius:11px;padding:5px 10px;font-size:11px;font-weight:600;color:#5d6b7a">紫茶小学</span>
+                <span style="background:#fff;border-radius:11px;padding:5px 10px;font-size:11px;font-weight:600;color:#5d6b7a">江门一中</span>
+                <span style="background:#fff;border-radius:11px;padding:5px 10px;font-size:11px;font-weight:600;color:#5d6b7a">棠下初中</span>
+                <span style="background:#fff;border-radius:11px;padding:5px 10px;font-size:11px;font-weight:600;color:#9aa4b1">等多所</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-top:1px solid #eef1f4;display:flex;padding:8px 4px 11px">
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📍</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">校区</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📝</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">报名</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px"><img src="assets/brand/logo.png" style="width:17px;height:17px;object-fit:contain;display:inline-block;vertical-align:middle"></div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">MakerSeed</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📚</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">课程</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 8: 课程体系 ============ -->
+    <div style="width:100%;max-width:320px">
+      <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">⑧ 课程体系</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">5 大方向 · 系统匹配官网 · PBL 海报</div></div>
+      <div style="background:#0f1722;border-radius:42px;padding:9px;box-shadow:0 26px 54px rgba(15,30,55,.2)">
+        <div style="background:#f1f4f7;border-radius:34px;overflow:hidden;height:660px;display:flex;flex-direction:column;position:relative">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 2px;font-size:12px;font-weight:700;color:#1a2330"><span style="font-family:'Space Grotesk'">9:41</span><span style="width:16px;height:9px;border:1.5px solid #1a2330;border-radius:2px;display:inline-block"></span></div>
+          <div style="padding:8px 18px 12px;background:#fff;border-bottom:1px solid #eef1f4">
+            <div style="font-size:18px;font-weight:800">课程体系</div>
+            <div style="font-size:12px;color:#8a94a3;margin-top:2px">5 大核心方向 · 按年龄进阶</div>
+          </div>
+          <div style="flex:1;overflow:hidden;padding:12px 14px">
+            <!-- 头脑风暴 -->
+            <div style="background:#fff;border-radius:13px;padding:11px 12px;margin-bottom:8px;display:flex;gap:10px;align-items:center;border-left:3px solid #39B0E3">
+              <div style="width:36px;height:36px;border-radius:10px;background:#e7f5fc;display:grid;place-items:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#2C9FD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="9" width="14" height="10" rx="2"></rect><path d="M12 9V6"></path><circle cx="12" cy="4.5" r="1"></circle><circle cx="9.5" cy="14" r="1"></circle><circle cx="14.5" cy="14" r="1"></circle></svg></div>
+              <div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:6px"><b style="font-size:13px">头脑风暴</b><span style="font-size:9.5px;color:#1f7fa8;background:#eaf7fd;padding:2px 6px;border-radius:8px;font-weight:700">6岁+</span></div><div style="font-size:10.5px;color:#8a94a3;margin-top:2px">STEAM 机器人 · 1.0 / 2.0 / 3.0</div></div>
+            </div>
+            <!-- 编程研习社 -->
+            <div style="background:#fff;border-radius:13px;padding:11px 12px;margin-bottom:8px;display:flex;gap:10px;align-items:center;border-left:3px solid #F4B721">
+              <div style="width:36px;height:36px;border-radius:10px;background:#fdf3da;display:grid;place-items:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#d99a1c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 8 5 12 9 16"></polyline><polyline points="15 8 19 12 15 16"></polyline></svg></div>
+              <div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:6px"><b style="font-size:13px">编程研习社</b><span style="font-size:9.5px;color:#a9760a;background:#fdf3da;padding:2px 6px;border-radius:8px;font-weight:700">8岁+</span></div><div style="font-size:10.5px;color:#8a94a3;margin-top:2px">编程类 · Scratch / Python / C++</div></div>
+            </div>
+            <!-- 智能智造 -->
+            <div style="background:#fff;border-radius:13px;padding:11px 12px;margin-bottom:8px;display:flex;gap:10px;align-items:center;border-left:3px solid #3AAA4A">
+              <div style="width:36px;height:36px;border-radius:10px;background:#e8f6ea;display:grid;place-items:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#247d34" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.5"></rect><path d="M10 7V4M14 7V4M10 20v-3M14 20v-3M7 10H4M7 14H4M20 10h-3M20 14h-3"></path></svg></div>
+              <div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:6px"><b style="font-size:13px">智能智造</b><span style="font-size:9.5px;color:#247d34;background:#e8f6ea;padding:2px 6px;border-radius:8px;font-weight:700">9岁+</span></div><div style="font-size:10.5px;color:#8a94a3;margin-top:2px">创客类 · 开源硬件 / 物联网 / 3D</div></div>
+            </div>
+            <!-- 科技模型 -->
+            <div style="background:#fff;border-radius:13px;padding:11px 12px;margin-bottom:8px;display:flex;gap:10px;align-items:center;border-left:3px solid #DE3B2F">
+              <div style="width:36px;height:36px;border-radius:10px;background:#fdeceb;display:grid;place-items:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#b3271d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"></circle><circle cx="18" cy="6" r="2.5"></circle><circle cx="6" cy="18" r="2.5"></circle><circle cx="18" cy="18" r="2.5"></circle><rect x="9.5" y="9.5" width="5" height="5" rx="1"></rect></svg></div>
+              <div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:6px"><b style="font-size:13px">科技模型</b><span style="font-size:9.5px;color:#b3271d;background:#fdeceb;padding:2px 6px;border-radius:8px;font-weight:700">8岁+</span></div><div style="font-size:10.5px;color:#8a94a3;margin-top:2px">RC 科技体育 · 无人机 / 车模 / 航模</div></div>
+            </div>
+            <!-- AI 创意应用 -->
+            <div style="background:#fff;border-radius:13px;padding:11px 12px;margin-bottom:12px;display:flex;gap:10px;align-items:center;border-left:3px solid #23459E">
+              <div style="width:36px;height:36px;border-radius:10px;background:#e9edf8;display:grid;place-items:center;flex-shrink:0"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#23459E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"></circle><circle cx="5" cy="18" r="2"></circle><circle cx="19" cy="18" r="2"></circle><path d="M12 7v3M10.5 11.5 7 16M13.5 11.5 17 16"></path></svg></div>
+              <div style="flex:1;min-width:0"><div style="display:flex;align-items:center;gap:6px"><b style="font-size:13px">AI 创意应用</b><span style="font-size:9.5px;color:#1E3C8C;background:#e9edf8;padding:2px 6px;border-radius:8px;font-weight:700">12岁+</span></div><div style="font-size:10.5px;color:#8a94a3;margin-top:2px">人工智能 · 视觉识别 / 深度学习</div></div>
+            </div>
+            <!-- PBL posters -->
+            <div style="font-family:'IBM Plex Mono';font-size:10.5px;color:#ff5a36;letter-spacing:.06em;margin-bottom:8px;font-weight:600">PBL 项目课 · 简章</div>
+            <div style="display:flex;gap:8px;overflow:hidden">
+              <div style="flex:0 0 auto;width:80px;height:112px;border-radius:9px;overflow:hidden;border:1px solid #e2e6ea"><img src="assets/posters/pbl-smart-toy.png" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"></div>
+              <div style="flex:0 0 auto;width:80px;height:112px;border-radius:9px;overflow:hidden;border:1px solid #e2e6ea"><img src="assets/posters/pbl-mech-factory.png" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"></div>
+              <div style="flex:0 0 auto;width:80px;height:112px;border-radius:9px;overflow:hidden;border:1px solid #e2e6ea"><img src="assets/posters/pbl-drone.png" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"></div>
+              <div style="flex:0 0 auto;width:38px;height:112px;border-radius:9px;background:#e8edf2;display:grid;place-items:center;color:#8a94a3;font-size:16px">›</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-top:1px solid #eef1f4;display:flex;padding:8px 4px 11px">
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📍</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">校区</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📝</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">报名</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4"><img src="assets/brand/logo.png" style="width:17px;height:17px;object-fit:contain;display:inline-block;vertical-align:middle"></div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">MakerSeed</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px">📚</div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">课程</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SCREEN 9: 师资 · 研发 ============ -->
+    <div style="width:100%;max-width:320px">
+      <div style="text-align:center;margin-bottom:14px"><span style="font-weight:700;font-size:15px">⑨ 机构介绍 · 师资研发</span><div style="font-size:12.5px;color:#8a94a3;margin-top:2px">核心讲师 · 自研科普教具</div></div>
+      <div style="background:#0f1722;border-radius:42px;padding:9px;box-shadow:0 26px 54px rgba(15,30,55,.2)">
+        <div style="background:#f1f4f7;border-radius:34px;overflow:hidden;height:660px;display:flex;flex-direction:column;position:relative">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 2px;font-size:12px;font-weight:700;color:#1a2330"><span style="font-family:'Space Grotesk'">9:41</span><span style="width:16px;height:9px;border:1.5px solid #1a2330;border-radius:2px;display:inline-block"></span></div>
+          <div style="display:flex;align-items:center;gap:8px;padding:6px 14px 9px;background:#fff;border-bottom:1px solid #eef1f4"><span style="font-size:13.5px;font-weight:800;flex-shrink:0">机构介绍</span><div style="display:flex;gap:5px;background:#eef1f4;border-radius:11px;padding:3px;flex:1"><span style="flex:1;text-align:center;font-size:11.5px;font-weight:700;padding:5px;border-radius:8px;color:#8a94a3">实力</span><span style="flex:1;text-align:center;font-size:11.5px;font-weight:700;padding:5px;border-radius:8px;background:#fff;color:#0079c8;box-shadow:0 1px 3px rgba(0,0,0,.08)">师资研发</span></div></div>
+          <div style="flex:1;overflow:hidden;padding:12px 14px">
+            <!-- faculty cards -->
+            <div style="display:grid;gap:8px;margin-bottom:14px">
+              <div style="background:#fff;border-radius:13px;padding:9px;display:flex;gap:11px;align-items:center;box-shadow:0 6px 16px rgba(15,30,55,.05)">
+                <div style="width:48px;height:48px;border-radius:11px;overflow:hidden;flex-shrink:0"><img src="assets/faculty/liweilin.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block"></div>
+                <div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:800">李伟林</div><div style="font-size:10.5px;color:#ff5a36;font-weight:700;margin-top:1px">负责人 · 联合创始人</div><div style="font-size:10px;color:#8a94a3;margin-top:2px">工信部认证讲师 · 深耕创客十年+</div></div>
+              </div>
+              <div style="background:#fff;border-radius:13px;padding:9px;display:flex;gap:11px;align-items:center;box-shadow:0 6px 16px rgba(15,30,55,.05)">
+                <div style="width:48px;height:48px;border-radius:11px;overflow:hidden;flex-shrink:0"><img src="assets/faculty/xiaozehai.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block"></div>
+                <div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:800">肖泽海</div><div style="font-size:10.5px;color:#ff5a36;font-weight:700;margin-top:1px">负责人 · 联合创始人</div><div style="font-size:10px;color:#8a94a3;margin-top:2px">ASFC 航模飞行员 · RC 优秀教练</div></div>
+              </div>
+              <div style="background:#fff;border-radius:13px;padding:9px;display:flex;gap:11px;align-items:center;box-shadow:0 6px 16px rgba(15,30,55,.05)">
+                <div style="width:48px;height:48px;border-radius:11px;overflow:hidden;flex-shrink:0"><img src="assets/faculty/zhangmengmeng.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block"></div>
+                <div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:800">张朦朦</div><div style="font-size:10.5px;color:#ff5a36;font-weight:700;margin-top:1px">机器人教育专业教师</div><div style="font-size:10px;color:#8a94a3;margin-top:2px">擅长低龄段 · 辅导超 5000 人次</div></div>
+              </div>
+            </div>
+            <!-- R&D results -->
+            <div style="font-family:'IBM Plex Mono';font-size:11px;color:#247d34;letter-spacing:.08em;margin-bottom:9px;font-weight:600">研发科普资源能力及成果</div>
+            <div style="background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 6px 16px rgba(15,30,55,.05)">
+              <div style="overflow:hidden;height:118px"><img src="assets/rnd/rnd-2.png" style="width:100%;display:block"></div>
+              <div style="padding:9px 12px;display:flex;align-items:center;justify-content:space-between">
+                <span style="font-size:11px;color:#5d6b7a;font-weight:600">自研系列科普教具 · 课程套件</span>
+                <span style="font-size:11px;color:#0079c8;font-weight:700">查看 ›</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-top:1px solid #eef1f4;display:flex;padding:8px 4px 11px">
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📍</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">校区</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📝</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">报名</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px"><img src="assets/brand/logo.png" style="width:17px;height:17px;object-fit:contain;display:inline-block;vertical-align:middle"></div><div style="font-size:10px;color:#0079c8;font-weight:700;margin-top:1px">MakerSeed</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">📚</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">课程</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:17px;opacity:.4">👤</div><div style="font-size:10px;color:#9aa4b1;margin-top:1px">我的</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== NEXT ===== -->
+  <div style="max-width:1280px;margin:0 auto;padding:56px 32px 0">
+    <div style="background:#0f1722;border-radius:18px;padding:30px 34px;color:#fff;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:center">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;color:#5fc0ff;margin-bottom:10px">NEXT STEPS</div>
+        <h3 style="margin:0 0 10px;font-family:'Space Grotesk',sans-serif;font-size:23px;font-weight:600">官网 + 小程序两套高保真已就位</h3>
+        <p style="margin:0;font-size:14px;line-height:1.7;color:#aeb9c4">小程序为静态高保真稿，可直接对照切到微信原生项目。需要的话我可以继续：补充<b style="color:#fff">城市切换 / 课程列表页 / 预约填写页</b>，或把官网与小程序的视觉再统一打磨。</p>
+      </div>
+      <div style="display:grid;gap:9px">
+        <div style="display:flex;align-items:center;gap:11px;background:#16222e;border-radius:12px;padding:12px 15px"><span style="width:9px;height:9px;border-radius:50%;background:#0079c8"></span><span style="font-size:13.5px;color:#dbe3ea">蓝色主调 · 结构 1 配色</span></div>
+        <div style="display:flex;align-items:center;gap:11px;background:#16222e;border-radius:12px;padding:12px 15px"><span style="width:9px;height:9px;border-radius:50%;background:#ff5a36"></span><span style="font-size:13.5px;color:#dbe3ea">故事流布局 · 结构 2</span></div>
+        <div style="display:flex;align-items:center;gap:11px;background:#16222e;border-radius:12px;padding:12px 15px"><span style="width:9px;height:9px;border-radius:50%;background:#ffb020"></span><span style="font-size:13.5px;color:#dbe3ea">真实课程 / 校区内容</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

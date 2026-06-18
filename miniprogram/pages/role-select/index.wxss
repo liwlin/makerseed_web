@@ -1,0 +1,36 @@
+.role-title {
+  margin-top: 48rpx;
+  color: #1a2330;
+  font-size: 48rpx;
+  font-weight: 900;
+}
+
+.role-subtitle {
+  margin-top: 16rpx;
+  color: #5d6b7a;
+  font-size: 27rpx;
+  line-height: 1.6;
+}
+
+.role-list {
+  display: grid;
+  gap: 20rpx;
+  margin-top: 44rpx;
+}
+
+.role-card {
+  padding: 32rpx;
+}
+
+.role-card view {
+  color: #0079c8;
+  font-size: 34rpx;
+  font-weight: 900;
+}
+
+.role-card text {
+  display: block;
+  margin-top: 10rpx;
+  color: #8a94a3;
+  font-size: 24rpx;
+}

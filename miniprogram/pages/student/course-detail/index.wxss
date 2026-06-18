@@ -1,0 +1,153 @@
+.detail-page {
+  min-height: 100vh;
+  padding-bottom: 130rpx;
+  background: #f1f4f7;
+}
+
+.detail-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 28rpx 36rpx 46rpx;
+  color: #ffffff;
+}
+
+.detail-hero::after {
+  content: "";
+  position: absolute;
+  right: -50rpx;
+  bottom: -50rpx;
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+}
+
+.back {
+  display: inline-flex;
+  padding: 8rpx 18rpx;
+  border-radius: 24rpx;
+  background: rgba(255,255,255,.2);
+  font-size: 24rpx;
+}
+
+.tag {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  margin-top: 28rpx;
+  padding: 8rpx 20rpx;
+  border-radius: 24rpx;
+  color: #075f9b;
+  background: rgba(255,255,255,.92);
+  font-size: 22rpx;
+  font-weight: 900;
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  margin-top: 20rpx;
+  font-size: 44rpx;
+  font-weight: 900;
+}
+
+.fit {
+  position: relative;
+  z-index: 1;
+  margin-top: 12rpx;
+  color: rgba(255,255,255,.86);
+  font-size: 24rpx;
+}
+
+.content {
+  padding-top: 28rpx;
+}
+
+.summary {
+  color: #5d6b7a;
+  font-size: 27rpx;
+  line-height: 1.65;
+}
+
+.block-title {
+  margin: 32rpx 0 18rpx;
+  color: #1a2330;
+  font-size: 27rpx;
+  font-weight: 800;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14rpx;
+}
+
+.project-tags view {
+  padding: 14rpx 24rpx;
+  border-radius: 28rpx;
+  color: #075f9b;
+  background: #e8f4ff;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.outcome-list {
+  display: grid;
+  gap: 18rpx;
+}
+
+.outcome-list > view {
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  color: #3a4655;
+  font-size: 25rpx;
+}
+
+.outcome-list text {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: #25a66a;
+}
+
+.sticky-book {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 20rpx 28rpx calc(20rpx + env(safe-area-inset-bottom));
+  border-top: 1rpx solid #eef1f4;
+  background: #ffffff;
+}
+
+.sticky-book > view {
+  flex: 0 0 auto;
+}
+
+.sticky-book text {
+  color: #8a94a3;
+  font-size: 21rpx;
+}
+
+.sticky-book view view {
+  margin-top: 2rpx;
+  color: #0079c8;
+  font-size: 28rpx;
+  font-weight: 900;
+}
+
+.sticky-book button {
+  flex: 1;
+  min-height: 82rpx;
+  border-radius: 42rpx;
+  color: #ffffff;
+  background: #ff5a36;
+  box-shadow: 0 10rpx 22rpx rgba(255, 90, 54, 0.24);
+  font-size: 29rpx;
+  font-weight: 800;
+  line-height: 82rpx;
+}

@@ -1,0 +1,124 @@
+.signup-page {
+  padding-bottom: 156rpx;
+}
+
+.page-title {
+  margin-top: 8rpx;
+  color: #1a2330;
+  font-size: 38rpx;
+  font-weight: 900;
+}
+
+.page-subtitle {
+  margin-top: 6rpx;
+  color: #8a94a3;
+  font-size: 24rpx;
+}
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16rpx;
+  margin-top: 28rpx;
+}
+
+.entry-card {
+  min-height: 150rpx;
+  padding: 22rpx 10rpx;
+  border-radius: 26rpx;
+  background: #ffffff;
+  text-align: center;
+  color: #1a2330;
+  font-size: 23rpx;
+  font-weight: 800;
+}
+
+.entry-icon {
+  display: grid;
+  place-items: center;
+  width: 68rpx;
+  height: 68rpx;
+  margin: 0 auto 12rpx;
+  border-radius: 20rpx;
+  font-size: 30rpx;
+}
+
+.entry-card.blue .entry-icon {
+  color: #0079c8;
+  background: #e8f4ff;
+}
+
+.entry-card.orange .entry-icon {
+  color: #ff5a36;
+  background: #fff1ec;
+}
+
+.entry-card.purple .entry-icon {
+  color: #6144d8;
+  background: #f0ecff;
+}
+
+.tabs {
+  display: flex;
+  gap: 14rpx;
+  margin: 24rpx 0;
+}
+
+.family-list {
+  display: grid;
+  gap: 14rpx;
+}
+
+.family-card {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  min-height: 112rpx;
+  padding: 18rpx 22rpx;
+  border-left: 6rpx solid #0079c8;
+  border-radius: 24rpx;
+  background: #ffffff;
+}
+
+.family-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  font-size: 20rpx;
+  font-weight: 900;
+}
+
+.family-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.family-title {
+  color: #1a2330;
+  font-size: 27rpx;
+  font-weight: 800;
+}
+
+.family-desc {
+  margin-top: 5rpx;
+  color: #8a94a3;
+  font-size: 21rpx;
+  line-height: 1.35;
+}
+
+.arrow {
+  color: #c2ccd6;
+  font-size: 42rpx;
+}
+
+.fixed-cta {
+  position: fixed;
+  right: 28rpx;
+  bottom: calc(28rpx + env(safe-area-inset-bottom));
+  left: 28rpx;
+  z-index: 20;
+  padding: 18rpx 0;
+}

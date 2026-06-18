@@ -1,0 +1,15 @@
+.member-card {
+  margin-top: 24rpx;
+  padding: 32rpx;
+}
+.member-card view {
+  color: #0079c8;
+  font-size: 34rpx;
+  font-weight: 900;
+}
+.member-card text {
+  display: block;
+  margin-top: 10rpx;
+  color: #8a94a3;
+  font-size: 24rpx;
+}

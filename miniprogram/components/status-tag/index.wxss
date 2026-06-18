@@ -1,0 +1,19 @@
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: 6rpx 16rpx;
+  border-radius: 999rpx;
+  color: #0079c8;
+  background: rgba(0, 121, 200, 0.12);
+  font-size: 24rpx;
+}
+
+.status-confirmed {
+  color: #16834a;
+  background: rgba(58, 170, 74, 0.14);
+}
+
+.status-cancelled {
+  color: #9aa4b1;
+  background: #edf1f5;
+}

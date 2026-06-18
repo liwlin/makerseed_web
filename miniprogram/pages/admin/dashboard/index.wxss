@@ -1,0 +1,22 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18rpx;
+  margin-top: 24rpx;
+}
+.stat-card {
+  padding: 30rpx;
+}
+.stat-card text {
+  color: #0079c8;
+  font-size: 48rpx;
+  font-weight: 900;
+}
+.stat-card view {
+  margin-top: 8rpx;
+  color: #5d6b7a;
+  font-size: 24rpx;
+}
+.action {
+  margin-top: 28rpx;
+}

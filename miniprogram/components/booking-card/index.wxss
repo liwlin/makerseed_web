@@ -1,0 +1,29 @@
+.booking-card {
+  padding: 28rpx;
+  border-radius: 28rpx;
+  background: #ffffff;
+  box-shadow: 0 16rpx 40rpx rgba(20, 35, 55, 0.08);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.name {
+  color: #111827;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.line {
+  margin-top: 12rpx;
+  color: #4b5563;
+  font-size: 25rpx;
+}
+
+.muted {
+  color: #8a95a3;
+}

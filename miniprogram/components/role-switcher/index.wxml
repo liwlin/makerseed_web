@@ -1,0 +1,9 @@
+<view class="role-switcher">
+  <button
+    wx:for="{{roles}}"
+    wx:key="role"
+    class="role {{item.role === currentRole ? 'active' : ''}}"
+    data-role="{{item.role}}"
+    bindtap="selectRole"
+  >{{item.label}}</button>
+</view>

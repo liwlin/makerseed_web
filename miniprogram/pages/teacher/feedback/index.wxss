@@ -1,0 +1,15 @@
+.form-card {
+  margin-top: 24rpx;
+  padding: 28rpx;
+}
+textarea {
+  width: 100%;
+  min-height: 240rpx;
+  padding: 22rpx;
+  border-radius: 20rpx;
+  background: #f1f4f7;
+  font-size: 27rpx;
+}
+button {
+  margin-top: 24rpx;
+}

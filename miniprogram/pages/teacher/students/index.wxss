@@ -1,0 +1,12 @@
+.list-card {
+  margin-top: 18rpx;
+}
+.item-title {
+  color: #1a2330;
+  font-size: 29rpx;
+  font-weight: 900;
+}
+text {
+  color: #8a94a3;
+  font-size: 24rpx;
+}

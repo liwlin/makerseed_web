@@ -1,0 +1,58 @@
+<view class="page manage-page">
+  <view class="page-title">我的课程</view>
+  <view class="segmented">
+    <view
+      class="segment {{active === item.value ? 'active' : ''}}"
+      wx:for="{{tabs}}"
+      wx:key="value"
+      data-value="{{item.value}}"
+      bindtap="switchTab"
+    >{{item.label}}</view>
+  </view>
+
+  <view wx:if="{{active === 'current'}}" class="course-list">
+    <view class="course-card card" wx:for="{{currentCourses}}" wx:key="title">
+      <view class="course-top">
+        <view class="course-label" style="background: {{item.soft}}; color: {{item.color}};">{{item.label}}</view>
+        <view class="course-main">
+          <view class="course-title">{{item.title}}</view>
+          <view class="course-time">{{item.time}}</view>
+        </view>
+        <view class="percent" style="color: {{item.color}};">{{item.progress}}%</view>
+      </view>
+      <view class="bar"><view style="width: {{item.progress}}%; background: {{item.color}};"></view></view>
+      <view class="next" wx:if="{{item.next}}">{{item.next}}</view>
+    </view>
+  </view>
+
+  <view wx:if="{{active === 'past'}}" class="course-list">
+    <view class="past-card card" wx:for="{{pastCourses}}" wx:key="title">
+      <view>
+        <view class="course-title">{{item.title}}</view>
+        <view class="course-time">{{item.time}}</view>
+      </view>
+      <view class="done">已完成</view>
+    </view>
+  </view>
+
+  <view class="signup-card" bindtap="goSignup">
+    <view>想体验更多方向？</view>
+    <text>去报名 →</text>
+  </view>
+
+  <view class="section-head">
+    <view class="section-title">课程体系</view>
+  </view>
+  <view class="system-grid">
+    <view
+      class="system-item"
+      wx:for="{{courseFamilies}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="goCourse"
+    >
+      <view style="background: {{item.color}};"></view>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+</view>

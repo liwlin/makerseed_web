@@ -1,0 +1,8 @@
+<view class="booking-card">
+  <view class="top">
+    <view class="name">{{booking.studentName || booking.student}}</view>
+    <status-tag status="{{booking.status}}" />
+  </view>
+  <view class="line">{{booking.course}}</view>
+  <view class="line muted">{{booking.contactPhone || booking.phone}} · {{booking.grade}}</view>
+</view>

@@ -1,0 +1,144 @@
+.member-card {
+  position: relative;
+  overflow: hidden;
+  padding: 36rpx;
+  border-radius: 36rpx;
+  color: #ffffff;
+  background: linear-gradient(135deg, #075f9b, #0079c8);
+}
+
+.circle {
+  position: absolute;
+  top: -40rpx;
+  right: -40rpx;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+}
+
+.member-head {
+  position: relative;
+  display: flex;
+  gap: 22rpx;
+  align-items: center;
+}
+
+.member-head image {
+  width: 76rpx;
+  height: 76rpx;
+}
+
+.member-title {
+  font-size: 32rpx;
+  font-weight: 900;
+}
+
+.member-title text {
+  color: #ffd470;
+}
+
+.member-subtitle {
+  margin-top: 4rpx;
+  color: rgba(255,255,255,.82);
+  font-size: 23rpx;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 34rpx;
+  color: rgba(255,255,255,.92);
+  font-size: 23rpx;
+  font-weight: 700;
+}
+
+.progress-meta text:last-child {
+  color: #ffd470;
+  font-weight: 900;
+}
+
+.progress-bar {
+  height: 14rpx;
+  margin-top: 12rpx;
+  border-radius: 999rpx;
+  overflow: hidden;
+  background: rgba(255,255,255,.22);
+}
+
+.progress-bar view {
+  height: 100%;
+  background: #ffb020;
+}
+
+.bind-card {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  margin-top: 28rpx;
+  padding: 26rpx 30rpx;
+}
+
+.bind-icon {
+  display: grid;
+  place-items: center;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 22rpx;
+  background: #fff1ec;
+  font-size: 36rpx;
+}
+
+.bind-copy {
+  flex: 1;
+}
+
+.bind-copy view {
+  color: #1a2330;
+  font-size: 27rpx;
+  font-weight: 800;
+}
+
+.bind-copy text {
+  display: block;
+  margin-top: 5rpx;
+  color: #8a94a3;
+  font-size: 22rpx;
+}
+
+.bind-card button {
+  min-width: 112rpx;
+  min-height: 60rpx;
+  border-radius: 30rpx;
+  color: #ffffff;
+  background: #0079c8;
+  font-size: 24rpx;
+  font-weight: 800;
+  line-height: 60rpx;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14rpx;
+}
+
+.benefit-card {
+  min-height: 128rpx;
+  padding: 20rpx 6rpx;
+  border-radius: 24rpx;
+  background: #ffffff;
+  text-align: center;
+}
+
+.benefit-card view {
+  font-size: 34rpx;
+}
+
+.benefit-card text {
+  display: block;
+  margin-top: 8rpx;
+  color: #5d6b7a;
+  font-size: 21rpx;
+  font-weight: 700;
+}

@@ -1,0 +1,7 @@
+<view class="page">
+  <view class="section-title">会员管理</view>
+  <view class="card member-card">
+    <view>{{member.level}}</view>
+    <text>创客值 {{member.points}} / {{member.targetValue}}</text>
+  </view>
+</view>

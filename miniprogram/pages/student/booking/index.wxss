@@ -1,0 +1,53 @@
+.booking-head {
+  padding: 24rpx 8rpx 28rpx;
+}
+
+.booking-title {
+  margin-top: 10rpx;
+  color: #1a2330;
+  font-size: 44rpx;
+  font-weight: 900;
+}
+
+.booking-subtitle {
+  margin-top: 10rpx;
+  color: #5d6b7a;
+  font-size: 24rpx;
+  line-height: 1.45;
+}
+
+.form {
+  display: grid;
+  gap: 24rpx;
+  padding: 30rpx;
+}
+
+.field {
+  display: grid;
+  gap: 12rpx;
+}
+
+.label {
+  color: #1a2330;
+  font-size: 25rpx;
+  font-weight: 800;
+}
+
+input,
+.picker-value {
+  width: 100%;
+  min-height: 84rpx;
+  padding: 18rpx 22rpx;
+  border-radius: 20rpx;
+  color: #1a2330;
+  background: #f1f4f7;
+  font-size: 27rpx;
+}
+
+.picker-value {
+  color: #637083;
+}
+
+.submit {
+  margin-top: 10rpx;
+}

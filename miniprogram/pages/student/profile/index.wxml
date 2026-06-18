@@ -1,0 +1,54 @@
+<view class="profile-page">
+  <view class="profile-hero">
+    <view class="hero-orb"></view>
+    <view class="student-row">
+      <view class="avatar">明</view>
+      <view>
+        <view class="student-name">小明</view>
+        <view class="level-pill">⭐ {{siteConfig.membershipName}} · {{siteConfig.memberLevel.name}}</view>
+      </view>
+    </view>
+    <view class="stats">
+      <view>
+        <text>{{siteConfig.memberLevel.currentValue}}</text>
+        <view>{{siteConfig.pointsName}}</view>
+      </view>
+      <view>
+        <text>2</text>
+        <view>在学课程</view>
+      </view>
+      <view>
+        <text>3</text>
+        <view>完成作品</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="page profile-body">
+    <view class="action-grid card">
+      <view
+        class="action-item"
+        wx:for="{{profileActions}}"
+        wx:key="title"
+        data-title="{{item.title}}"
+        bindtap="handleAction"
+      >
+        <view class="action-icon" style="background: {{item.color}};">{{item.icon}}</view>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+
+    <view class="section-head">
+      <view class="section-title">最近预约</view>
+      <view class="section-more">全部 ›</view>
+    </view>
+    <view class="booking-card card">
+      <view class="calendar">📅</view>
+      <view class="booking-main">
+        <view>{{recentBooking.course || recentBooking.interest}}</view>
+        <text>{{recentBooking.status}} · {{recentBooking.date || recentBooking.createdAt}}</text>
+      </view>
+      <view class="status">{{recentBooking.status}}</view>
+    </view>
+  </view>
+</view>

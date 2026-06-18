@@ -1,0 +1,5 @@
+<view class="course-card">
+  <view class="title">{{course.title}}</view>
+  <view class="meta">{{course.ageRange || course.meta}}</view>
+  <button bindtap="tapAction">{{actionText}}</button>
+</view>

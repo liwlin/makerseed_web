@@ -1,0 +1,166 @@
+.page-title {
+  color: #1a2330;
+  font-size: 38rpx;
+  font-weight: 900;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rpx;
+  width: 100%;
+  margin-top: 24rpx;
+  padding: 8rpx;
+  border-radius: 24rpx;
+  background: #e1e5ea;
+}
+
+.segment {
+  display: grid;
+  place-items: center;
+  min-height: 64rpx;
+  border-radius: 18rpx;
+  color: #5d6b7a;
+  font-size: 26rpx;
+  font-weight: 800;
+}
+
+.segment.active {
+  color: #0079c8;
+  background: #ffffff;
+  box-shadow: 0 2rpx 8rpx rgba(15, 30, 55, 0.08);
+}
+
+.course-list {
+  display: grid;
+  gap: 18rpx;
+  margin-top: 28rpx;
+}
+
+.course-card {
+  padding: 28rpx;
+}
+
+.course-top,
+.past-card {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.course-label {
+  display: grid;
+  place-items: center;
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 24rpx;
+  font-size: 21rpx;
+  font-weight: 900;
+}
+
+.course-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.course-title {
+  color: #1a2330;
+  font-size: 29rpx;
+  font-weight: 800;
+}
+
+.course-time {
+  margin-top: 6rpx;
+  color: #8a94a3;
+  font-size: 22rpx;
+}
+
+.percent {
+  font-size: 26rpx;
+  font-weight: 900;
+}
+
+.bar {
+  height: 14rpx;
+  margin-top: 22rpx;
+  overflow: hidden;
+  border-radius: 999rpx;
+  background: #eef1f4;
+}
+
+.bar view {
+  height: 100%;
+}
+
+.next {
+  margin-top: 22rpx;
+  padding: 18rpx 22rpx;
+  border-radius: 22rpx;
+  color: #075f9b;
+  background: #e8f4ff;
+  font-size: 24rpx;
+}
+
+.past-card {
+  justify-content: space-between;
+  padding: 28rpx;
+}
+
+.done {
+  color: #3AAA4A;
+  font-size: 24rpx;
+  font-weight: 800;
+}
+
+.signup-card {
+  margin-top: 28rpx;
+  padding: 34rpx;
+  border: 2rpx dashed #cfd9e2;
+  border-radius: 28rpx;
+  background: #ffffff;
+  text-align: center;
+}
+
+.signup-card view {
+  color: #8a94a3;
+  font-size: 25rpx;
+}
+
+.signup-card text {
+  display: inline-block;
+  margin-top: 18rpx;
+  padding: 16rpx 38rpx;
+  border-radius: 34rpx;
+  color: #0079c8;
+  background: #e8f4ff;
+  font-size: 25rpx;
+  font-weight: 800;
+}
+
+.system-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16rpx;
+}
+
+.system-item {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+  min-height: 72rpx;
+  padding: 0 18rpx;
+  border-radius: 22rpx;
+  background: #ffffff;
+}
+
+.system-item view {
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+}
+
+.system-item text {
+  color: #1a2330;
+  font-size: 24rpx;
+  font-weight: 800;
+}
