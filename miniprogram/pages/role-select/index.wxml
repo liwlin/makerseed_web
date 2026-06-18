@@ -1,0 +1,10 @@
+<view class="page role-page">
+  <view class="role-title">选择工作台</view>
+  <view class="role-subtitle">不同身份看到不同业务入口，敏感操作会在服务层和云函数层继续校验。</view>
+  <view class="role-list">
+    <view class="role-card card" wx:for="{{roles}}" wx:key="role" data-role="{{item.role}}" bindtap="chooseRole">
+      <view>{{item.label}}</view>
+      <text>{{item.role}}</text>
+    </view>
+  </view>
+</view>

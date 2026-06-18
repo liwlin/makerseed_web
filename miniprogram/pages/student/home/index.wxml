@@ -1,0 +1,66 @@
+<view class="page campus-page">
+  <view class="topbar">
+    <view class="brand">
+      <image src="{{media.logo}}" mode="aspectFit"></image>
+      <text>种子创客工坊</text>
+    </view>
+    <view class="city-pill">📍 {{siteConfig.city}}</view>
+  </view>
+
+  <view class="campus-card card">
+    <image class="campus-bg" src="{{campus.image}}" mode="aspectFill"></image>
+    <view class="campus-wash"></view>
+    <view class="campus-main">
+      <view class="logo-box">
+        <image src="{{media.squareLogo}}" mode="aspectFit"></image>
+      </view>
+      <view class="campus-info">
+        <view class="campus-name">{{campus.name}}</view>
+        <view class="campus-tag">{{campus.tag}}</view>
+        <view class="campus-address">{{campus.address}}</view>
+        <view class="campus-phone">📞 {{campus.phoneText}}</view>
+      </view>
+    </view>
+    <view class="campus-actions">
+      <button class="soft-button" bindtap="copyAddress">复制地址</button>
+      <button class="primary-button" bindtap="goSignup">立即报名</button>
+    </view>
+  </view>
+
+  <view class="section-head">
+    <view class="section-title">本季课程</view>
+    <view class="section-more" bindtap="goSignup">全部 ›</view>
+  </view>
+  <view class="season-row">
+    <view
+      class="chip {{activeSeason === item ? 'active' : ''}}"
+      wx:for="{{seasons}}"
+      wx:key="*this"
+      data-season="{{item}}"
+      bindtap="chooseSeason"
+    >{{item}}</view>
+  </view>
+
+  <view class="featured-card card">
+    <view class="featured-banner">
+      <image src="{{media.whiteLogo}}" mode="aspectFit"></image>
+      <text>春季 · 项目制</text>
+    </view>
+    <view class="featured-body">
+      <view class="featured-title">{{featuredSeason.title}}</view>
+      <view class="featured-meta">{{featuredSeason.meta}}</view>
+      <view class="featured-bottom">
+        <text>{{featuredSeason.desc}}</text>
+        <button bindtap="goSignup">报名</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="honor-card" bindtap="goStrength">
+    <view class="honor-icon">🏅</view>
+    <view class="honor-copy">
+      <view>全球发明大会中国区一等奖 · 省赛多项第一</view>
+      <text>江门市首家科技类培训机构 · 机构实力 ›</text>
+    </view>
+  </view>
+</view>

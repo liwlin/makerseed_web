@@ -1,0 +1,15 @@
+.check-card {
+  margin-top: 24rpx;
+  padding: 32rpx;
+}
+.check-card view {
+  font-size: 32rpx;
+  font-weight: 900;
+}
+.check-card text {
+  display: block;
+  margin: 16rpx 0 28rpx;
+  color: #8a94a3;
+  font-size: 25rpx;
+  line-height: 1.6;
+}

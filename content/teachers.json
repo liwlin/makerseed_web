@@ -1,0 +1,20 @@
+[
+  {
+    "id": "liweilin",
+    "name": "李伟林",
+    "role": "负责人 · 联合创始人",
+    "specialties": ["创客教育", "开源机器人", "智能硬件"]
+  },
+  {
+    "id": "xiaozehai",
+    "name": "肖泽海",
+    "role": "负责人 · 联合创始人",
+    "specialties": ["航模", "RC 科技体育", "竞赛训练"]
+  },
+  {
+    "id": "zhangmengmeng",
+    "name": "张朦朦",
+    "role": "机器人教育专业教师",
+    "specialties": ["低龄段教学", "机器人课程", "项目制学习"]
+  }
+]

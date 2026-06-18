@@ -1,0 +1,36 @@
+.teacher-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24rpx;
+  margin-top: 24rpx;
+  padding: 30rpx;
+}
+
+.item-title {
+  color: #1a2330;
+  font-size: 30rpx;
+  font-weight: 900;
+}
+
+.teacher-card text {
+  display: block;
+  margin-top: 8rpx;
+  color: #8a94a3;
+  font-size: 24rpx;
+}
+
+.teacher-card button {
+  min-width: 108rpx;
+  min-height: 60rpx;
+  border-radius: 30rpx;
+  color: #ffffff;
+  background: #0079c8;
+  font-size: 24rpx;
+  font-weight: 800;
+  line-height: 60rpx;
+}
+
+.nav-button {
+  margin-top: 28rpx;
+}

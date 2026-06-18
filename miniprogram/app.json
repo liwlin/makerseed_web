@@ -1,53 +1,68 @@
 {
   "pages": [
-    "pages/campus/index",
-    "pages/signup/index",
-    "pages/makerclub/index",
-    "pages/course-manage/index",
-    "pages/profile/index",
-    "pages/course-detail/index",
-    "pages/booking/index",
-    "pages/home/index",
-    "pages/courses/index"
+    "pages/role-select/index",
+    "pages/student/home/index",
+    "pages/student/courses/index",
+    "pages/student/booking/index",
+    "pages/student/works/index",
+    "pages/student/profile/index",
+    "pages/student/course-detail/index",
+    "pages/student/membership/index",
+    "pages/student/org-strength/index",
+    "pages/student/org-faculty/index",
+    "pages/teacher/home/index",
+    "pages/teacher/schedule/index",
+    "pages/teacher/students/index",
+    "pages/teacher/checkin/index",
+    "pages/teacher/feedback/index",
+    "pages/teacher/profile/index",
+    "pages/admin/dashboard/index",
+    "pages/admin/bookings/index",
+    "pages/admin/students/index",
+    "pages/admin/courses/index",
+    "pages/admin/teachers/index",
+    "pages/admin/orders/index",
+    "pages/admin/memberships/index",
+    "pages/admin/profile/index"
   ],
   "window": {
     "navigationBarTitleText": "种子创客工坊",
-    "navigationBarBackgroundColor": "#eeeeee",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#eeeeee"
+    "backgroundColor": "#f1f4f7"
   },
   "tabBar": {
-    "color": "#666666",
-    "selectedColor": "#ff5a36",
+    "color": "#9aa4b1",
+    "selectedColor": "#0079c8",
     "backgroundColor": "#ffffff",
     "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/campus/index",
-        "text": "校区",
+        "pagePath": "pages/student/home/index",
+        "text": "首页",
         "iconPath": "images/tab/campus-normal.png",
         "selectedIconPath": "images/tab/campus-active.png"
       },
       {
-        "pagePath": "pages/signup/index",
-        "text": "报名",
-        "iconPath": "images/tab/signup-normal.png",
-        "selectedIconPath": "images/tab/signup-active.png"
-      },
-      {
-        "pagePath": "pages/makerclub/index",
-        "text": "MakerSeed",
-        "iconPath": "images/tab/club-normal.png",
-        "selectedIconPath": "images/tab/club-active.png"
-      },
-      {
-        "pagePath": "pages/course-manage/index",
+        "pagePath": "pages/student/courses/index",
         "text": "课程",
         "iconPath": "images/tab/course-normal.png",
         "selectedIconPath": "images/tab/course-active.png"
       },
       {
-        "pagePath": "pages/profile/index",
+        "pagePath": "pages/student/booking/index",
+        "text": "预约",
+        "iconPath": "images/tab/signup-normal.png",
+        "selectedIconPath": "images/tab/signup-active.png"
+      },
+      {
+        "pagePath": "pages/student/works/index",
+        "text": "成长",
+        "iconPath": "images/tab/makerseed-logo-normal.png",
+        "selectedIconPath": "images/tab/makerseed-logo-active.png"
+      },
+      {
+        "pagePath": "pages/student/profile/index",
         "text": "我的",
         "iconPath": "images/tab/profile-normal.png",
         "selectedIconPath": "images/tab/profile-active.png"

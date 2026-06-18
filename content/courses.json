@@ -1,0 +1,47 @@
+[
+  {
+    "id": "brainstorm",
+    "title": "头脑风暴",
+    "category": "steam",
+    "ageRange": "6 岁 / 一年级+",
+    "summary": "STEAM 机器人项目，按 1.0 / 2.0 / 3.0 进阶。",
+    "status": "published",
+    "sortOrder": 10
+  },
+  {
+    "id": "coding",
+    "title": "编程研习社",
+    "category": "coding",
+    "ageRange": "8 岁 / 三年级+",
+    "summary": "Scratch、Python、C++ 与计算思维课程。",
+    "status": "published",
+    "sortOrder": 20
+  },
+  {
+    "id": "smart-making",
+    "title": "智能智造",
+    "category": "maker",
+    "ageRange": "9 岁 / 四年级+",
+    "summary": "开源硬件、物联网、数字制造与 PBL 项目。",
+    "status": "published",
+    "sortOrder": 30
+  },
+  {
+    "id": "rc-tech",
+    "title": "科技模型",
+    "category": "robot",
+    "ageRange": "8 岁 / 三年级+",
+    "summary": "无人机、车模、模拟飞行等 RC 科技体育项目。",
+    "status": "published",
+    "sortOrder": 40
+  },
+  {
+    "id": "ai-creative",
+    "title": "AI 创意应用",
+    "category": "ai",
+    "ageRange": "12 岁 / 六年级+",
+    "summary": "人工智能、视觉识别、数据应用与 AI 创作。",
+    "status": "published",
+    "sortOrder": 50
+  }
+]

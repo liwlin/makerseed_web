@@ -1,0 +1,6 @@
+.empty {
+  margin-top: 24rpx;
+  padding: 44rpx;
+  color: #8a94a3;
+  line-height: 1.6;
+}

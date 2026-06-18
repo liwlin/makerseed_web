@@ -1,0 +1,22 @@
+<view class="page">
+  <view class="section-title">管理看板</view>
+  <view class="stats-grid">
+    <view class="stat-card card">
+      <text>{{stats.pendingBookings || 0}}</text>
+      <view>待联系预约</view>
+    </view>
+    <view class="stat-card card">
+      <text>{{stats.totalBookings || 0}}</text>
+      <view>全部预约</view>
+    </view>
+    <view class="stat-card card">
+      <text>{{stats.todayLessons || 0}}</text>
+      <view>今日课程</view>
+    </view>
+    <view class="stat-card card">
+      <text>{{stats.newStudents || 0}}</text>
+      <view>新增学员</view>
+    </view>
+  </view>
+  <button class="primary-button action" bindtap="goBookings">处理预约</button>
+</view>

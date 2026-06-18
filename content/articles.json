@@ -1,0 +1,14 @@
+[
+  {
+    "id": "spring-autumn-course",
+    "title": "春秋季课程介绍",
+    "url": "https://mp.weixin.qq.com/s/pHvM6vADUsP_PVRNrlVeNw",
+    "type": "course"
+  },
+  {
+    "id": "summer-course",
+    "title": "暑假课程介绍",
+    "url": "https://mp.weixin.qq.com/s/2Us_7YtPTEWQckH1mBOA9g",
+    "type": "camp"
+  }
+]

@@ -1,0 +1,9 @@
+<view class="page">
+  <view class="section-title">课程管理</view>
+  <view class="list-card" wx:for="{{courses}}" wx:key="id">
+    <view>
+      <view class="item-title">{{item.title}}</view>
+      <text>{{item.kind}} · {{item.fit}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+.role-switcher {
+  display: flex;
+  gap: 16rpx;
+}
+
+.role {
+  flex: 1;
+  min-height: 72rpx;
+  border-radius: 999rpx;
+  color: #667085;
+  background: #ffffff;
+}
+
+.role.active {
+  color: #ffffff;
+  background: #0079c8;
+}

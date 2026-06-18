@@ -1,0 +1,31 @@
+<view class="page booking-page">
+  <view class="booking-head">
+    <view class="mono-label">BOOKING</view>
+    <view class="booking-title">预约一节体验课</view>
+    <view class="booking-subtitle">{{siteConfig.campusName}} · {{siteConfig.defaultPhone}}</view>
+  </view>
+
+  <form class="form card" bindsubmit="submitBooking">
+    <view class="field">
+      <view class="label">学生姓名</view>
+      <input name="student" placeholder="请输入学生姓名" />
+    </view>
+    <view class="field">
+      <view class="label">当前年级</view>
+      <picker range="{{grades}}" bindchange="changeGrade">
+        <view class="picker-value">{{selectedGrade || '请选择当前年级'}}</view>
+      </picker>
+    </view>
+    <view class="field">
+      <view class="label">联系电话</view>
+      <input name="phone" type="number" placeholder="请输入手机号" />
+    </view>
+    <view class="field">
+      <view class="label">感兴趣课程</view>
+      <picker range="{{interests}}" bindchange="changeInterest">
+        <view class="picker-value">{{selectedInterest || '请选择课程方向'}}</view>
+      </picker>
+    </view>
+    <button class="primary-button submit" formType="submit">提交预约</button>
+  </form>
+</view>

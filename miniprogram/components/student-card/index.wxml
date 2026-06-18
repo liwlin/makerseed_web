@@ -1,0 +1,7 @@
+<view class="student-card">
+  <view class="avatar">{{initial}}</view>
+  <view>
+    <view class="name">{{student.name}}</view>
+    <view class="meta">{{student.grade}} · {{student.parentPhone || student.phone}}</view>
+  </view>
+</view>

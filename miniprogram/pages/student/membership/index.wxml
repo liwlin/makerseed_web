@@ -1,0 +1,38 @@
+<view class="page membership-page">
+  <view class="member-card">
+    <view class="circle"></view>
+    <view class="member-head">
+      <image src="{{media.whiteLogo}}" mode="aspectFit"></image>
+      <view>
+        <view class="member-title">{{siteConfig.membershipName}} · <text>{{siteConfig.memberLevel.name}}</text></view>
+        <view class="member-subtitle">绑定学员，解锁专属成长权益</view>
+      </view>
+    </view>
+    <view class="progress-meta">
+      <text>{{siteConfig.pointsName}}</text>
+      <text>{{siteConfig.memberLevel.currentValue}} / {{siteConfig.memberLevel.targetValue}}</text>
+    </view>
+    <view class="progress-bar">
+      <view style="width: 3%;"></view>
+    </view>
+  </view>
+
+  <view class="bind-card card">
+    <view class="bind-icon">🎓</view>
+    <view class="bind-copy">
+      <view>绑定我的孩子</view>
+      <text>关联学员后查看课程与成长</text>
+    </view>
+    <button bindtap="goProfile">去绑定</button>
+  </view>
+
+  <view class="section-head">
+    <view class="section-title">会员权益</view>
+  </view>
+  <view class="benefit-grid">
+    <view class="benefit-card" wx:for="{{memberBenefits}}" wx:key="title">
+      <view>{{item.icon}}</view>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+</view>

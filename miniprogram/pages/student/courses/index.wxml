@@ -1,0 +1,43 @@
+<view class="page signup-page">
+  <view class="page-title">选择课程报名</view>
+  <view class="page-subtitle">按学段查看适合孩子的方向</view>
+
+  <view class="entry-grid">
+    <view class="entry-card {{item.tone}}" wx:for="{{signupEntries}}" wx:key="id">
+      <view class="entry-icon">{{item.icon}}</view>
+      <view>{{item.title}}</view>
+    </view>
+  </view>
+
+  <view class="tabs">
+    <view
+      class="chip {{activeTab === item ? 'active' : ''}}"
+      wx:for="{{schoolTabs}}"
+      wx:key="*this"
+      data-tab="{{item}}"
+      bindtap="chooseTab"
+    >{{item}}</view>
+  </view>
+
+  <view class="family-list">
+    <view
+      class="family-card"
+      wx:for="{{courseFamilies}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="viewCourse"
+      style="border-left-color: {{item.color}};"
+    >
+      <view class="family-icon" style="background: {{item.soft}}; color: {{item.color}};">{{item.age}}</view>
+      <view class="family-main">
+        <view class="family-title">{{item.title}}</view>
+        <view class="family-desc">{{item.kind}} · {{item.subtitle}}</view>
+      </view>
+      <view class="arrow">›</view>
+    </view>
+  </view>
+
+  <view class="fixed-cta">
+    <button class="primary-button" bindtap="goBooking">立即报名 / 预约体验</button>
+  </view>
+</view>

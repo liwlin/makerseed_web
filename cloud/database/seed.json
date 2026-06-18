@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "_id": "user_admin_demo",
+      "openid": "demo_admin_openid",
+      "role": "admin",
+      "nickname": "种子创客管理员"
+    },
+    {
+      "_id": "user_teacher_demo",
+      "openid": "demo_teacher_openid",
+      "role": "teacher",
+      "nickname": "创客导师"
+    }
+  ],
+  "courses": [
+    {
+      "_id": "course_spring_project",
+      "title": "春季 STEAM 项目课",
+      "category": "spring",
+      "ageRange": "7-15 岁",
+      "status": "published"
+    }
+  ],
+  "bookings": []
+}

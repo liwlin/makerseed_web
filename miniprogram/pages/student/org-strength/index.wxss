@@ -1,0 +1,194 @@
+.subnav {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  padding: 14rpx 18rpx;
+}
+
+.sub-title {
+  flex-shrink: 0;
+  color: #1a2330;
+  font-size: 27rpx;
+  font-weight: 900;
+}
+
+.toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  gap: 6rpx;
+  padding: 6rpx;
+  border-radius: 22rpx;
+  background: #eef1f4;
+}
+
+.toggle view {
+  display: grid;
+  place-items: center;
+  min-height: 52rpx;
+  border-radius: 16rpx;
+  color: #8a94a3;
+  font-size: 23rpx;
+  font-weight: 800;
+}
+
+.toggle .active {
+  color: #0079c8;
+  background: #ffffff;
+}
+
+.dark-head {
+  position: relative;
+  overflow: hidden;
+  margin-top: 18rpx;
+  padding: 28rpx;
+  border-radius: 28rpx;
+  color: #ffffff;
+  background: #0c1a26;
+}
+
+.dark-head image {
+  position: absolute;
+  right: -28rpx;
+  bottom: -28rpx;
+  width: 180rpx;
+  height: 180rpx;
+  opacity: .16;
+}
+
+.company {
+  position: relative;
+  font-size: 32rpx;
+  font-weight: 900;
+}
+
+.badge-row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 18rpx;
+}
+
+.badge-row text {
+  padding: 10rpx 18rpx;
+  border: 1rpx solid rgba(95,192,255,.32);
+  border-radius: 24rpx;
+  color: #bfe3ff;
+  background: rgba(95,192,255,.16);
+  font-size: 21rpx;
+  font-weight: 800;
+}
+
+.mono-label {
+  margin: 28rpx 0 16rpx;
+}
+
+.gold {
+  color: #e09100;
+}
+
+.green {
+  color: #247d34;
+}
+
+.license-list {
+  display: grid;
+  gap: 14rpx;
+}
+
+.license {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  padding: 20rpx 24rpx;
+}
+
+.license text {
+  display: grid;
+  place-items: center;
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 18rpx;
+  background: #e9edf8;
+}
+
+.license view {
+  flex: 1;
+  color: #1a2330;
+  font-size: 24rpx;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.honor-list {
+  padding: 0 24rpx;
+}
+
+.honor-list > view {
+  display: flex;
+  gap: 20rpx;
+  padding: 22rpx 0;
+  border-bottom: 1rpx solid #f1f4f7;
+}
+
+.honor-list > view:last-child {
+  border-bottom: 0;
+}
+
+.honor-list text {
+  color: #e09100;
+  font-size: 26rpx;
+  font-weight: 900;
+}
+
+.honor-list view view {
+  color: #3a4655;
+  font-size: 24rpx;
+  line-height: 1.4;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14rpx;
+}
+
+.photo-grid > view {
+  position: relative;
+  overflow: hidden;
+  height: 120rpx;
+  border-radius: 22rpx;
+}
+
+.photo-grid image {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-grid text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 26rpx 14rpx 12rpx;
+  color: #ffffff;
+  background: linear-gradient(transparent, rgba(15,12,20,.75));
+  font-size: 21rpx;
+  font-weight: 800;
+}
+
+.school-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+
+.school-tags text {
+  padding: 10rpx 20rpx;
+  border-radius: 22rpx;
+  color: #5d6b7a;
+  background: #ffffff;
+  font-size: 22rpx;
+  font-weight: 700;
+}

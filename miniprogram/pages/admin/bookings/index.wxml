@@ -1,0 +1,13 @@
+<view class="page">
+  <view class="section-title">预约管理</view>
+  <view wx:if="{{!bookings.length}}" class="empty card">暂无预约数据</view>
+  <view class="booking-card card" wx:for="{{bookings}}" wx:key="_id">
+    <view class="booking-title">{{item.student || item.studentName || '未命名学员'}} · {{item.course || item.interest}}</view>
+    <view class="booking-meta">{{item.phone || item.contactPhone}} · {{item.grade}} · {{item.status}}</view>
+    <view class="actions">
+      <button data-id="{{item._id}}" data-status="contacted" bindtap="setStatus">已联系</button>
+      <button data-id="{{item._id}}" data-status="confirmed" bindtap="setStatus">已确认</button>
+      <button data-id="{{item._id}}" data-status="cancelled" bindtap="setStatus">取消</button>
+    </view>
+  </view>
+</view>

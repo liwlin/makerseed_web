@@ -1,0 +1,25 @@
+.course-card {
+  padding: 28rpx;
+  border-radius: 28rpx;
+  background: #ffffff;
+  box-shadow: 0 16rpx 40rpx rgba(20, 35, 55, 0.08);
+}
+
+.title {
+  color: #111827;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.meta {
+  margin-top: 10rpx;
+  color: #8a95a3;
+  font-size: 24rpx;
+}
+
+button {
+  margin-top: 22rpx;
+  border-radius: 999rpx;
+  color: #ffffff;
+  background: #ff5a36;
+}

@@ -1,0 +1,33 @@
+<view class="detail-page">
+  <view class="detail-hero" style="background: linear-gradient(135deg, {{course.color}}, #0aa0e0);">
+    <view class="back" bindtap="goBack">‹ 返回</view>
+    <view class="tag">{{course.tag}}</view>
+    <view class="title">{{course.title}}</view>
+    <view class="fit">{{course.fit}}</view>
+  </view>
+
+  <view class="page content">
+    <view class="summary">{{course.summary}}</view>
+
+    <view class="block-title">项目方向</view>
+    <view class="project-tags">
+      <view wx:for="{{course.projects}}" wx:key="*this">{{item}}</view>
+    </view>
+
+    <view class="block-title">你将获得</view>
+    <view class="outcome-list">
+      <view wx:for="{{course.outcomes}}" wx:key="*this">
+        <text></text>
+        <view>{{item}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="sticky-book">
+    <view>
+      <text>适合</text>
+      <view>{{course.fitShort}}</view>
+    </view>
+    <button bindtap="bookCourse">预约这门课</button>
+  </view>
+</view>
