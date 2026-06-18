@@ -104,8 +104,6 @@ def check_three_end_structure():
         "pages/student/works/index",
         "pages/student/profile/index",
         "pages/student/course-detail/index",
-        "pages/student/org-strength/index",
-        "pages/student/org-faculty/index",
         "pages/student/booking/index",
         "pages/teacher/home/index",
         "pages/teacher/schedule/index",
@@ -152,6 +150,14 @@ def check_three_end_structure():
         "miniprogram/utils/articles.js",
         "miniprogram/images/tab/club-normal.png",
         "miniprogram/images/tab/club-active.png",
+        "miniprogram/pages/student/org-strength/index.js",
+        "miniprogram/pages/student/org-strength/index.json",
+        "miniprogram/pages/student/org-strength/index.wxml",
+        "miniprogram/pages/student/org-strength/index.wxss",
+        "miniprogram/pages/student/org-faculty/index.js",
+        "miniprogram/pages/student/org-faculty/index.json",
+        "miniprogram/pages/student/org-faculty/index.wxml",
+        "miniprogram/pages/student/org-faculty/index.wxss",
     ]:
         if (ROOT / path).exists():
             passed = fail(f"old mini-program artifact still exists: {path}") and passed
@@ -233,6 +239,7 @@ def check_no_stale_tokens():
 
 def check_design_alignment():
     design = (ROOT / "design/种子创客工坊 小程序-学生端.dc.html").read_text(encoding="utf-8")
+    handoff = (ROOT / "design/DESIGN_HANDOFF.md").read_text(encoding="utf-8")
     app_data = (ROOT / "miniprogram/utils/app-data.js").read_text(encoding="utf-8")
     app_wxss = (ROOT / "miniprogram/app.wxss").read_text(encoding="utf-8")
     makerseed_page = (ROOT / "miniprogram/pages/student/membership/index.wxml").read_text(encoding="utf-8")
@@ -241,6 +248,8 @@ def check_design_alignment():
     passed = True
     if "① 校区" not in design or "⑨ 机构介绍" not in design:
         passed = fail("student-side design source is missing expected 9-screen markers") and passed
+    if "MakerSeed Tab 以机构介绍 / 师资研发为当前实现准则" not in handoff:
+        passed = fail("design handoff must record the current MakerSeed tab correction") and passed
     for token in ["#0079c8", "#ff5a36", "#ffb020", "#39B0E3", "#F4B721", "#3AAA4A", "#DE3B2F", "#23459E"]:
         if token not in app_data and token not in app_wxss:
             passed = fail(f"design color token missing from miniprogram implementation: {token}") and passed
@@ -258,6 +267,12 @@ def check_design_alignment():
     for stale_icon in [">机<", ">芯<", ">航<"]:
         if stale_icon in works_page or stale_icon in app_data:
             passed = fail(f"course system still contains placeholder icon {stale_icon}") and passed
+    for path in (ROOT / "miniprogram/pages/teacher").glob("**/*.wxml"):
+        if "primary-button" in path.read_text(encoding="utf-8"):
+            passed = fail(f"teacher internal action should not use orange primary-button: {path.relative_to(ROOT)}") and passed
+    for path in (ROOT / "miniprogram/pages/admin").glob("**/*.wxml"):
+        if "primary-button" in path.read_text(encoding="utf-8"):
+            passed = fail(f"admin internal action should not use orange primary-button: {path.relative_to(ROOT)}") and passed
     return ok("design-source alignment") if passed else False
 
 

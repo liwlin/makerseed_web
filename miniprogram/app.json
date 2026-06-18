@@ -7,8 +7,6 @@
     "pages/student/works/index",
     "pages/student/profile/index",
     "pages/student/course-detail/index",
-    "pages/student/org-strength/index",
-    "pages/student/org-faculty/index",
     "pages/student/booking/index",
     "pages/teacher/home/index",
     "pages/teacher/schedule/index",

@@ -23,7 +23,7 @@
 
 - 校区、报名、MakerSeed、课程、我的 5 个底部 Tab，严格对应 `design/` 学生端方案。
 - MakerSeed Tab 为机构介绍页，内含“实力 / 师资研发”切换，不再显示旧会员权益页。
-- 预约填写、课程详情、机构实力、师资研发等页面。
+- 预约填写、课程详情等页面；机构实力与师资研发统一收敛在 MakerSeed Tab 内。
 - 预约表单已接入统一 `booking.service`，管理端可读取同一份开发版数据。
 - “MakerSeed”Tab 图标使用公司 Logo：`makerseed-logo-normal.png` / `makerseed-logo-active.png`。
 
@@ -133,6 +133,7 @@ python3 scripts/validate.py
 - 小程序三端页面结构和所有页面文件
 - 学生端 5 Tab：校区、报名、MakerSeed、课程、我的，以及 MakerSeed 公司 Logo 图标
 - MakerSeed Tab 必须显示 design 里的机构介绍 / 师资研发，不允许回退成会员权益页
+- 机构实力 / 师资研发不得作为无底部 Tab 的二级页重新出现
 - 旧页面、旧数据源、旧图标、旧 WOWKIDS 关键词清理
 - 服务层、模型、组件、云函数和文档骨架
 

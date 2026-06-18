@@ -2,6 +2,6 @@
   <view class="section-title">课后反馈</view>
   <view class="card form-card">
     <textarea placeholder="记录课堂内容、能力表现和下次建议" maxlength="300"></textarea>
-    <button class="primary-button" bindtap="submit">保存反馈</button>
+    <button class="blue-button" bindtap="submit">保存反馈</button>
   </view>
 </view>

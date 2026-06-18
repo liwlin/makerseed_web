@@ -23,6 +23,7 @@ Page({
     wx.switchTab({ url: "/pages/student/courses/index" });
   },
   goStrength() {
-    wx.navigateTo({ url: "/pages/student/org-strength/index" });
+    wx.setStorageSync("makerseedOrgTab", "strength");
+    wx.switchTab({ url: "/pages/student/membership/index" });
   }
 });

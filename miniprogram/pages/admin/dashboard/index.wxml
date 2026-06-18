@@ -18,5 +18,5 @@
       <view>新增学员</view>
     </view>
   </view>
-  <button class="primary-button action" bindtap="goBookings">处理预约</button>
+  <button class="blue-button action" bindtap="goBookings">处理预约</button>
 </view>

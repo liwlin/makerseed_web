@@ -3,6 +3,6 @@
   <view class="card check-card">
     <view>机器人与自动控制</view>
     <text>签到后正式接入云函数扣减课时；当前为 MVP 占位。</text>
-    <button class="primary-button" bindtap="checkin">{{checked ? '已签到' : '确认签到'}}</button>
+    <button class="blue-button" bindtap="checkin">{{checked ? '已签到' : '确认签到'}}</button>
   </view>
 </view>

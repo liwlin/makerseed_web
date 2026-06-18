@@ -25,6 +25,7 @@ Last audited: 2026-06-18
 - Student tabBar follows the design handoff exactly: `校区 · 报名 · MakerSeed · 课程 · 我的`.
 - The `MakerSeed` tab uses the MakerSeed company logo icon.
 - The `MakerSeed` tab is the institution-intro surface with `实力 / 师资研发` switching, matching the design screenshots rather than the earlier member-center prototype.
+- Student `机构实力 / 师资研发` routes are consolidated into the `MakerSeed` tab so the selected bottom tab remains correct.
 - Mock services under `miniprogram/services/` keep the app previewable while CloudBase is introduced.
 
 ## Remaining Production Work

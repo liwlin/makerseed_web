@@ -8,6 +8,13 @@ Page({
     schools,
     faculty
   },
+  onShow() {
+    const target = wx.getStorageSync("makerseedOrgTab");
+    if (target === "strength" || target === "faculty") {
+      this.setData({ active: target });
+      wx.removeStorageSync("makerseedOrgTab");
+    }
+  },
   showStrength() {
     this.setData({ active: "strength" });
   },
